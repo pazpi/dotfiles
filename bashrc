@@ -12,6 +12,7 @@ export TERMINAL=terminator
 export BROWSER=firefox-aurora
 export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 export TERM=xterm-256color
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -102,6 +103,8 @@ fi
 
 ## MISC ALIASES ##
 #alias sudo="sudo -E"
+alias git-pull="git pull origin master"
+alias git-push="git push origin master"
 alias x="exit"
 alias q="exit"
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
