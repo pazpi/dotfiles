@@ -38,6 +38,7 @@ Bundle 'jplaut/vim-arduino-ino'
 Bundle 'gaving/vimmpc'
 Bundle 'jiangmiao/auto-pairs'
 Bundle 'lervag/vim-latex'
+Bundle 'tpope/vim-fugitive'
 
 Plugin 'itchyny/calendar.vim'
 Plugin 'gmarik/Vundle.vim'
