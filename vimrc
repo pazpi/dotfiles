@@ -37,7 +37,7 @@ Bundle 'tomtom/tlib_vim'
 Bundle 'jplaut/vim-arduino-ino'
 Bundle 'gaving/vimmpc'
 Bundle 'jiangmiao/auto-pairs'
-Bundle 'lervag/vim-latex'
+"Bundle 'lervag/vim-latex'
 Bundle 'tpope/vim-fugitive'
 
 Plugin 'itchyny/calendar.vim'
@@ -67,7 +67,8 @@ call plug#end()
 
 
 filetype plugin indent on       " enable detection, plugins and indenting in one step
-syntax on
+syntax enable
+set background=dark
 "}}}
 " Change shell
 set shell=bash                  " Vim expects a POSIX-compliant shell, which Fish (my default shell) is not
@@ -481,7 +482,9 @@ nnoremap L $
 " insert mode
 "let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-
+"let g:solarized_termcolors=256
+"colorscheme solarized
+"call togglebg#map("<F6>")
 colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
@@ -491,7 +494,7 @@ let g:rehash256 = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#left_alt_sep = '>'
 "let g:Powerline_symbols = "fancy"
 set laststatus=2
 "-----------------------------------------------------------
@@ -549,6 +552,14 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_key_list_previous_completion = ['<Up>']
 " Global Syntastic options.
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_enable_signs = 1
@@ -682,10 +693,10 @@ if has("autocmd")
         "autocmd filetype python setlocal foldmethod=expr
 
         " Python runners
-        autocmd filetype python noremap <buffer> <F5> :w<CR>:!python %<CR>
-        autocmd filetype python inoremap <buffer> <F5> <Esc>:w<CR>:!python %<CR>
-        autocmd filetype python noremap <buffer> <S-F5> :w<CR>:!ipython %<CR>
-        autocmd filetype python inoremap <buffer> <S-F5> <Esc>:w<CR>:!ipython %<CR>
+        "autocmd filetype python noremap <buffer> <F5> :w<CR>:!python %<CR>
+        "autocmd filetype python inoremap <buffer> <F5> <Esc>:w<CR>:!python %<CR>
+        "autocmd filetype python noremap <buffer> <S-F5> :w<CR>:!ipython %<CR>
+        "autocmd filetype python inoremap <buffer> <S-F5> <Esc>:w<CR>:!ipython %<CR>
 
         " Toggling True/False
         autocmd filetype python nnoremap <silent> <C-t> mmviw:s/True\\|False/\={'True':'False','False':'True'}[submatch(0)]/<CR>`m:nohlsearch<CR>
