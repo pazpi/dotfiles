@@ -287,8 +287,8 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 nnoremap <leader>w <C-w>v<C-w>l
 " Complete whole filenames/lines with a quicker shortcut key in insert mode
-inoremap <C-f> <C-x><C-f>
-inoremap <C-l> <C-x><C-l>
+inoremap <C-f> <C-z><C-f>
+inoremap <C-l> <C-z><C-l>
 
 " Quick yanking to the end of the line
 nnoremap Y y$
