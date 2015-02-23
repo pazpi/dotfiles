@@ -8,10 +8,11 @@ esac
 
 # Add vim as default editor
 export EDITOR=vim
-export TERMINAL=terminator
+export TERMINAL=urxvtc
 export BROWSER=firefox-aurora
 export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 export TERM=xterm
+export LC_ALL=en_US.UTF-8
 #export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
