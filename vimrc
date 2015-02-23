@@ -17,8 +17,9 @@ filetype off                    " force reloading *after* pathogen loaded
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
-"Bundle 'Valloric/YouCompleteMe'
+if has("mac")
+    Bundle 'Valloric/YouCompleteMe'
+endif
 Bundle 'rstacruz/sparkup'
 Bundle 'majutsushi/tagbar'
 Bundle 'terryma/vim-multiple-cursors'
@@ -47,7 +48,9 @@ Plugin 'vim-scripts/YankRing.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
-"Plugin 'bling/vim-airline'
+if has("mac")
+    Plugin 'bling/vim-airline'
+endif
 Plugin 'KabbAmine/vCoolor.vim'
 Plugin 'wincent/command-t'
 Plugin 'msanders/snipmate.vim'
@@ -485,9 +488,21 @@ nnoremap L $
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "call togglebg#map("<F6>")
-colorscheme molokai
-let g:molokai_original = 1
-let g:rehash256 = 1
+if has("mac")
+    "<<<<<<< Updated upstream
+    "let g:solarized_termcolors=256
+    "colorscheme solarized
+    "call togglebg#map("<F6>")
+    "=======
+    set background=dark
+    colorscheme solarized
+    ">>>>>>> Stashed changes
+    let g:rehash256 = 1
+else
+    colorscheme molokai
+    let g:molokai_original = 1
+    let g:rehash256 = 1
+endif
 "-----------------------------------------------------------
 "
 "vim airline -----------------------------------------------
