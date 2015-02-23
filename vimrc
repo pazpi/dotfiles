@@ -40,6 +40,7 @@ Bundle 'gaving/vimmpc'
 Bundle 'jiangmiao/auto-pairs'
 "Bundle 'lervag/vim-latex'
 Bundle 'tpope/vim-fugitive'
+Bundle 'nvie/vim-flake8'
 
 Plugin 'itchyny/calendar.vim'
 Plugin 'gmarik/Vundle.vim'
@@ -387,7 +388,6 @@ autocmd BufReadPost *
     \   exe "normal! g`\"" |
     \ endif
 " }}}
-
 " Extra vi-compatibility {{{
 " set extra vi-compatible options
 set cpoptions+=$     " when changing a line, don't redisplay, but put a '$' at
@@ -693,6 +693,7 @@ if has("autocmd")
             " go with html
             set ft=python
         endfun
+        autocmd BufNewFile,BufRead *.py set ft=python
         autocmd BufNewFile,BufRead *.py call s:DetectPythonVariant()
 
         " PEP8 compliance (set 1 tab = 4 chars explicitly, even if set
