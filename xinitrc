@@ -16,7 +16,7 @@ session=${1:-openbox}
 
 case $session in
     awesome           ) exec awesome;;
-    bspwm             ) exec bspwm;;
+    bspwm             ) sxhkd & exec bspwm;;
     catwm             ) exec catwm;;
     cinnamon          ) exec cinnamon-session;;
     dwm               ) exec dwm;;
