@@ -156,6 +156,7 @@ alias tty-clock='tty-clock -scC 3'
 alias masterpdfeditor="pdfeditor"
 alias rock="mpv http://tunein.com/radio/98-ROCK-979-s29726/"
 alias bc="bc -l"
+alias ram="watch -n 1 cat /proc/meminfo"
 # Color man pages
 man() {
 	env \
