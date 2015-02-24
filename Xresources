@@ -30,7 +30,7 @@ URxvt.geometry: 105x33
 URxvt.borderless: true 
 
 URxvt.depth: 32
-!URxvt.background: [85]#000000
+URxvt.background: [85]#000000
 
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
