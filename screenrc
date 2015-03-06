@@ -1,0 +1,17 @@
+#Screen config file
+#
+term rxvt-unicode-256color
+
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d-%m-%y %{W} %c %{g}]'
+
+bind c screen 1
+bind ^c screen 1
+bind 0 select 10                                                            
+screen 1
+
+startup_message off
+
+altscreen on
+
