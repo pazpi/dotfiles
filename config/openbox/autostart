@@ -1,0 +1,61 @@
+## ManjaroBox Autostart File
+##
+## 
+##
+## Note that global autostart .desktop files will also be in 
+## /etc/xdg/openbox/autostart. These will include applications
+## such as the Network Manager and Parcellite
+##
+
+## DPMS - Display Power Management Signaling
+## This is disabled by default to prevent auto-actions when
+## the system is idle, such as screen blanking (10 mins) or
+## suspending (1 hour).
+
+if [ ! -d /bootmnt/manjaro ]; then
+    rm ~/.config/autostart/manjaro-welcome.desktop
+fi
+
+## Ensure that obmenu-generator (a pipe menu) is set to the user.
+## Does this for each session (i.e. ease of use for addtional
+## accounts where created.
+
+#sed -i "s,_homedir_,${HOME}," ~/.config/obmenu-generator/schema.pl
+#sed -i "s,_homedir_,${HOME}," ~/.config/obmenu-generator/config.pl
+
+xset -dpms; xset s off &
+
+## Basic compositing effects
+compton -CGb &
+start-pulseaudio-x11 &
+
+## Panel
+tint2 &
+#xfce4-panel &
+## Background
+(sleep 1s && nitrogen --restore) &
+## Battery Icon
+(sleep 1s && cbatticon -u 20 -i notification -c "systemctl hybrid-sleep" -l 15 -r 3) &
+(sleep 1s && volumeicon) &
+#(sleep 1s && pcmanfm -d) &
+#(sleep 5s && octopi-notifier) &
+## Startup
+#(sleep 1s && pnmixer) &
+
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+urxvtd -q -f -o
+
+## Optionally enable file manager in daemon mode for automounting
+#(sleep 1s && thunar --daemon) &
+(sleep 1s && pcmanfm -d) &
+(sleep 1s && conky) &
+(sleep 1s && conky -c .conkyCLOCK) &
+(sleep 1s && conky -c .conkyMPD -d) &
+## Optionally enable screensaver
+#(sleep 1s && xautolock -time 15 -locker 'xlock -mode blank') &
+xscreensaver -no-splash &
+#(xrdb /home/pazpi/.Xresources) &
+# Disable screensaver when play video in VLC, mPlayer, Flash, ecc (see script for detail)
+(sleep 2s && lightsOn) &
+## Optionally disable touchpad
+#/usr/bin/synclient TouchpadOff=1 &

@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<!--<item label="Run Program">
+			<action name="Execute">
+				<execute>
+                    gmrun
+                </execute>
+			</action>
+		</item>-->
+		<item label="Run Program">
+			<action name="Execute">
+				<execute>
+                    dmenu_run -fn -misc-fixed-*-*-*-*-20-200-*-*-*-*-*-*  -i -nf 'gray' -sb 'dark green' -nb 'dim gray'
+                </execute>
+			</action>
+		</item>
+		--&gt;
+		<separator/>
+		<item label="Terminal">
+			<action name="Execute">
+				<execute>urxvt</execute>
+			</action>
+		</item>
+		<item label="Web Browser">
+			<action name="Execute">
+				<execute>firefox-aurora</execute>
+			</action>
+		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>
+                   pcmanfm 
+                </execute>
+			</action>
+		</item>
+		<item label="Text Editor">
+			<action name="Execute">
+				<execute>urxvtc -e vim</execute>
+			</action>
+		</item>
+		<item label="Media Player">
+			<action name="Execute">
+				<execute>
+                    vlc
+                </execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="accessories" label="Accessories">
+            <!--
+			   -<item label="Catfish File Search">
+			   -    <action name="Execute">
+			   -        <execute>
+               -            catfish
+               -        </execute>
+			   -    </action>
+			   -</item>
+               -->
+			<item label="Archive Manager">
+				<action name="Execute">
+					<execute>
+                        file-roller
+                    </execute>
+				</action>
+			</item>
+			<!--<item label="Aptana Studio 3">-->
+				<!--<action name="Execute">-->
+					<!--<execute>aptanastudio3</execute>-->
+				<!--</action>-->
+			<!--</item>-->
+			<item label="File Manager">
+				<action name="Execute">
+					<execute>
+                       pcmanfm 
+                    </execute>
+				</action>
+			</item>
+			<!--<item label="Thunar File Manager (root)">-->
+			<!--<action name="Execute">-->
+			<!--<execute>-->
+			<!--gksudo thunar-->
+			<!--</execute>-->
+			<!--</action>-->
+			<!--</item>-->
+			<!--<item label="System Profiler and Benchmark">-->
+				<!--<action name="Execute">-->
+					<!--<execute>hardinfo</execute>-->
+				<!--</action>-->
+			<!--</item>-->
+		</menu>
+		<menu execute="/usr/bin/obdevicemenu" id="devices" label="Devices"/>
+		<menu id="network" label="Network">
+			<item label="Firefox">
+				<action name="Execute">
+					<execute>firefox-aurora</execute>
+				</action>
+			</item>
+			<item label="weechat">
+				<action name="Execute">
+					<execute>urxvtc -e weechat-curses</execute>
+				</action>
+			</item>
+			<!--<item label="Filezilla">-->
+				<!--<action name="Execute">-->
+					<!--<execute>filezilla</execute>-->
+				<!--</action>-->
+			<!--</item>-->
+			<!--<item label="Remote Filesystems">-->
+				<!--<action name="Execute">-->
+					<!--<execute>-->
+                        <!--gigolo-->
+                    <!--</execute>-->
+				<!--</action>-->
+			<!--</item>-->
+			<separator label="Services"/>
+			<menu id="network-832814" label="Mega">
+				<item label="Start">
+					<action name="Execute">
+						<execute>megasync</execute>
+					</action>
+				</item>
+				<item label="Stop">
+					<action name="Execute">
+						<execute>killall megasync</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="network-522228" label="Dropbox">
+				<item label="start">
+					<action name="Execute">
+						<execute>dropboxd</execute>
+					</action>
+				</item>
+				<item label="stop">
+					<action name="Execute">
+						<execute>killall dropbox</execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<menu id="games" label="Games">
+			<menu id="games-465427" label="Dwarf Fortress">
+				<item label="Dwarf Fortress">
+					<action name="Execute">
+						<execute>dwarf-fortress</execute>
+					</action>
+				</item>
+				<item label="Dwarf Therapist">
+					<action name="Execute">
+						<execute>dwarftherapist</execute>
+					</action>
+				</item>
+			</menu>
+			<item label="Steam">
+				<action name="Execute">
+					<execute>primusrun steam</execute>
+				</action>
+			</item>
+			<item label="Minecraft">
+				<action name="Execute">
+					<execute>java -jar /home/pazpi/.minecraft/TElinux.jar</execute>
+				</action>
+			</item>
+			<item label="Minecraft Nvidia">
+				<action name="Execute">
+					<execute>primusrun java -jar /home/pazpi/.minecraft/TElinux.jar</execute>
+				</action>
+			</item>
+			<!--<item label="Play on Linux">-->
+				<!--<action name="Execute">-->
+					<!--<execute>primusrun playonlinux</execute>-->
+				<!--</action>-->
+			<!--</item>-->
+		</menu>
+		<menu id="graphics" label="Graphics">
+			<!--<item label="GIMP">
+                <action name="Execute">
+                    <execute>
+                        gimp
+                    </execute>
+                </action>
+            </item>-->
+			<item label="Blender">
+				<action name="Execute">
+					<execute>blender</execute>
+				</action>
+			</item>
+			<item label="Gimp">
+				<action name="Execute">
+					<execute>gimp</execute>
+				</action>
+			</item>
+			<item label="Natron">
+				<action name="Execute">
+					<execute>natron</execute>
+				</action>
+			</item>
+			<item label="Viewnior Image Viewer">
+				<action name="Execute">
+					<execute>
+                        viewnior
+                    </execute>
+				</action>
+			</item>
+			<menu id="graphicsScreenshots" label="Take Screenshot">
+				<separator label="scrot"/>
+				<item label="Now">
+					<action name="Execute">
+						<execute>
+                            scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshot/ &amp; viewnior ~/Pictures/Screenshot/$f'
+                        </execute>
+					</action>
+				</item>
+				<item label="In 5 Seconds...">
+					<action name="Execute">
+						<execute>
+                            scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshot/ &amp; viewnior ~/Pictures/Screenshot/$f'
+                        </execute>
+					</action>
+				</item>
+				<item label="In 10 Seconds...">
+					<action name="Execute">
+						<execute>
+                            scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshot/ &amp; viewnior ~/Pictures/Screenshot/$f'
+                        </execute>
+					</action>
+				</item>
+				<item label="Selected Area... (click &amp; drag mouse)">
+					<action name="Execute">
+						<execute>
+                            scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshot/ &amp; viewnior ~/Pictures/Screenshot/$f'
+                        </execute>
+					</action>
+				</item>
+			</menu>
+		</menu>
+		<menu id="multimedia" label="Multimedia">
+			<item label="XBMC">
+				<action name="Execute">
+					<execute>xbmc</execute>
+				</action>
+			</item>
+			<item label="Popcorn Time">
+				<action name="Execute">
+					<execute>/home/pazpi/Popcorn-Time-0.3.5.3-Linux64/Popcorn-Time</execute>
+				</action>
+			</item>
+			<item label="VLC Media Player">
+				<action name="Execute">
+					<execute>
+                        vlc
+                    </execute>
+				</action>
+			</item>
+			<item label="TV VLC">
+				<action name="Execute">
+					<execute>vlc /home/pazpi/channels-v.conf</execute>
+				</action>
+			</item>
+			<item label="PulseAudio VC">
+				<action name="Execute">
+					<execute>pavucontrol</execute>
+				</action>
+			</item>
+			<!--<item label="Screen Record">-->
+				<!--<action name="Execute">-->
+					<!--<execute>simplescreenrecorder</execute>-->
+				<!--</action>-->
+			<!--</item>-->
+			<!--<item label="Music AutoTag">-->
+				<!--<action name="Execute">-->
+					<!--<execute>picard</execute>-->
+				<!--</action>-->
+			<!--</item>-->
+		</menu>
+		<menu id="office" label="Office">
+			<item label="AbiWord">
+				<action name="Execute">
+					<execute>abiword</execute>
+				</action>
+			</item>
+			<item label="LibreOffice">
+				<action name="Execute">
+					<execute>libreoffice</execute>
+                </action>
+            </item>
+			<item label="Gnumeric">
+				<action name="Execute">
+					<execute>gnumeric</execute>
+				</action>
+			</item>
+			<item label="Calculator">
+				<action name="Execute">
+					<execute>
+                        speedcrunch 
+                    </execute>
+				</action>
+			</item>
+			<item label="PDF Viewer">
+				<action name="Execute">
+					<execute>
+                       okular 
+                    </execute>
+				</action>
+			</item>
+			<item label="Master PDF">
+				<action name="Execute">
+					<execute>/opt/masterpdfeditor/master-pdf-editor</execute>
+				</action>
+			</item>
+			<item label="Krop">
+				<action name="Execute">
+					<execute>krop</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<menu id="settings" label="Settings">
+			<!--
+			   -<menu id="conkyconfig" label="Conky">
+			   -    <item label="Edit .conkyrc">
+			   -        <action name="Execute">
+			   -            <execute>
+               -                terminator -e vim ~/.conkyrc
+               -            </execute>
+			   -        </action>
+			   -    </item>
+			   -</menu>
+               -->
+			<menu id="obConfig" label="Openbox">
+				<!--
+				   -<item label="Edit menu.xml">
+				   -    <action name="Execute">
+				   -        <execute>
+                   -            terminator -e vim ~/.config/openbox/menu.xml
+                   -        </execute>
+				   -    </action>
+				   -</item>
+				   -<item label="Edit rc.xml">
+				   -    <action name="Execute">
+				   -        <execute>
+                   -            terminator -e vim ~/.config/openbox/rc.xml
+                   -        </execute>
+				   -    </action>
+				   -</item>
+				   -<item label="Edit autostart">
+				   -    <action name="Execute">
+				   -        <execute>
+                   -            terminator -e vim ~/.config/openbox/autostart
+                   -        </execute>
+				   -    </action>
+				   -</item>
+				   -<item label="GUI Menu Editor">
+				   -    <action name="Execute">
+				   -        <execute>
+                   -            obmenu
+                   -        </execute>
+				   -    </action>
+				   -</item>
+                   -->
+				<item label="GUI Config Tool">
+					<action name="Execute">
+						<execute>lxappearance</execute>
+					</action>
+				</item>
+				<item label="Reconfigure">
+					<action name="Reconfigure"/>
+				</item>
+				<item label="Restart">
+					<action name="Restart"/>
+				</item>
+			</menu>
+			<!--
+			   -<menu id="terminatorconfig" label="Terminator">
+			   -    <item label="Edit config file">
+			   -        <action name="Execute">
+			   -            <execute>
+               -                terminator -e vim ~/.config/terminator/config
+               -            </execute>
+			   -        </action>
+			   -    </item>
+			   -</menu>
+               -->
+			<menu id="tint2config" label="tint2">
+				<item label="Edit config file">
+					<action name="Execute">
+						<execute>
+                            urxvtc -e vim /home/pazpi/.config/tint2/tint2rc
+                        </execute>
+					</action>
+				</item>
+				<item label="Restart tint2">
+					<action name="Execute">
+						<execute>
+                            tint2restart
+                        </execute>
+					</action>
+				</item>
+				<item label="TintWizard">
+					<action name="Execute">
+						<execute>tintwizard</execute>
+					</action>
+				</item>
+			</menu>
+			<menu id="DisplaySettings" label="Display Settings">
+				<item label="Adjust with grandr">
+					<action name="Execute">
+						<execute>arandr</execute>
+					</action>
+				</item>
+			</menu>
+			<!--
+			   -<item label="Power Management">
+			   -    <action name="Execute">
+			   -        <execute>
+               -            xfce4-power-manager-settings
+               -        </execute>
+			   -    </action>
+			   -</item>
+               -->
+			<item label="Screensaver">
+				<action name="Execute">
+					<execute>
+                        xscreensaver-demo
+                    </execute>
+				</action>
+			</item>
+			<item label="Choose Wallpaper">
+				<action name="Execute">
+					<execute>nitrogen</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="38" label="Utilities">
+			<menu id="software manger" label="Software Manager">
+				<item label="Pamac Updater">
+					<action name="Execute">
+						<execute>pamac-updater</execute>
+					</action>
+				</item>
+				<item label="Pacman Manager">
+					<action name="Execute">
+						<execute>pamac-manager</execute>
+					</action>
+				</item>
+			</menu>
+			<!--
+			   -<item label="7-Zip FM">
+			   -    <action name="Execute">
+			   -        <execute>7zFM</execute>
+			   -    </action>
+			   -</item>
+               -->
+			<item label="Archive Manager">
+				<action name="Execute">
+					<execute>file-roller</execute>
+				</action>
+			</item>
+			<item label="Bulk Rename">
+				<action name="Execute">
+					<execute>/usr/lib/Thunar/ThunarBulkRename</execute>
+				</action>
+			</item>
+			<item label="Catfish File Search">
+				<action name="Execute">
+					<execute>catfish</execute>
+				</action>
+			</item>
+			<item label="Gparted">
+				<action name="Execute">
+					<execute>gparted_polkit</execute>
+				</action>
+			</item>
+			<item label="Info">
+				<action name="Execute">
+					<execute>urxvtc -e info</execute>
+				</action>
+			</item>
+		</menu>
+		<!--<menu id="help" label="Help" execute="cb-help-pipemenu" />-->
+		<!--<menu id="37" label="System">-->
+		<!--<menu id="36" label="Settings">-->
+		<!--<menu id="21" label="GNOME">-->
+		<!--
+					   -<item label="Adobe Flash Player">
+					   -    <action name="Execute">
+					   -        <execute>flash-player-properties</execute>
+					   -    </action>
+					   -</item>
+                       -->
+		<!--</menu>-->
+		<!--</menu>-->
+		<!--<item label="dconf Editor">-->
+		<!--<action name="Execute">-->
+		<!--<execute>dconf-editor</execute>-->
+		<!--</action>-->
+		<!--</item>-->
+		<!--</menu>-->
+		<separator/>
+		<menu id="root-men" label="OpenBox">
+			<menu id="client-list-menu"/>
+			<item label="Reconfigure">
+				<action name="Reconfigure"/>
+			</item>
+		</menu>
+		<!--
+		Autoconf menu
+		-->
+		<item label="Exit">
+			<action name="Execute">
+				<execute>
+                    oblogout
+                </execute>
+			</action>
+		</item>
+	</menu>
+</openbox_menu>

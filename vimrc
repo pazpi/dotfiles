@@ -20,51 +20,51 @@ call vundle#begin()
 if has("mac")
     Bundle 'Valloric/YouCompleteMe'
 endif
-Bundle 'rstacruz/sparkup'
-Bundle 'majutsushi/tagbar'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'scrooloose/nerdtree'
-"Bundle 'joonty/vim-phpqa'
-"Bundle 'rking/ag.vim'
-"Bundle 'octol/vim-cpp-enhanced-highlight' 
-"Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'sudar/vim-arduino-syntax'
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-"Bundle 'snipmate-snippets'
-"Bundle 'garbas/vim-snipmate'
-"Bundle 'honza/vim-snippets'
-"Bundle 'sudar/vim-arduino-snippets'
-Bundle 'jplaut/vim-arduino-ino'
-Bundle 'gaving/vimmpc'
-Bundle 'jiangmiao/auto-pairs'
-"Bundle 'lervag/vim-latex'
-Bundle 'tpope/vim-fugitive'
-Bundle 'nvie/vim-flake8'
-
-Plugin 'itchyny/calendar.vim'
 Plugin 'gmarik/Vundle.vim'
-"Plugin ' aperezdc/vim-template/'
-Plugin 'vim-scripts/YankRing.vim'
-Plugin 'sjl/gundo.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
 if has("mac")
     Plugin 'bling/vim-airline'
+    Plugin 'altercation/vim-colors-solarized'
 endif
-Plugin 'KabbAmine/vCoolor.vim'
-Plugin 'wincent/command-t'
-Plugin 'msanders/snipmate.vim'
-Plugin 'junegunn/vim-easy-align'
-"Plugin 'LaTeX-Box-Team/LaTeX-Box'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'alvan/vim-closetag'
-Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()            " required
 "------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+    Plug 'rstacruz/sparkup'
+    Plug 'majutsushi/tagbar'
+    Plug 'terryma/vim-multiple-cursors'
+    Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+    "Plug 'joonty/vim-phpqa'
+    "Plug 'rking/ag.vim'
+    "Plug 'octol/vim-cpp-enhanced-highlight' 
+    "Plug 'shawncplus/phpcomplete.vim'
+    Plug 'sudar/vim-arduino-syntax'
+    Plug 'MarcWeber/vim-addon-mw-utils'
+    Plug 'tomtom/tlib_vim'
+    "Plug 'snipmate-snippets'
+    "Plug 'garbas/vim-snipmate'
+    "Plug 'honza/vim-snippets'
+    "Plug 'sudar/vim-arduino-snippets'
+    Plug 'jplaut/vim-arduino-ino'
+    Plug 'gaving/vimmpc'
+    Plug 'jiangmiao/auto-pairs'
+    "Plug 'lervag/vim-latex'
+    Plug 'tpope/vim-fugitive'
+    Plug 'nvie/vim-flake8'
+    Plug 'gmarik/Vundle.vim'
+    Plug 'itchyny/calendar.vim'
+    "Plugin ' aperezdc/vim-template/'
+    Plug 'vim-scripts/YankRing.vim'
+    Plug 'sjl/gundo.vim'
+    Plug 'kien/ctrlp.vim'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+    Plug 'KabbAmine/vCoolor.vim'
+    Plug 'wincent/command-t'
+    Plug 'msanders/snipmate.vim'
+    Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
+    "Plug 'LaTeX-Box-Team/LaTeX-Box'
+    Plug 'octol/vim-cpp-enhanced-highlight'
+    Plug 'alvan/vim-closetag'
 call plug#end()
 "------------------------------------------------------------
 "let items = fzf#run({ 'sink': 'tabe', 'options': '-m +c', 'dir': '~', 'source': 'ls'  })
