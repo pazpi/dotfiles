@@ -11,7 +11,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-# Here Xfce is kept as default
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+urxvtd -q -f -o
+
+xscreensaver -no-splash &
+nitrogen --restore &
+compton -CGb &
+# Here openbox is kept as default
+
 session=${1:-openbox}
 
 case $session in

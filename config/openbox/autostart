@@ -45,7 +45,7 @@ tint2 &
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 urxvtd -q -f -o
 
-## Optionally enable file manager in daemon mode for automounting
+# Optionally enable file manager in daemon mode for automounting
 #(sleep 1s && thunar --daemon) &
 (sleep 1s && pcmanfm -d) &
 (sleep 1s && conky) &
