@@ -47,7 +47,7 @@ urxvtd -q -f -o
 
 # Optionally enable file manager in daemon mode for automounting
 #(sleep 1s && thunar --daemon) &
-(sleep 1s && pcmanfm -d) &
+# (sleep 1s && pcmanfm -d) &
 (sleep 1s && conky) &
 (sleep 1s && conky -c .conkyCLOCK) &
 (sleep 1s && conky -c .conkyMPD -d) &
