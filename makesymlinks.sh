@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="screenrc bashrc vimrc zshrc Xresources conkyrc conkyMPD conkyCLOCK ncmpcppa rtorrent.rc channels.conf xinitrc"    # list of files/folders to symlink in homedir
+files="screenrc bashrc vimrc zshrc Xresources conkyrc conkyMPD conkyCLOCK ncmpcpp rtorrent.rc channels.conf xinitrc"    # list of files/folders to symlink in homedir
 
 ##########
 

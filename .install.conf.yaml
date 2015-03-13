@@ -1,0 +1,29 @@
+- clean: ['~', '~/.config']
+
+- shell:
+  - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads
+  # - mkdir -p .config/openbox
+  - git submodule update # after linking ~/.gitconfig
+
+- link:
+    # ~/.axelrc: axelrc
+    ~/.conkyrc: conkyrc
+    ~/.conkyMPD: conkyMPD
+    ~/.conkyCLOCK: conkyCLOCK
+    ~/.config/openbox:
+        create: true
+        path: config/openbox
+    # ~/.config/openbox/autostart: config/openbox/autostart
+    # ~/.config/openbox/environment: config/openbox/environment
+    # ~/.config/openbox/menu.conf: config/openbox/menu.conf
+    # ~/.config/openbox/rc.conf: config/openbox/rc.conf
+    ~/.dotfiles: ''
+    # ~/.gitconfig: gitconfig
+    # ~/.gitignore_global: gitignore_global
+    ~/.rtorrent.rc: rtorrent.rc
+    ~/.screenrc: screenrc
+    # ~/.tmux.conf: tmux.conf
+    # ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
