@@ -10,6 +10,9 @@
     ~/.conkyrc: conkyrc
     ~/.conkyMPD: conkyMPD
     ~/.conkyCLOCK: conkyCLOCK
+    ~/.config/mpv:
+        create: true
+        path: config/mpv
     ~/.config/openbox:
         create: true
         path: config/openbox
