@@ -213,7 +213,8 @@ set wildmenu                    " make tab completion for files/buffers act like
 set wildmode=list:full          " show a list when pressing tab and complete
                                 "    first full match
 set wildignore=*.swp,*.bak,*.pyc,*.class
-set title                       " change the terminal's title
+" set title                       " change the terminal's title
+let &titleold=getcwd()
 set visualbell                  " don't beep
 set noerrorbells                " don't beep
 set showcmd                     " show (partial) command in the last line of the screen this also shows visual selection info
