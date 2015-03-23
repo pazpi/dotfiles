@@ -30,6 +30,8 @@ endif
 call vundle#end()            " required
 "------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
+    Plug 'yegappan/mru'
+    Plug 'klen/python-mode'
     Plug 'rstacruz/sparkup'
     Plug 'majutsushi/tagbar'
     Plug 'terryma/vim-multiple-cursors'
@@ -50,7 +52,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'jiangmiao/auto-pairs'
     "Plug 'lervag/vim-latex'
     Plug 'tpope/vim-fugitive'
-    Plug 'nvie/vim-flake8'
+    " Plug 'nvie/vim-flake8'
     Plug 'gmarik/Vundle.vim'
     Plug 'itchyny/calendar.vim'
     "Plugin ' aperezdc/vim-template/'
@@ -505,7 +507,9 @@ let NERDTreeMouseMode=2
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
             \ '\.o$', '\.so$', '\.egg$', '^\.git$' ]
 "-----------------------------------------------------------
-"
+"Pep8 (python-mode)-----------------------------------------
+let g:pymode_lint_ignore="E114,E115,E116"
+"-----------------------------------------------------------
 "NerdCommenter----------------------------------------------
 let NERDSpaceDelims=1
 "-----------------------------------------------------------
@@ -713,7 +717,7 @@ if has("autocmd")
         autocmd filetype python nnoremap <silent> <C-t> mmviw:s/True\\|False/\={'True':'False','False':'True'}[submatch(0)]/<CR>`m:nohlsearch<CR>
 
         " Run a quick static syntax check every time we save a Python file
-        autocmd BufWritePost *.py call Flake8()
+        " autocmd BufWritePost *.py call Flake8()
 
         " Defer to isort for sorting headers (instead of using Unix sort)
         autocmd filetype python nnoremap <leader>s :Isort<cr>
