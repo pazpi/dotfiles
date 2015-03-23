@@ -12,9 +12,9 @@
 ## the system is idle, such as screen blanking (10 mins) or
 ## suspending (1 hour).
 
-if [ ! -d /bootmnt/manjaro ]; then
-    rm ~/.config/autostart/manjaro-welcome.desktop
-fi
+# if [ ! -d /bootmnt/manjaro ]; then
+    # rm ~/.config/autostart/manjaro-welcome.desktop
+# fi
 
 ## Ensure that obmenu-generator (a pipe menu) is set to the user.
 ## Does this for each session (i.e. ease of use for addtional
@@ -26,14 +26,14 @@ fi
 xset -dpms; xset s off &
 
 ## Basic compositing effects
-compton -CGb &
+# compton -CGb &
 start-pulseaudio-x11 &
 
 ## Panel
 tint2 &
 #xfce4-panel &
 ## Background
-(sleep 1s && nitrogen --restore) &
+# (sleep 1s && nitrogen --restore) &
 ## Battery Icon
 (sleep 1s && cbatticon -u 20 -i notification -c "systemctl hybrid-sleep" -l 15 -r 3) &
 (sleep 1s && volumeicon) &
@@ -42,8 +42,8 @@ tint2 &
 ## Startup
 #(sleep 1s && pnmixer) &
 
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-urxvtd -q -f -o
+# [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+# urxvtd -q -f -o
 
 # Optionally enable file manager in daemon mode for automounting
 #(sleep 1s && thunar --daemon) &
@@ -53,7 +53,7 @@ urxvtd -q -f -o
 (sleep 1s && conky -c .conkyMPD -d) &
 ## Optionally enable screensaver
 #(sleep 1s && xautolock -time 15 -locker 'xlock -mode blank') &
-xscreensaver -no-splash &
+# xscreensaver -no-splash &
 #(xrdb /home/pazpi/.Xresources) &
 # Disable screensaver when play video in VLC, mPlayer, Flash, ecc (see script for detail)
 (sleep 2s && lightsOn) &
