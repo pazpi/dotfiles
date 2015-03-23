@@ -20,6 +20,7 @@ call vundle#begin()
 if has("mac")
     Bundle 'Valloric/YouCompleteMe'
 endif
+
 Plugin 'gmarik/Vundle.vim'
 if has("mac")
     Plugin 'bling/vim-airline'
@@ -121,7 +122,7 @@ set clipboard=unnamed           " normal OS clipboard interaction
 nnoremap <leader>i :set list!<cr>
 
 " Toggle line numbers
-nnoremap <leader>N :setlocal number!<cr>
+" nnoremap <leader>N :setlocal number!<cr>
 
 " Thanks to Steve Losh for this liberating tip
 " See http://stevelosh.com/blog/2010/09/coming-home-to-vim
@@ -294,13 +295,11 @@ nnoremap <leader>w <C-w>v<C-w>l
 " Complete whole filenames/lines with a quicker shortcut key in insert mode
 inoremap <C-f> <C-z><C-f>
 inoremap <C-l> <C-z><C-l>
-
 " Quick yanking to the end of the line
 nnoremap Y y$
 
 " Edit the vimrc file
 nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
-nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Clears the search register
 nnoremap <silent> <leader>\ :nohlsearch<CR>
