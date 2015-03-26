@@ -16,7 +16,7 @@ urxvtd -q -f -o
 
 xscreensaver -no-splash &
 nitrogen --restore &
-compton -CGb &
+# compton -CGb &
 # Here openbox is kept as default
 
 session=${1:-openbox}

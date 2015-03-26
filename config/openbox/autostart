@@ -26,7 +26,7 @@
 xset -dpms; xset s off &
 
 ## Basic compositing effects
-# compton -CGb &
+compton -CGb &
 start-pulseaudio-x11 &
 
 ## Panel
