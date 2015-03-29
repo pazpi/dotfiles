@@ -69,7 +69,7 @@ ${color orange}MEMORY${hr 2}$color
 ${color orange}DISK ${hr 2}$color
 
  ${color white}ROOT$color ${fs_free_perc /}%$alignr${fs_free /}/ ${fs_size /}
- ${color white}HOME$color ${fs_free_perc /home/pazpi}%$alignr${fs_free /home/pazpi}/ ${fs_size /home/pazpi}
+ # ${color white}HOME$color ${fs_free_perc /home/pazpi}%$alignr${fs_free /home/pazpi}/ ${fs_size /home/pazpi}
  ${color white}Read:$color ${diskio_read /dev/sda4}${alignr}${color white}Write:$color ${diskio_write /dev/sda4}
  #${fs_bar 3, 320 /home/pazpi}$color
  ${diskiograph_read /dev/sda4 15,150 000000 00ff00}${alignr}${diskiograph_write /dev/sda4 15,150 000000 ffff00}

@@ -90,6 +90,7 @@
 			<!--</item>-->
 		</menu>
 		<menu execute="/usr/bin/obdevicemenu" id="devices" label="Devices"/>
+		<menu execute="/usr/bin/obfilebrowser" id="file" label="File"/>
 		<menu id="network" label="Network">
 			<item label="Firefox">
 				<action name="Execute">

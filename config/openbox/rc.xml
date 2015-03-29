@@ -55,7 +55,7 @@
     <keepBorder>yes</keepBorder>
     <animateIconify>no</animateIconify>
     <font place="ActiveWindow">
-      <name>Glober Light</name>
+      <name>Terminus</name>
       <size>10</size>
       <!-- font size in points -->
       <weight>Normal</weight>
@@ -528,31 +528,31 @@
       </action>
     </keybind>
     <!--<keybind key="XF86MonBrightnessUp">-->
-      <!--<action name="Execute">-->
-        <!--<command>xbacklight +10</command>-->
-      <!--</action>-->
+    <!--<action name="Execute">-->
+    <!--<command>xbacklight +10</command>-->
+    <!--</action>-->
     <!--</keybind>-->
     <!--<keybind key="XF86MonBrightnessDown">-->
-      <!--<action name="Execute">-->
-        <!--<command>xbacklight -10</command>-->
-      <!--</action>-->
+    <!--<action name="Execute">-->
+    <!--<command>xbacklight -10</command>-->
+    <!--</action>-->
     <!--</keybind>-->
     <!-- Where installing pulse-audio instead, change 'amixer set' to 'amixer -D pulse set' -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
-        <command>pactl set-sink-volume 0 +5%</command>
+        <command>amixer -D pulse set Master 5%+ unmute</command>
       </action>
     </keybind>
     <!-- Where installing pulse-audio instead, change 'amixer set' to 'amixer -D pulse set' -->
     <keybind key="XF86AudioLowerVolume">
       <action name="Execute">
-        <command>pactl set-sink-volume 0 -5%</command>
+        <command>amixer -D pulse set Master 5%- unmute</command>
       </action>
     </keybind>
     <!-- Where installing pulse-audio instead, nothing needs to be changed -->
     <keybind key="XF86AudioMute">
       <action name="Execute">
-        <command>pactl set-sink-mute 0 toggle</command>
+        <command>amixer -D pulse set Master toggle</command>
       </action>
     </keybind>
     <!-- Dual screen with VGA monitor 1440x900 on the left of LVDS monitor -->

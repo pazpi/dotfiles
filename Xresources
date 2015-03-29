@@ -41,7 +41,7 @@ Urxvt.perl-ext-common: default,clipboard
 URxvt.iconFile: /home/pazpi/Pictures/Terminal-icon.png 
 
 !! Perl Script
-URxvt.perl-ext-common: default,matcher,clipboard,fullscreen
+URxvt.perl-ext-common: default,matcher,clipboard,fullscreen,tabbedex
 
 URxvt.url-launcher: /usr/bin/firefox-aurora
 URxvt.matcher.button: 1
@@ -53,16 +53,16 @@ URxvt.keysym.M-c:   perl:clipboard:copy
 URxvt.keysym.M-v:   perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 
-!! Tab Managment
-!URxvt.tabbed.new-button: true
-!URxvt.tabbed.autohide: true
-!URxvt.keysym.Control-t: perl:tabbedex:new_tab
-!URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
-!URxvt.keysym.Control-Shift-Tab: perl:tabbedex:prev_tab
-!URxvt.keysym.Control-Shift-Left: perl:tabbedex:move_tab_left
-!URxvt.keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
-!URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
-!URxvt.tabbed.no-tabbedex-keys: true
+! Tab Managment
+URxvt.tabbed.new-button: true
+URxvt.tabbed.autohide: true
+URxvt.keysym.Alt-t: perl:tabbedex:new_tab
+URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
+URxvt.keysym.Control-Shift-Tab: perl:tabbedex:prev_tab
+URxvt.keysym.Control-Shift-Left: perl:tabbedex:move_tab_left
+URxvt.keysym.Control-Shift-Right: perl:tabbedex:move_tab_right
+URxvt.keysym.Control-Shift-R: perl:tabbedex:rename_tab
+URxvt.tabbed.no-tabbedex-keys: true
 
 !! Fullscreen
 URxvt.keysym.F11: perl:fullscreen:switch

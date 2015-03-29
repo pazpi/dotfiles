@@ -6,6 +6,7 @@
   - git submodule update # after linking ~/.gitconfig
 
 - link:
+    ~/.bashrc: bashrc
     # ~/.axelrc: axelrc
     ~/.conkyrc: conkyrc
     ~/.conkyMPD: conkyMPD
@@ -28,5 +29,7 @@
     # ~/.tmux.conf: tmux.conf
     # ~/.vim: vim/
     ~/.vimrc: vimrc
+    ~/.xinitrc: xinitrc
+    ~/.Xresources: Xresources    
     ~/.zsh: zsh/
     ~/.zshrc: zshrc

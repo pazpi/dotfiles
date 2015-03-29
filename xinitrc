@@ -15,7 +15,7 @@ fi
 urxvtd -q -f -o
 
 xscreensaver -no-splash &
-nitrogen --restore &
+# nitrogen --restore &
 # compton -CGb &
 # Here openbox is kept as default
 
