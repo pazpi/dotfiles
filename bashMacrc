@@ -7,11 +7,9 @@ case $- in
 esac
 
 # Add vim as default editor
-export EDITOR=vim
-export TERMINAL=urxvtc
-export BROWSER=firefox-aurora
+export EDITOR=mvim
+export BROWSER=firefox
 export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
-export TERM=xterm
 export LC_ALL=en_US.UTF-8
 #export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # don't put duplicate lines or lines starting with space in the history.
@@ -30,25 +28,22 @@ HISTFILESIZE=2000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
-shopt -s checkwinsize
 
 # Gtk themes 
 export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
-xhost +local:root > /dev/null 2>&1
-
-complete -cf sudo
-complete -cf man
+# complete -cf sudo
+# complete -cf man
 
 # Shopt
-shopt -s autocd
-shopt -s cdspell
-shopt -s cmdhist
-shopt -s dotglob
-shopt -s expand_aliases
-shopt -s extglob
-shopt -s hostcomplete
-shopt -s nocaseglob
+# shopt -s autocd
+# shopt -s cdspell
+# shopt -s cmdhist
+# shopt -s dotglob
+# shopt -s expand_aliases
+# shopt -s extglob
+# shopt -s hostcomplete
+# shopt -s nocaseglob
 
 # Colour chart
 #T='123'   # The test text
@@ -108,37 +103,37 @@ alias git-pull="git pull origin master"
 alias git-push="git push origin master"
 alias x="exit"
 alias q="exit"
-alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
-alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+# alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+# alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
+# alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias grep='grep --color=tty -d skip'
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias vp='vim PKGBUILD'
-alias update='sudo pacman -Syu'
-alias install='sudo pacman -S'
-alias uninstall='sudo pacman -Rs'
-alias search='pacman -Ss'
-alias show='pacman -Si'
-alias need='pacman -Qi'
-alias missing='pacman -Qk'
-alias trash='pacman -Qdt'
-alias orphan='pacman -Rns $(pacman -Qtdq)'
+# alias update='sudo pacman -Syu'
+# alias install='sudo pacman -S'
+# alias uninstall='sudo pacman -Rs'
+# alias search='pacman -Ss'
+# alias show='pacman -Si'
+# alias need='pacman -Qi'
+# alias missing='pacman -Qk'
+# alias trash='pacman -Qdt'
+# alias orphan='pacman -Rns $(pacman -Qtdq)'
 alias record="ffmpeg -y -f alsa -ac 2 -i pulse -f x11grab -r 30 -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -i :0.0 -acodec pcm_s16le output.wav -an -vcodec libx264 -threads 0 output.mp4"
-alias vga="bash /home/pazpi/.screenlayout/VGA1440x900.sh"
-alias lvds="bash /home/pazpi/.screenlayout/LVDS1.sh"
-alias nfspi="sudo mount -t nfs 192.168.1.190:/media/1TORRHDD /mnt/1TORRHDD"
-alias sshpi="ssh pi@pazpi.local"
+# alias vga="bash /home/pazpi/.screenlayout/VGA1440x900.sh"
+# alias lvds="bash /home/pazpi/.screenlayout/LVDS1.sh"
+# alias nfspi="sudo mount -t nfs 192.168.1.190:/media/1TORRHDD /mnt/1TORRHDD"
+# alias sshpi="ssh pi@pazpi.local"
 alias cal="cal -m"
 alias tv='mpv dvb://"Italia1 HD"'
 alias yotobi="livestreamer twitch.tv/yotobi"
 alias :q='exit'
 alias :Q='exit'
 #alias v='vim'
-alias pacman='sudo pacman'
-alias HIST='echo > ~/.zsh/.zsh-history'
-alias TMP='sudo /bin/rm -rf /tmp/* /tmp/.* &>/dev/null'
-alias ls='ls -hF --color=auto --group-directories-first'
+# alias pacman='sudo pacman'
+# alias HIST='echo > ~/.zsh/.zsh-history'
+# alias TMP='sudo /bin/rm -rf /tmp/* /tmp/.* &>/dev/null'
+# alias ls='ls -hF --color=auto --group-directories-first'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
@@ -146,15 +141,15 @@ alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias reboot='sudo shutdown -r now'
 alias shutdown='sudo shutdown -h now'
-alias wifi='sudo wifi-menu wlp3s0'
-alias ipwifidown='sudo ip link set wlp3s0 down'
-alias ipwifiup='sudo ip link set wlp3s0 up'
+# alias wifi='sudo wifi-menu wlp3s0'
+# alias ipwifidown='sudo ip link set wlp3s0 down'
+# alias ipwifiup='sudo ip link set wlp3s0 up'
 alias youtube-wl='mpv -ytdl https://www.youtube.com/playlist?list=PLg-qQC6kJtcM6yLCBg1m-mUYoFRGBJ88g'
 alias youtube-max='youtube-dl -f bestvideo+bestaudio '
-alias aurcurl='cd AurPackage && curl -O'
-alias 'nvidia-settings'='optirun -b none nvidia-settings -c :8'
-alias tty-clock='tty-clock -scC 3'
-alias masterpdfeditor="pdfeditor"
+# alias aurcurl='cd AurPackage && curl -O'
+# alias 'nvidia-settings'='optirun -b none nvidia-settings -c :8'
+# alias tty-clock='tty-clock -scC 3'
+# alias masterpdfeditor="pdfeditor"
 alias rock="mpv http://tunein.com/radio/98-ROCK-979-s29726/"
 alias bc="bc -l"
 alias ram="watch -n 1 cat /proc/meminfo"
@@ -218,22 +213,22 @@ argc () {
         echo $count;
 }
 
-v () { if [[ `argc "$@"` > 1 ]]; then vim $@;
-                elif [ $1 = '' ]; then vim;
-                elif [ ! -f $1 ] || [ -w $1 ]; then vim $@;
+v () { if [[ `argc "$@"` > 1 ]]; then mvim $@;
+                elif [ $1 = '' ]; then mvim;
+                elif [ ! -f $1 ] || [ -w $1 ]; then mvim $@;
                 else
                         echo -n "File is Read-only. Edit as root? (Y/n): "
                         read -n 1 yn; echo;
                         if [ "$yn" = 'n' ] || [ "$yn" = 'N' ];
-                            then vim $*;
-                            else sudo -E vim $*;
+                            then mvim $*;
+                            else sudo -E mvim $*;
                         fi
                 fi
             }
 
-fzf-locate() { xdg-open "$(locate "*" | fzf -e -m)" ;}
-fzf-filetype() { xdg-open "$(locate ".$1" | fzf -e)" ;}
-fzf-playonlinux() { playonlinux --run '$(ls ~/.PlayOnLinux/shortcuts | fzf -e)' ;}            
+# fzf-locate() { xdg-open "$(locate "*" | fzf -e -m)" ;}
+# fzf-filetype() { xdg-open "$(locate ".$1" | fzf -e)" ;}
+# fzf-playonlinux() { playonlinux --run '$(ls ~/.PlayOnLinux/shortcuts | fzf -e)' ;}            
 
 # fe [FUZZY PATTERN] - Open the selected file with the default editor
 #   - Bypass fuzzy finder if there's only one match (--select-1)
@@ -287,18 +282,6 @@ rst=$'\e[0m'
 inv=$'\e[7m'
 #
 #
-cat << EOF
-
-$rst
- $f3  ▄███████▄                $f1  ▄██████▄    $f2  ▄██████▄    $f4  ▄██████▄    $f5  ▄██████▄    $f6  ▄██████▄    
- $f3▄█████████▀▀               $f1▄$f7█▀█$f1██$f7█▀█$f1██▄  $f2▄█$f7███$f2██$f7███$f2█▄  $f4▄█$f7███$f4██$f7███$f4█▄  $f5▄█$f7███$f5██$f7███$f5█▄  $f6▄██$f7█▀█$f6██$f7█▀█$f6▄
- $f3███████▀      $f7▄▄  ▄▄  ▄▄   $f1█$f7▄▄█$f1██$f7▄▄█$f1███  $f2██$f7█ █$f2██$f7█ █$f2██  $f4██$f7█ █$f4██$f7█ █$f4██  $f5██$f7█ █$f5██$f7█ █$f5██  $f6███$f7█▄▄$f6██$f7█▄▄$f6█
- $f3███████▄      $f7▀▀  ▀▀  ▀▀   $f1████████████  $f2████████████  $f4████████████  $f5████████████  $f6████████████  
- $f3▀█████████▄▄               $f1██▀██▀▀██▀██  $f2██▀██▀▀██▀██  $f4██▀██▀▀██▀██  $f5██▀██▀▀██▀██  $f6██▀██▀▀██▀██
- $f3  ▀███████▀                $f1▀   ▀  ▀   ▀  $f2▀   ▀  ▀   ▀  $f4▀   ▀  ▀   ▀  $f5▀   ▀  ▀   ▀  $f6▀   ▀  ▀   ▀ 
-$rst
-EOF
-
 
 # prompt
 PS1="\[\e[01;37m\]┌─\[\e[01;37m\][\[\e[01;32m\]\u\[\e[01;37m\]@\h]───[\t]: \w\[\e[01;37m\]\n\[\e[01;37m\]└──\[\e[01;37m\]──╼\[\e[0m\] "
