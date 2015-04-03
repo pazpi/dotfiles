@@ -1,27 +1,27 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-case $- in
-	*i*) ;;
-	  *) return;;
-esac
+# case $- in
+	# *i*) ;;
+	  # *) return;;
+# esac
 
 # Add vim as default editor
 export EDITOR=mvim
 export BROWSER=firefox
-export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
-export LC_ALL=en_US.UTF-8
+# export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
+# export LC_ALL=en_US.UTF-8
 #export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
-HISTCONTROL=ignoreboth
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+# HISTCONTROL=ignoreboth
+# PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 # append to the history file, don't overwrite it
-shopt -s histappend
+# shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=10000
-HISTFILESIZE=2000
+# HISTSIZE=10000
+# HISTFILESIZE=2000
 
 # set pager
 #export PAGER=/usr/bin/bash
@@ -30,7 +30,7 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 
 # Gtk themes 
-export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+# export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # complete -cf sudo
 # complete -cf man
@@ -64,43 +64,43 @@ export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 #echo
 
 # enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias dir='dir --color=auto'
-    alias vdir='vdir --color=auto'
+# if [ -x /usr/bin/dircolors ]; then
+    # test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    # alias ls='ls --color=auto'
+    # alias dir='dir --color=auto'
+    # alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+    # alias grep='grep --color=auto'
+    # alias fgrep='fgrep --color=auto'
+    # alias egrep='egrep --color=auto'
+# fi
 
-color_prompt=yes
+# color_prompt=yes
 
 # Bash Completion
-if [ -f /etc/bash_completion ]; then
-	    . /etc/bash_completion
-fi
+# if [ -f /etc/bash_completion ]; then
+		# . /etc/bash_completion
+# fi
 
 # Alias definitions.
-if [ -x ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
+# if [ -x ~/.bash_aliases ]; then
+    # . ~/.bash_aliases
+# fi
 
 # Function definitions.
-if [ -x ~/.bash_functions ]; then
-    . ~/.bash_functions
-fi
+# if [ -x ~/.bash_functions ]; then
+    # . ~/.bash_functions
+# fi
 
 # Prompt definitions.
-if [ -x ~/.bash_prompt ]; then
-    . ~/.bash_prompt
-fi
+# if [ -x ~/.bash_prompt ]; then
+    # . ~/.bash_prompt
+# fi
 
 ## MISC ALIASES ##
 #alias sudo="sudo -E"
-alias git-pull="git pull origin master"
-alias git-push="git push origin master"
+# alias git-pull="git pull origin master"
+# alias git-push="git push origin master"
 alias x="exit"
 alias q="exit"
 # alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -109,7 +109,7 @@ alias q="exit"
 alias grep='grep --color=tty -d skip'
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
-alias vp='vim PKGBUILD'
+# alias vp='vim PKGBUILD'
 # alias update='sudo pacman -Syu'
 # alias install='sudo pacman -S'
 # alias uninstall='sudo pacman -Rs'
@@ -119,7 +119,7 @@ alias vp='vim PKGBUILD'
 # alias missing='pacman -Qk'
 # alias trash='pacman -Qdt'
 # alias orphan='pacman -Rns $(pacman -Qtdq)'
-alias record="ffmpeg -y -f alsa -ac 2 -i pulse -f x11grab -r 30 -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -i :0.0 -acodec pcm_s16le output.wav -an -vcodec libx264 -threads 0 output.mp4"
+# alias record="ffmpeg -y -f alsa -ac 2 -i pulse -f x11grab -r 30 -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -i :0.0 -acodec pcm_s16le output.wav -an -vcodec libx264 -threads 0 output.mp4"
 # alias vga="bash /home/pazpi/.screenlayout/VGA1440x900.sh"
 # alias lvds="bash /home/pazpi/.screenlayout/LVDS1.sh"
 # alias nfspi="sudo mount -t nfs 192.168.1.190:/media/1TORRHDD /mnt/1TORRHDD"
@@ -271,19 +271,17 @@ cl() {
     fi
 }
 
-f=3 b=4
-for j in f b; do
-  for i in {0..7}; do
-    printf -v $j$i %b "\e[${!j}${i}m"
-  done
-done
-bld=$'\e[1m'
-rst=$'\e[0m'
-inv=$'\e[7m'
+# f=3 b=4
+# for j in f b; do
+  # for i in {0..7}; do
+    # printf -v $j$i %b "\e[${!j}${i}m"
+  # done
+# done
+# bld=$'\e[1m'
+# rst=$'\e[0m'
+# inv=$'\e[7m'
 #
 #
 
 # prompt
 PS1="\[\e[01;37m\]┌─\[\e[01;37m\][\[\e[01;32m\]\u\[\e[01;37m\]@\h]───[\t]: \w\[\e[01;37m\]\n\[\e[01;37m\]└──\[\e[01;37m\]──╼\[\e[0m\] "
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
