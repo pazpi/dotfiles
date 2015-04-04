@@ -28,7 +28,7 @@ xset -dpms; xset s off &
 ## Basic compositing effects
 compton -CGb &
 start-pulseaudio-x11 &
-
+xrandr-autodetect &
 ## Panel
 tint2 &
 #xfce4-panel &
