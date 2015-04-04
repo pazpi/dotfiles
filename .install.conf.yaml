@@ -22,6 +22,7 @@
     # ~/.config/openbox/environment: config/openbox/environment
     # ~/.config/openbox/menu.conf: config/openbox/menu.conf
     # ~/.config/openbox/rc.conf: config/openbox/rc.conf
+    ~/Pictures/dojanp.png: dojang.png        
     ~/.dotfiles: ''
     # ~/.gitconfig: gitconfig
     # ~/.gitignore_global: gitignore_global

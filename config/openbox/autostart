@@ -34,7 +34,7 @@ tint2 &
 #xfce4-panel &
 ## Background
 # (sleep 1s && nitrogen --restore) &
-feh --bg-tile ~/dotfiles/dojanp.png
+feh --bg-tile ~/Pictures/dojanp.png
 ## Battery Icon
 (sleep 1s && cbatticon -u 20 -i notification -c "systemctl hybrid-sleep" -l 15 -r 3) &
 (sleep 1s && volumeicon) &
