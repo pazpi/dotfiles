@@ -39,13 +39,13 @@
 				<execute>urxvtc -e vim</execute>
 			</action>
 		</item>
-		<item label="Media Player">
-			<action name="Execute">
-				<execute>
-                    vlc
-                </execute>
-			</action>
-		</item>
+		<!-- <item label="Media Player"> -->
+			<!-- <action name="Execute"> -->
+				<!-- <execute> -->
+                    <!-- vlc -->
+                <!-- </execute> -->
+			<!-- </action> -->
+		<!-- </item> -->
 		<separator/>
 		<menu id="accessories" label="Accessories">
             <!--
@@ -57,13 +57,13 @@
 			   -    </action>
 			   -</item>
                -->
-			<item label="Archive Manager">
-				<action name="Execute">
-					<execute>
-                        file-roller
-                    </execute>
-				</action>
-			</item>
+			<!-- <item label="Archive Manager"> -->
+				<!-- <action name="Execute"> -->
+					<!-- <execute> -->
+                        <!-- file-roller -->
+                    <!-- </execute> -->
+				<!-- </action> -->
+			<!-- </item> -->
 			<!--<item label="Aptana Studio 3">-->
 				<!--<action name="Execute">-->
 					<!--<execute>aptanastudio3</execute>-->
@@ -130,7 +130,7 @@
 			<menu id="network-522228" label="Dropbox">
 				<item label="start">
 					<action name="Execute">
-						<execute>dropboxd</execute>
+						<execute>dropbox</execute>
 					</action>
 				</item>
 				<item label="stop">
@@ -155,7 +155,7 @@
 			</menu>
 			<item label="Steam">
 				<action name="Execute">
-					<execute>primusrun steam</execute>
+					<execute>steam</execute>
 				</action>
 			</item>
 			<item label="Minecraft">
@@ -187,11 +187,11 @@
 					<execute>blender</execute>
 				</action>
 			</item>
-			<item label="Gimp">
-				<action name="Execute">
-					<execute>gimp</execute>
-				</action>
-			</item>
+			<!-- <item label="Gimp"> -->
+				<!-- <action name="Execute"> -->
+					<!-- <execute>gimp</execute> -->
+				<!-- </action> -->
+			<!-- </item> -->
 			<item label="Natron">
 				<action name="Execute">
 					<execute>natron</execute>
@@ -237,26 +237,26 @@
 			</menu>
 		</menu>
 		<menu id="multimedia" label="Multimedia">
-			<item label="XBMC">
+			<!-- <item label="XBMC"> -->
+				<!-- <action name="Execute"> -->
+					<!-- <execute>xbmc</execute> -->
+				<!-- </action> -->
+			<!-- </item> -->
+			<!-- <item label="Popcorn Time"> -->
+				<!-- <action name="Execute"> -->
+					<!-- <execute>/home/pazpi/Popcorn-Time-0.3.5.3-Linux64/Popcorn-Time</execute> -->
+				<!-- </action> -->
+			<!-- </item> -->
+			<!-- <item label="VLC Media Player"> -->
+				<!-- <action name="Execute"> -->
+					<!-- <execute> -->
+                        <!-- vlc -->
+                    <!-- </execute> -->
+				<!-- </action> -->
+			<!-- </item> -->
+			<item label="TV mpv">
 				<action name="Execute">
-					<execute>xbmc</execute>
-				</action>
-			</item>
-			<item label="Popcorn Time">
-				<action name="Execute">
-					<execute>/home/pazpi/Popcorn-Time-0.3.5.3-Linux64/Popcorn-Time</execute>
-				</action>
-			</item>
-			<item label="VLC Media Player">
-				<action name="Execute">
-					<execute>
-                        vlc
-                    </execute>
-				</action>
-			</item>
-			<item label="TV VLC">
-				<action name="Execute">
-					<execute>vlc /home/pazpi/channels-v.conf</execute>
+                    <execute>mpv dvb://Italia1 HD</execute>
 				</action>
 			</item>
 			<item label="PulseAudio VC">
@@ -276,21 +276,21 @@
 			<!--</item>-->
 		</menu>
 		<menu id="office" label="Office">
-			<item label="AbiWord">
-				<action name="Execute">
-					<execute>abiword</execute>
-				</action>
-			</item>
+			<!-- <item label="AbiWord"> -->
+				<!-- <action name="Execute"> -->
+					<!-- <execute>abiword</execute> -->
+				<!-- </action> -->
+			<!-- </item> -->
 			<item label="LibreOffice">
 				<action name="Execute">
 					<execute>libreoffice</execute>
                 </action>
             </item>
-			<item label="Gnumeric">
-				<action name="Execute">
-					<execute>gnumeric</execute>
-				</action>
-			</item>
+			<!-- <item label="Gnumeric"> -->
+				<!-- <action name="Execute"> -->
+					<!-- <execute>gnumeric</execute> -->
+				<!-- </action> -->
+			<!-- </item> -->
 			<item label="Calculator">
 				<action name="Execute">
 					<execute>
@@ -301,7 +301,7 @@
 			<item label="PDF Viewer">
 				<action name="Execute">
 					<execute>
-                       okular 
+                       qpdfview
                     </execute>
 				</action>
 			</item>
@@ -391,13 +391,13 @@
                         </execute>
 					</action>
 				</item>
-				<item label="Restart tint2">
-					<action name="Execute">
-						<execute>
-                            tint2restart
-                        </execute>
-					</action>
-				</item>
+				<!-- <item label="Restart tint2"> -->
+					<!-- <action name="Execute"> -->
+						<!-- <execute> -->
+                            <!-- tint2restart -->
+                        <!-- </execute> -->
+					<!-- </action> -->
+				<!-- </item> -->
 				<item label="TintWizard">
 					<action name="Execute">
 						<execute>tintwizard</execute>
@@ -427,25 +427,25 @@
                     </execute>
 				</action>
 			</item>
-			<item label="Choose Wallpaper">
-				<action name="Execute">
-					<execute>nitrogen</execute>
-				</action>
-			</item>
+			<!-- <item label="Choose Wallpaper"> -->
+				<!-- <action name="Execute"> -->
+					<!-- <execute>nitrogen</execute> -->
+				<!-- </action> -->
+			<!-- </item> -->
 		</menu>
 		<menu id="38" label="Utilities">
-			<menu id="software manger" label="Software Manager">
-				<item label="Pamac Updater">
-					<action name="Execute">
-						<execute>pamac-updater</execute>
-					</action>
-				</item>
-				<item label="Pacman Manager">
-					<action name="Execute">
-						<execute>pamac-manager</execute>
-					</action>
-				</item>
-			</menu>
+			<!-- <menu id="software manger" label="Software Manager"> -->
+				<!-- <item label="Pamac Updater"> -->
+					<!-- <action name="Execute"> -->
+						<!-- <execute>pamac-updater</execute> -->
+					<!-- </action> -->
+				<!-- </item> -->
+				<!-- <item label="Pacman Manager"> -->
+					<!-- <action name="Execute"> -->
+						<!-- <execute>pamac-manager</execute> -->
+					<!-- </action> -->
+				<!-- </item> -->
+			<!-- </menu> -->
 			<!--
 			   -<item label="7-Zip FM">
 			   -    <action name="Execute">
@@ -453,24 +453,24 @@
 			   -    </action>
 			   -</item>
                -->
-			<item label="Archive Manager">
-				<action name="Execute">
-					<execute>file-roller</execute>
-				</action>
-			</item>
-			<item label="Bulk Rename">
-				<action name="Execute">
-					<execute>/usr/lib/Thunar/ThunarBulkRename</execute>
-				</action>
-			</item>
-			<item label="Catfish File Search">
-				<action name="Execute">
-					<execute>catfish</execute>
-				</action>
-			</item>
+			<!-- <item label="Archive Manager"> -->
+				<!-- <action name="Execute"> -->
+					<!-- <execute>file-roller</execute> -->
+				<!-- </action> -->
+			<!-- </item> -->
+			<!-- <item label="Bulk Rename"> -->
+				<!-- <action name="Execute"> -->
+					<!-- <execute>/usr/lib/Thunar/ThunarBulkRename</execute> -->
+				<!-- </action> -->
+			<!-- </item> -->
+			<!-- <item label="Catfish File Search"> -->
+				<!-- <action name="Execute"> -->
+					<!-- <execute>catfish</execute> -->
+				<!-- </action> -->
+			<!-- </item> -->
 			<item label="Gparted">
 				<action name="Execute">
-					<execute>gparted_polkit</execute>
+					<execute>gksu gparted</execute>
 				</action>
 			</item>
 			<item label="Info">

@@ -447,9 +447,18 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
+          <name>weechat</name>
+        </startupnotify>
+        <command>urxvtc -e weechat-curses</command>
+      </action>
+    </keybind>
+    <keybind key="W-s">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
           <name>steam</name>
         </startupnotify>
-        <command>primusrun steam</command>
+        <command>steam</command>
       </action>
     </keybind>
     <keybind key="W-e">
@@ -461,15 +470,15 @@
         <command>urxvtc -e vim</command>
       </action>
     </keybind>
-    <keybind key="W-m">
-      <action name="Execute">
-        <startupnotify>
-          <enabled>true</enabled>
-          <name>Mediaplayer</name>
-        </startupnotify>
-        <command>vlc</command>
-      </action>
-    </keybind>
+    <!-- <keybind key="W-m"> -->
+      <!-- <action name="Execute"> -->
+        <!-- <startupnotify> -->
+          <!-- <enabled>true</enabled> -->
+          <!-- <name>Mediaplayer</name> -->
+        <!-- </startupnotify> -->
+        <!-- <command>vlc</command> -->
+      <!-- </action> -->
+    <!-- </keybind> -->
     <keybind key="Print">
       <action name="Execute">
         <startupnotify>
