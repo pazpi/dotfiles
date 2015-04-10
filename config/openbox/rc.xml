@@ -443,7 +443,7 @@
         <command>oblogout</command>
       </action>
     </keybind>
-    <keybind key="W-s">
+    <keybind key="W-i">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
@@ -528,12 +528,12 @@
     <!-- A bit of tiling (end) -->
     <keybind key="XF86MonBrightnessUp">
       <action name="Execute">
-        <command>light -s ideapad -A 10</command>
+        <command>xbacklight -inc 5</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessDown">
       <action name="Execute">
-        <command>light -s ideapad -U 10</command>
+        <command>xbacklight -dec 5</command>
       </action>
     </keybind>
     <!--<keybind key="XF86MonBrightnessUp">-->
