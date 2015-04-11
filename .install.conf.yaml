@@ -27,6 +27,7 @@
     ~/.dotfiles: ''
     # ~/.gitconfig: gitconfig
     # ~/.gitignore_global: gitignore_global
+    ~/.ncmpcpp/config: ncmpcpp/config
     ~/.rtorrent.rc: rtorrent.rc
     ~/.screenrc: screenrc
     # ~/.tmux.conf: tmux.conf
