@@ -23,7 +23,7 @@ directory = ~/Downloads/Varie
 # Default session directory. Make sure you don't run multiple instance
 # of rtorrent using the same session directory. Perhaps using a
 # relative path?
-session = ~/.session
+session = ~/.rtorrent/session
 
 # Watch a directory for new torrents, and stop those that have been
 # deleted.
