@@ -389,13 +389,13 @@
         <command>urxvtc</command>
       </action>
     </keybind>
-    <keybind key="W-S-n">
+    <keybind key="W-m">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
           <name>ncmpcpp-localhost</name>
         </startupnotify>
-        <command>urxvtc -e "ncmpcpp -h localhost"</command>
+        <command>urxvtc -e ncmpcpp -h localhost</command>
       </action>
     </keybind>
     <keybind key="W-n">
