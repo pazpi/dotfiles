@@ -194,7 +194,7 @@
 			<!-- </item> -->
 			<item label="Natron">
 				<action name="Execute">
-					<execute>natron</execute>
+                    <execute>/home/pazpi/Projects/Natron/Natron</execute>
 				</action>
 			</item>
 			<item label="Viewnior Image Viewer">

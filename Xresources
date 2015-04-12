@@ -15,7 +15,7 @@ URxvt.scrollBar: false
 URxvt.cursorUnderline: false
 URxvt.colorUL: #9695b5
 URxvt.internalBorder:0
-URxvt.saveLines: 65535
+URxvt.saveLines: 16384
 
 URxvt.font: xft:Terminus:pixelsize=15,xft:Inconsolata\ for\ Powerline:pixelsize=15:antialias=true:hinting=true
 URxvt.boldFont: xft:Terminus:bold:pixelsize=15,xft:Inconsolata\ for\ Powerline:bold:pixelsize=15:antialias=true:hinting=true
@@ -32,7 +32,7 @@ URxvt.borderless: true
 URxvt.depth: 32
 URxvt.background: [85]#000000
 
-URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+! URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
 Urxvt.perl-ext-common: default,clipboard
 !! Color !!
@@ -56,7 +56,7 @@ URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 ! Tab Managment
 URxvt.tabbed.new-button: true
 URxvt.tabbed.autohide: true
-URxvt.keysym.Alt-t: perl:tabbedex:new_tab
+! URxvt.keysym.Alt-t: perl:tabbedex:new_tab
 URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
 URxvt.keysym.Control-Shift-Tab: perl:tabbedex:prev_tab
 URxvt.keysym.Control-Shift-Left: perl:tabbedex:move_tab_left
@@ -309,7 +309,7 @@ URxvt*color15:     #ffffff
 ! URxvt*print-pipe: string
 
 ! Set scrollbar style to rxvt, plain, next or xterm. plain is the authors favourite.
-! URxvt*scrollstyle: mode
+URxvt*scrollstyle: rxvt
 
 ! Set the scrollbar width in pixels.
 ! URxvt*thickness: number
