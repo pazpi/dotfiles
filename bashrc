@@ -112,7 +112,7 @@ alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=au
 alias ll='ls -l --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias la='ls -la --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
 alias grep='grep --color=tty -d skip'
-alias df='df -h'                          # human-readable sizes
+alias df='df -hT'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias vp='vim PKGBUILD'
 alias update='sudo pacman -Syu'

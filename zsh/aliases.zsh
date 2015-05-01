@@ -63,13 +63,13 @@ alias la='ls -A'
 alias l='ls'
 
 # Aliases to protect against overwriting
-alias cp='cp -i'
-alias mv='mv -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
 
 # Update dotfiles
 function dfu() {
     (
-        cd ~/.dotfiles && git pullff && ./install -q
+        cd ~/Projects/dotfiles && git pullff && ./install -q
     )
 }
 
@@ -79,7 +79,7 @@ function syspip() {
 }
 
 # cd to git root directory
-alias cdgr='cd "$(git root)"'
+# alias cdgr='cd "$(git root)"'
 
 # Create a directory and cd into it
 function mcd() {
@@ -131,6 +131,20 @@ function in() {
         cd ${1} && shift && ${@}
     )
 }
+
+# Open vim in a smart way
+v () { if [[ `argc "$@"` > 1 ]]; then vim $@;
+                elif [ $1 = '' ]; then vim;
+                elif [ ! -f $1 ] || [ -w $1 ]; then vim $@;
+                else
+                        echo -n "File is Read-only. Edit as root? (Y/n): "
+                        read -n 1 yn; echo;
+                        if [ "$yn" = 'n' ] || [ "$yn" = 'N' ];
+                            then vim $*;
+                            else sudo -E vim $*;
+                        fi
+                fi
+            }
 
 # Check if a file contains non-ascii characters
 function nonascii() {

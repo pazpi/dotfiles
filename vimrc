@@ -30,6 +30,7 @@ endif
 call vundle#end()            " required
 "------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
+    Plug 'junegunn/seoul256.vim'
     Plug 'yegappan/mru'
     Plug 'klen/python-mode'
     Plug 'rstacruz/sparkup'
@@ -473,9 +474,12 @@ if has("mac")
     ">>>>>>> Stashed changes
     let g:rehash256 = 1
 else
-    colorscheme molokai
-    let g:molokai_original = 1
-    let g:rehash256 = 1
+    let g:seoul256_background = 233
+    colo seoul256
+    " set background=dark
+    " colorscheme molokai
+    " let g:molokai_original = 1
+    " let g:rehash256 = 1
 endif
 "-----------------------------------------------------------
 "
