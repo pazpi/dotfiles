@@ -389,6 +389,15 @@
         <command>urxvtc</command>
       </action>
     </keybind>
+    <keybind key="W-b">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>blender</name>
+        </startupnotify>
+        <command>blender</command>
+      </action>
+    </keybind>
     <keybind key="W-m">
       <action name="Execute">
         <startupnotify>

@@ -51,12 +51,13 @@ feh --bg-tile ~/Pictures/dojanp.png
 # (sleep 1s && pcmanfm -d) &
 (sleep 1s && conky) &
 (sleep 1s && conky -c .conkyCLOCK) &
-(sleep 1s && conky -c .conkyMPD -d) &
+(sleep 2s && conky -c .conkyMPD -d) &
 ## Optionally enable screensaver
 #(sleep 1s && xautolock -time 15 -locker 'xlock -mode blank') &
 # xscreensaver -no-splash &
 #(xrdb /home/pazpi/.Xresources) &
 # Disable screensaver when play video in VLC, mPlayer, Flash, ecc (see script for detail)
 (sleep 2s && lightsOn) &
+(sleep 2s && xrandr-autodetect) &
 ## Optionally disable touchpad
 #/usr/bin/synclient TouchpadOff=1 &
