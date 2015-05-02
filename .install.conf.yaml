@@ -2,9 +2,8 @@
 
 - shell:
     - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads ~/Pictures
-- cp dojanp.png ~/Pictures/dojanp.png
-  # - mkdir -p .config/openbox
-- git submodule update --init --recursive # after linking ~/.gitconfig
+    - cp dojanp.png ~/Pictures/dojanp.png
+    - git submodule update --init --recursive # after linking ~/.gitconfig
 
 - link:
     ~/.bashrc: bashrc
@@ -19,11 +18,6 @@
     ~/.config/openbox:
         create: true
         path: config/openbox
-    # ~/.config/openbox/autostart: config/openbox/autostart
-    # ~/.config/openbox/environment: config/openbox/environment
-    # ~/.config/openbox/menu.conf: config/openbox/menu.conf
-    # ~/.config/openbox/rc.conf: config/openbox/rc.conf
-    # ~/Pictures/dojanp.png: dojanp.png        
     ~/.dotfiles: ''
     # ~/.gitconfig: gitconfig
     # ~/.gitignore_global: gitignore_global
@@ -35,9 +29,7 @@
     ~/.vimrc: vimrc
     ~/.xinitrc: xinitrc
     ~/.Xresources: Xresources    
-    ~/.zprezto: zprezto
-        create: true
-        path: prezto
+    ~/.zprezto: prezto/
     ~/.zpreztorc: zpreztorc
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
