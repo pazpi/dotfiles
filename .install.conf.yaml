@@ -1,10 +1,10 @@
 - clean: ['~', '~/.config']
 
 - shell:
-  - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads ~/Pictures
-  - cp dojanp.png ~/Pictures/dojanp.png
+    - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads ~/Pictures
+- cp dojanp.png ~/Pictures/dojanp.png
   # - mkdir -p .config/openbox
-  - git submodule update # after linking ~/.gitconfig
+- git submodule update --init --recursive # after linking ~/.gitconfig
 
 - link:
     ~/.bashrc: bashrc
@@ -35,6 +35,9 @@
     ~/.vimrc: vimrc
     ~/.xinitrc: xinitrc
     ~/.Xresources: Xresources    
+    ~/.zprezto: zprezto
+        create: true
+        path: prezto
     ~/.zpreztorc: zpreztorc
     ~/.zsh: zsh/
     ~/.zshrc: zshrc
