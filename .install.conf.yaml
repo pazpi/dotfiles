@@ -35,5 +35,6 @@
     ~/.vimrc: vimrc
     ~/.xinitrc: xinitrc
     ~/.Xresources: Xresources    
+    ~/.zpreztorc: zpreztorc
     ~/.zsh: zsh/
     ~/.zshrc: zshrc

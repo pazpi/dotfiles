@@ -151,5 +151,51 @@ function nonascii() {
     LC_ALL=C grep -n '[^[:print:][:space:]]' ${1}
 }
 
+# fzf-shortcut
+fzf-locate() { xdg-open "$(locate "*" | fzf -e -m)" ;}
+fzf-filetype() { xdg-open "$(locate ".$1" | fzf -e)" ;}
+fzf-playonlinux() { playonlinux --run '$(ls ~/.PlayOnLinux/shortcuts | fzf -e)' ;}            
+
+# fe [FUZZY PATTERN] - Open the selected file with the default editor
+#   - Bypass fuzzy finder if there's only one match (--select-1)
+#   - Exit if there's no match (--exit-0)
+fe() {
+  local file
+  file=$(fzf --query="$1" --select-1 --exit-0)
+  [ -n "$file" ] && ${EDITOR:-vim} "$file"
+}
+
+# fd - cd to selected directory
+fd() {
+  local dir
+  dir=$(find ${1:-*} -path '*/\.*' -prune \
+                  -o -type d -print 2> /dev/null | fzf +m) &&
+  cd "$dir"
+}
+
+# fkill - kill process
+fkill() {
+  ps -ef | sed 1d | fzf -m | awk '{print $2}' | xargs kill -${1:-9}
+}
+
+# cd and ls in one
+cl() {
+    dir=$1
+    if [[ -z "$dir" ]]; then
+        dir=$HOME
+    fi
+    if [[ -d "$dir" ]]; then
+        cd "$dir"
+        ls
+    else
+        echo "bash: cl: '$dir': Directory not found"
+    fi
+}
+
 # Mirror a website
 alias mirrorsite='wget -m -k -K -E -e robots=off'
+
+# fh - repeat history
+fh() {
+  eval $(([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s | sed 's/ *[0-9]* *//')
+}
