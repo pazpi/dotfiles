@@ -6,8 +6,8 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-*foreground: rgb:b2/b2/b2
-*background: rgb:08/08/08
+! *foreground: rgb:b2/b2/b2
+! *background: rgb:08/08/08
 !! Urxvt config !!
 !!Technical stuff
  
@@ -30,7 +30,7 @@ URxvt.geometry: 105x33
 URxvt.borderless: true 
 
 URxvt.depth: 32
-URxvt.background: [85]#000000
+! URxvt.background: [85]#000000
 
 ! URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
@@ -67,139 +67,28 @@ URxvt.tabbed.no-tabbedex-keys: true
 !! Fullscreen
 URxvt.keysym.F11: perl:fullscreen:switch
 
-!! --- ~/.Xresources ------------------------------------------------------------
-!! ------------------------------------------------------------------------------
-!! --- generated with 4bit Terminal Color Scheme Designer -----------------------
-!! ------------------------------------------------------------------------------
-!! --- http://ciembor.github.com/4bit -------------------------------------------
-!! ------------------------------------------------------------------------------
-
-!! --- special colors ---
-
-!*background: #0d1926
-!*foreground: #d9e6f2
-
-!! --- standard colors ---
-
-!! black
-!*color0: #000000
-
-!! bright_black
-!*color8: #262626
-
-!! red
-!*color1: #b87a7a
-
-!! bright_red
-!*color9: #dbbdbd
-
-!! green
-!*color2: #7ab87a
-
-!! bright_green
-!*color10: #bddbbd
-
-!! yellow
-!*color3: #b8b87a
-
-!! bright_yellow
-!*color11: #dbdbbd
-
-!! blue
-!*color4: #7a7ab8
-
-!! bright_blue
-!*color12: #bdbddb
-
-!! magenta
-!*color5: #b87ab8
-
-!! bright_magenta
-!*color13: #dbbddb
-
-!! cyan
-!*color6: #7ab8b8
-
-!! bright_cyan
-!*color14: #bddbdb
-
-!! white
-!*color7: #d9d9d9
-
-!! bright_white
-!*color15: #ffffff
-
-
-!! ------------------------------------------------------------------------------
-!! --- end of terminal colors section -------------------------------------------
-!! ------------------------------------------------------------------------------
-
-!Xresources
-
-!*background:#222222
-!*foreground:#e8e9ca
-
-!*color0:    #222222
-!*color1:    #8b3e2f
-!*color2:    #526f33
-!*color3:    #665847
-!*color4:    #4a708b
-!*color5:    #7a378b
-!*color6:    #528b8b
-!*color7:    #999999
-
-!*color8:    #4c4c4c
-!*color9:    #d75f00
-!*color10:   #cee318
-!*color11:   #eee685
-!*color12:   #9ac0cd
-!*color13:   #9f79ee
-!*color14:   #79cdcd
-!*color15:   #e8e9ca
-
-! Other colors
-! black + red
-!URxvt*color0:     #3f3f3f
-URxvt*color0:      #000000
-URxvt*color1:      #e01010
-! green + yellow
-URxvt*color2:      #00AA00
-URxvt*color3:      #FFFF00
-! blue + purple
-URxvt*color4:      #27364D
-URxvt*color5:      #A020F0
-! cyan + white
-URxvt*color6:      #5B5BC7
-URxvt*color7:      #fefefe
-! bright-black + bright-red
-URxvt*color8:      #6a6a6a
-URxvt*color9:      #FF5555
-! bright-green + bright-yellow
-URxvt*color10:     #0BBF0B
-URxvt*color11:     #ffff2f
-! bright-blue + bright-purple
-URxvt*color12:     #5B5BC7
-URxvt*color13:     #e628ba
-! bright-cyan + bright-white
-URxvt*color14:     #7D7DFB
-URxvt*color15:     #ffffff
-!URxvt.color0 =       !black
-!URxvt.color1 =       !red3
-!URxvt.color2 =       !green3
-!URxvt.color3 =       !yellow3
-!URxvt.color4 =       !blue2
-!URxvt.color5 =       !magenta3
-!URxvt.color6 =       !cyan3
-!URxvt.color7 =       !gray90
-!URxvt.color8 =       !grey50
-!URxvt.color9 =       !red
-!URxvt.color10 =      !green
-!URxvt.color11 =      !yellow
-!URxvt.color12 =      !blue
-!URxvt.color13 =      !magenta
-!URxvt.color14 =      !cyan
-!URxvt.color15 =      !white
-
+! Seoul246 colorscheme
+URxvt.background: [85]#121212 
+URxvt.foreground: #d0d0d0 
+URxvt.color0: #4e4e4e
+URxvt.color1: #d68787 
+URxvt.color2: #33CC33
+URxvt.color3: #d8af5f
+URxvt.color4: #85add4
+URxvt.color5: #d7afaf
+URxvt.color6: #87afaf
+URxvt.color7: #d0d0d0
+URxvt.color8: #626262
+URxvt.color9: #d75f87
+URxvt.color10: #87af87
+URxvt.color11: #ffd787 
+URxvt.color12: #add4fb
+URxvt.color13: #ffafaf
+URxvt.color14: #87d7d7
+URxvt.color15: #e4e4e4
+URxvt.cursorColor: #d0d0d0
+URxvt.cursorColor2: #3a3a3a
+URxvt.colorBD: #e4e4e4
 
 ! Compile xft: Attempt to find a visual with the given bit depth; option -depth.
 !URxvt*depth: bitdepth
@@ -282,7 +171,7 @@ URxvt*color15:     #ffffff
 ! URxvt*boldItalicFont: fontlist
 
 ! When font styles are not enabled, or this option is enabled (True, option -is, the default),
-! URxvt*intensityStyles: boolean
+URxvt*intensityStyles: false
 
 ! Set window title string, the default title is the command-line specified after the -e option, if
 ! URxvt*title: string
@@ -309,7 +198,7 @@ URxvt*color15:     #ffffff
 ! URxvt*print-pipe: string
 
 ! Set scrollbar style to rxvt, plain, next or xterm. plain is the authors favourite.
-URxvt*scrollstyle: rxvt
+URxvt*scrollstyle: plain
 
 ! Set the scrollbar width in pixels.
 ! URxvt*thickness: number
@@ -336,7 +225,7 @@ URxvt*scrollstyle: rxvt
 ! URxvt*scrollTtyKeypress: boolean
 
 ! Save number lines in the scrollback buffer [default 64]. This resource is limited on most machines
-! URxvt*saveLines: number
+URxvt*saveLines: 65535
 
 ! Internal border of number pixels. This resource is limited to 100; option -b.
 ! URxvt*internalBorder: number
@@ -475,17 +364,41 @@ URxvt*secondaryScroll: 0
 
 ! xterm ----------------------------------------------------------------------
 
-xterm*VT100.geometry:     105x33
-xterm*faceName:           Terminus:style=Regular:size=10
-!xterm*font:              -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
-xterm*dynamicColors:      true
-xterm*utf8:               2
-xterm*eightBitInput:      true
-xterm*saveLines:          512
-xterm*scrollKey:          true
-xterm*scrollTtyOutput:    false
-xterm*scrollBar:          true
-xterm*rightScrollBar:     true
-xterm*jumpScroll:         true
-xterm*multiScroll:        true
-xterm*toolBar:            false
+xterm*VT100.geometry:  105x33
+xterm*faceName:        Terminus:style=Regular:size=10
+!xterm*font:           -*-dina-medium-r-*-*-16-*-*-*-*-*-*-*
+xterm*dynamicColors:   true
+xterm*utf8:            2
+xterm*eightBitInput:   true
+xterm*saveLines:       512
+xterm*scrollKey:       true
+xterm*scrollTtyOutput: false
+xterm*scrollBar:       true
+xterm*rightScrollBar:  true
+xterm*jumpScroll:      true
+xterm*multiScroll:     true
+xterm*toolBar:         false
+xterm*termName:        xterm-256color
+
+xterm*background: #121212 
+xterm*foreground: #d0d0d0 
+! xterm*color0: #4e4e4e
+! xterm*color1: #d68787 
+! xterm*color2: #33CC33
+! xterm*color3: #d8af5f
+! xterm*color4: #85add4
+! xterm*color5: #d7afaf
+! xterm*color6: #87afaf
+! xterm*color7: #d0d0d0
+! xterm*color8: #626262
+! xterm*color9: #d75f87
+! xterm*color10: #87af87
+! xterm*color11: #ffd787 
+! xterm*color12: #add4fb
+! xterm*color13: #ffafaf
+! xterm*color14: #87d7d7
+! xterm*color15: #e4e4e4
+! xterm*cursorColor: #d0d0d0
+! xterm*cursorColor2: #3a3a3a
+! xterm*colorBD: #e4e4e4
+

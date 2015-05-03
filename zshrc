@@ -41,7 +41,6 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt HIST_IGNORE_DUPS
-bindkey -v
 autoload zmv
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 # End of lines configured by zsh-newuser-install

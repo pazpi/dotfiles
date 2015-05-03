@@ -1,5 +1,6 @@
 # Initialize completion
 autoload -Uz compinit && compinit
+zstyle ':completion:*' rehash true
 
 # Initialize editing command line
 autoload -U edit-command-line && zle -N edit-command-line

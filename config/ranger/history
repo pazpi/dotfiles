@@ -1,0 +1,50 @@
+deletey
+open_with qpdf
+open_with qpdfview
+rename Foto
+rename mav nadia
+rename mav-nadia.pdf
+mkdir mod
+find 
+rename mods
+rename 09 Destitute and Losin'1.mp3
+rename 03 Briganti di montagna.mp3
+open_with 0
+mkdir Foto Eventi
+rename weechat.confBCK
+rename weechat.confMAYBE
+rename session/
+rename configOLD
+mkdir Blender
+mkdir Tutorial Chander Ruzzi
+rename logger.conf
+rename plugins.conf
+rename relay.conf
+rename 
+rename script.conf
+rename sec.conf
+rename trigger.conf
+rename weechat.conf
+mkdir Fisica Martino
+rename Fisica Nerd
+rename minecraft/
+open_with 
+rename CE1-p2-Teoria-Decisione.pdf
+rename CE1-p1-Modulazioni.pdf
+rename CE1-p1-14-15.pdf
+open_with blender
+rename bjt-split.blend
+open_with 1
+open_with 2
+rename bjt.blend
+rename bjt-Pas.blend
+rename Roma-mamma
+rename Rome-bepi-turbo
+rename bjt_torrisi_idea.blend
+rename bjt_torrisi_idea2.blend
+shell 
+shell
+
+open_with mpv
+mkdir Pictures
+delete

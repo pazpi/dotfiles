@@ -18,6 +18,9 @@
     ~/.config/openbox:
         create: true
         path: config/openbox
+    ~/.config/ranger:
+        create: true
+        path: config/ranger
     ~/.dotfiles: ''
     # ~/.gitconfig: gitconfig
     # ~/.gitignore_global: gitignore_global
