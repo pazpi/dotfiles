@@ -52,6 +52,8 @@ alias masterpdfeditor="pdfeditor"
 alias rock="mpv http://tunein.com/radio/98-ROCK-979-s29726/"
 alias bc="bc -l"
 alias ram="watch -n 1 cat /proc/meminfo"
+alias serveThis="php -S localhost:8080"
+alias rtorrent="screen -m -fa -S rtorrent /usr/bin/rtorrent"
 #
 # Use colors in coreutils utilities output
 # alias ls='ls --color=auto'

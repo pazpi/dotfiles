@@ -438,11 +438,20 @@
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
-          <name>dmenu</name>
+          <name>rofi</name>
         </startupnotify>
-        <command>dmenu_run -fn -misc-fixed-*-*-*-*-20-200-*-*-*-*-*-*  -i -nf 'gray' -sb 'dark green' -nb 'dim gray'</command>
+        <command>rofi -show run -font "snap 10" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 85</command>
       </action>
     </keybind>
+    <!-- <keybind key="W-z"> -->
+      <!-- <action name="Execute"> -->
+        <!-- <startupnotify> -->
+          <!-- <enabled>true</enabled> -->
+          <!-- <name>dmenu</name> -->
+        <!-- </startupnotify> -->
+        <!-- <command>dmenu_run -fn -misc-fixed-*-*-*-*-20-200-*-*-*-*-*-*  -i -nf 'gray' -sb 'dark green' -nb 'dim gray'</command> -->
+      <!-- </action> -->
+    <!-- </keybind> -->
     <keybind key="W-x">
       <action name="Execute">
         <startupnotify>

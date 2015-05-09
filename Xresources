@@ -404,3 +404,4 @@ xterm*foreground: #d0d0d0
 ! xterm*cursorColor2: #3a3a3a
 ! xterm*colorBD: #e4e4e4
 
+rofi.terminal: urxvt

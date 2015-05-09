@@ -1,34 +1,3 @@
-deletey
-open_with qpdf
-open_with qpdfview
-rename Foto
-rename mav nadia
-rename mav-nadia.pdf
-mkdir mod
-find 
-rename mods
-rename 09 Destitute and Losin'1.mp3
-rename 03 Briganti di montagna.mp3
-open_with 0
-mkdir Foto Eventi
-rename weechat.confBCK
-rename weechat.confMAYBE
-rename session/
-rename configOLD
-mkdir Blender
-mkdir Tutorial Chander Ruzzi
-rename logger.conf
-rename plugins.conf
-rename relay.conf
-rename 
-rename script.conf
-rename sec.conf
-rename trigger.conf
-rename weechat.conf
-mkdir Fisica Martino
-rename Fisica Nerd
-rename minecraft/
-open_with 
 rename CE1-p2-Teoria-Decisione.pdf
 rename CE1-p1-Modulazioni.pdf
 rename CE1-p1-14-15.pdf
@@ -42,9 +11,40 @@ rename Roma-mamma
 rename Rome-bepi-turbo
 rename bjt_torrisi_idea.blend
 rename bjt_torrisi_idea2.blend
-shell 
 shell
-
 open_with mpv
 mkdir Pictures
+mkdir Muddy Waters
+rename Muddy Waters - 1989 - Muddy, Brass and the Blues
+rename Muddy Waters - 1967 - Bo Diddley & Howlin Wolf & Muddy Waters - The Super Super Blues Band
+rename Muddy Waters - 1967 - Bo Diddley & Little Walter & Muddy Waters- Super Blues
+mkdir Live
+rename Muddy Waters - 1992 - The Complete Chess Muddy Waters 1947-1967
+rename Muddy Waters - 1964-1968 - Otis Spann & Muddy Waters- Live The Life
+rename Muddy Waters - 1997 - Otis Spann & Muddy Waters- Live The Life
+rename Muddy Waters - 1993 - The Complete Plantation Recordings 1941-1942
+rename
+rename Muddy Waters - 1993 - 28 Great Blues Songs/
+shell 
+shell youtube-dl 
+rename Muddy Waters - 1989 - The Chess Box 1947-1972
+rename Muddy Waters - 2009 - The Johnny Winter Sessions 1976-1981
+rename Muddy Waters - 1966 - Big Mama Thornton with the Muddy Waters Blues Band
+shell dos2unix 
+shell dos2unix Info\ File\ Muddy\ Waters\ Cambridge\ Club\ 47\ Aug.\ 24th\ 1966.txt
+rename Muddy Waters - 1979 - Muddy 'Missispi' Waters Live
+rename Muddy Waters - 1993 - Hoochie Coochie Man
+rename Muddy Waters - 1981 - The Rolling Stones & Muddy Waters- Checkerboard Lounge
+mkdir no-tag
+touch 
+rename The Original Recordings 1990-2003
+rename Oratorium
+rename Cordialmente
+rename PWM
+rename PWM-Example
+rename Sigla Finale
+rename b
+rename bjt_torrisi_idea3.blend
+rename auto-no_expo_il_manifestante.mp4
+
 delete
