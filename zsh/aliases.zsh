@@ -54,6 +54,7 @@ alias bc="bc -l"
 alias ram="watch -n 1 cat /proc/meminfo"
 alias serveThis="php -S localhost:8080"
 alias rtorrent="screen -m -fa -S rtorrent /usr/bin/rtorrent"
+alias sl="sl"
 #
 # Use colors in coreutils utilities output
 # alias ls='ls --color=auto'

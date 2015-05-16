@@ -269,6 +269,13 @@
       </action>
     </keybind>
     <!-- Keybindings for MPD/MPC -->
+    <keybind key="W-A-z">
+      <action name="Execute">
+        <enabled>true</enabled>
+        <name>clerk</name>
+        <execute>clerk</execute>
+      </action>
+    </keybind>
     <keybind key="W-A-Right">
       <action name="Execute">
         <enabled>true</enabled>
