@@ -1,9 +1,3 @@
-rename bjt_torrisi_idea.blend
-rename bjt_torrisi_idea2.blend
-shell
-open_with mpv
-mkdir Pictures
-mkdir Muddy Waters
 rename Muddy Waters - 1989 - Muddy, Brass and the Blues
 rename Muddy Waters - 1967 - Bo Diddley & Howlin Wolf & Muddy Waters - The Super Super Blues Band
 rename Muddy Waters - 1967 - Bo Diddley & Little Walter & Muddy Waters- Super Blues
@@ -39,7 +33,6 @@ find Va
 find V
 rename Dani.Daniels.Girl.Perversions.XXX.DVDRip.x264-UPPERCUT
 tab_move 
-tab_new 
 rename Foto papa
 rename Inernal Memory
 open_with 
@@ -47,4 +40,11 @@ open_with gtkwave
 
 rename octavespice
 mkdir Appendiabiti
+find 
+open_with natron
+mkdir Switching Eletronica
+rename locandina-nadia-finale.png
+mkdir Natron-Video
+tab_new 
+rename Tracce Progetti
 delete

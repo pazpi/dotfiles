@@ -30,6 +30,7 @@ endif
 call vundle#end()            " required
 "------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
+    Plug 'suan/vim-instant-markdown'
     Plug 'junegunn/seoul256.vim'
     Plug 'yegappan/mru'
     Plug 'klen/python-mode'

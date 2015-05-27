@@ -24,6 +24,7 @@ KEYTIMEOUT=1 # corresponds to 10ms
 
 # Use vim as the editor
 export EDITOR=vim
+export TERM=xterm
 
 # Use vim style line editing in zsh
 bindkey -v
