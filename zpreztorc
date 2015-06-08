@@ -157,3 +157,6 @@ zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 
 # Integrate with iTerm2.
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+
+# Passpie completion
+if which passpie > /dev/null; then eval "$(passpie complete zsh)"; fi

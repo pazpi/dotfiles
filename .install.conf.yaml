@@ -3,6 +3,7 @@
 - shell:
     - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads ~/Pictures
     - cp dojanp.png ~/Pictures/dojanp.png
+    - cp Terminal-icon.png ~/Pictures/Terminal-icon.png
     - git submodule update --init --recursive # after linking ~/.gitconfig
 
 - link:

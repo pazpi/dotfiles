@@ -39,6 +39,37 @@
 				<execute>urxvtc -e vim</execute>
 			</action>
 		</item>
+			<menu id="graphicsScreenshots" label="Screenshot">
+				<separator label="scrot"/>
+				<item label="Now">
+					<action name="Execute">
+						<execute>
+                            scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
+                        </execute>
+					</action>
+				</item>
+				<item label="In 5 Seconds...">
+					<action name="Execute">
+						<execute>
+                            scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
+                        </execute>
+					</action>
+				</item>
+				<item label="In 10 Seconds...">
+					<action name="Execute">
+						<execute>
+                            scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
+                        </execute>
+					</action>
+				</item>
+				<item label="Selected Area... (click &amp; drag mouse)">
+					<action name="Execute">
+						<execute>
+                            scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
+                        </execute>
+					</action>
+				</item>
+			</menu>
 		<!-- <item label="Media Player"> -->
 			<!-- <action name="Execute"> -->
 				<!-- <execute> -->
@@ -142,7 +173,7 @@
 		</menu>
 		<menu id="games" label="Games">
 			<menu id="games-465427" label="Dwarf Fortress">
-				<item label="Dwarf Fortress">
+				<item label="Dwarf Fortress LNP">
 					<action name="Execute">
 						<execute>dwarf-fortress</execute>
 					</action>
@@ -194,7 +225,7 @@
 			<!-- </item> -->
 			<item label="Natron">
 				<action name="Execute">
-                    <execute>/home/pazpi/Projects/Natron/Natron</execute>
+                    <execute>natron</execute>
 				</action>
 			</item>
 			<item label="Viewnior Image Viewer">
@@ -204,37 +235,37 @@
                     </execute>
 				</action>
 			</item>
-			<menu id="graphicsScreenshots" label="Take Screenshot">
-				<separator label="scrot"/>
-				<item label="Now">
-					<action name="Execute">
-						<execute>
-                            scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshot/ &amp; viewnior ~/Pictures/Screenshot/$f'
-                        </execute>
-					</action>
-				</item>
-				<item label="In 5 Seconds...">
-					<action name="Execute">
-						<execute>
-                            scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshot/ &amp; viewnior ~/Pictures/Screenshot/$f'
-                        </execute>
-					</action>
-				</item>
-				<item label="In 10 Seconds...">
-					<action name="Execute">
-						<execute>
-                            scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshot/ &amp; viewnior ~/Pictures/Screenshot/$f'
-                        </execute>
-					</action>
-				</item>
-				<item label="Selected Area... (click &amp; drag mouse)">
-					<action name="Execute">
-						<execute>
-                            scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshot/ &amp; viewnior ~/Pictures/Screenshot/$f'
-                        </execute>
-					</action>
-				</item>
-			</menu>
+			<!-- <menu id="graphicsScreenshots" label="Take Screenshot"> -->
+				<!-- <separator label="scrot"/> -->
+				<!-- <item label="Now"> -->
+					<!-- <action name="Execute"> -->
+						<!-- <execute> -->
+                            <!-- scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f' -->
+                        <!-- </execute> -->
+					<!-- </action> -->
+				<!-- </item> -->
+				<!-- <item label="In 5 Seconds..."> -->
+					<!-- <action name="Execute"> -->
+						<!-- <execute> -->
+                            <!-- scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f' -->
+                        <!-- </execute> -->
+					<!-- </action> -->
+				<!-- </item> -->
+				<!-- <item label="In 10 Seconds..."> -->
+					<!-- <action name="Execute"> -->
+						<!-- <execute> -->
+                            <!-- scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f' -->
+                        <!-- </execute> -->
+					<!-- </action> -->
+				<!-- </item> -->
+				<!-- <item label="Selected Area... (click &amp; drag mouse)"> -->
+					<!-- <action name="Execute"> -->
+						<!-- <execute> -->
+                            <!-- scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f' -->
+                        <!-- </execute> -->
+					<!-- </action> -->
+				<!-- </item> -->
+			<!-- </menu> -->
 		</menu>
 		<menu id="multimedia" label="Multimedia">
 			<!-- <item label="XBMC"> -->

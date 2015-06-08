@@ -1,24 +1,3 @@
-rename Muddy Waters - 1989 - Muddy, Brass and the Blues
-rename Muddy Waters - 1967 - Bo Diddley & Howlin Wolf & Muddy Waters - The Super Super Blues Band
-rename Muddy Waters - 1967 - Bo Diddley & Little Walter & Muddy Waters- Super Blues
-mkdir Live
-rename Muddy Waters - 1992 - The Complete Chess Muddy Waters 1947-1967
-rename Muddy Waters - 1964-1968 - Otis Spann & Muddy Waters- Live The Life
-rename Muddy Waters - 1997 - Otis Spann & Muddy Waters- Live The Life
-rename Muddy Waters - 1993 - The Complete Plantation Recordings 1941-1942
-rename
-rename Muddy Waters - 1993 - 28 Great Blues Songs/
-shell 
-shell youtube-dl 
-rename Muddy Waters - 1989 - The Chess Box 1947-1972
-rename Muddy Waters - 2009 - The Johnny Winter Sessions 1976-1981
-rename Muddy Waters - 1966 - Big Mama Thornton with the Muddy Waters Blues Band
-shell dos2unix 
-shell dos2unix Info\ File\ Muddy\ Waters\ Cambridge\ Club\ 47\ Aug.\ 24th\ 1966.txt
-rename Muddy Waters - 1979 - Muddy 'Missispi' Waters Live
-rename Muddy Waters - 1993 - Hoochie Coochie Man
-rename Muddy Waters - 1981 - The Rolling Stones & Muddy Waters- Checkerboard Lounge
-mkdir no-tag
 touch 
 rename The Original Recordings 1990-2003
 rename Oratorium
@@ -35,9 +14,7 @@ rename Dani.Daniels.Girl.Perversions.XXX.DVDRip.x264-UPPERCUT
 tab_move 
 rename Foto papa
 rename Inernal Memory
-open_with 
 open_with gtkwave
-
 rename octavespice
 mkdir Appendiabiti
 find 
@@ -47,4 +24,27 @@ rename locandina-nadia-finale.png
 mkdir Natron-Video
 tab_new 
 rename Tracce Progetti
+find fsta
+rename Esercizi-Pt2-Blocco1.pdf
+rename Esercizi-Pt2-Blocco2.pdf
+rename Esercizi-Pt2-Blocco4.pdf
+rename Esercizi-Pt2-Blocco3.pdf_
+rename Esercizi-Pt2-Blocco3.pdf
+rename Esercizi-Pt1-Blocco1.pdf
+rename Esercizi-Pt1-Blocco2.pdf
+rename Esercizi-Pt1-Blocco3.pdf
+rename Esercizi-Pt1-Blocco4.pdf
+rename dwarf_therapist
+rename dwarftherapist
+rename DwarfTherapist
+mkdir Games
+
+rename Natron
+mkdir Maglia-rosa-track
+rename Fisica 2
+rename Teoria dei Segnali
+rename Campi Elettromagnetici
+open_with 
+rename Applause.wav
+rename game.mkv
 delete
