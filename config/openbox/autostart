@@ -25,6 +25,9 @@
 
 xset -dpms; xset s off &
 
+# Ssh Agent
+eval "$(ssh-agent -s)" &
+ssh-add "$HOME/.ssh/id_rsa_pi" &
 ## Basic compositing effects
 compton -CGb &
 start-pulseaudio-x11 &
