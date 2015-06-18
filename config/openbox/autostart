@@ -27,7 +27,7 @@ xset -dpms; xset s off &
 
 # Ssh Agent
 eval "$(ssh-agent -s)" &
-ssh-add "$HOME/.ssh/id_rsa_pi" &
+ssh-add "/home/pazpi/.ssh/id_rsa_pi" &
 ## Basic compositing effects
 compton -CGb &
 start-pulseaudio-x11 &
@@ -53,7 +53,7 @@ feh --bg-tile ~/Pictures/dojanp.png
 # (sleep 1s && pcmanfm -d) &
 (sleep 1s && conky) &
 (sleep 1s && conky -c .conkyCLOCK) &
-(sleep 2s && conky -c .conkyMPD -d) &
+(sleep 2s && conky -c .conkyMPD) &
 ## Optionally enable screensaver
 #(sleep 1s && xautolock -time 15 -locker 'xlock -mode blank') &
 # xscreensaver -no-splash &
