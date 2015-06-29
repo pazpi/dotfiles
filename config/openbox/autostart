@@ -1,27 +1,7 @@
-## ManjaroBox Autostart File
-##
-## 
-##
 ## Note that global autostart .desktop files will also be in 
 ## /etc/xdg/openbox/autostart. These will include applications
 ## such as the Network Manager and Parcellite
 ##
-
-## DPMS - Display Power Management Signaling
-## This is disabled by default to prevent auto-actions when
-## the system is idle, such as screen blanking (10 mins) or
-## suspending (1 hour).
-
-# if [ ! -d /bootmnt/manjaro ]; then
-    # rm ~/.config/autostart/manjaro-welcome.desktop
-# fi
-
-## Ensure that obmenu-generator (a pipe menu) is set to the user.
-## Does this for each session (i.e. ease of use for addtional
-## accounts where created.
-
-#sed -i "s,_homedir_,${HOME}," ~/.config/obmenu-generator/schema.pl
-#sed -i "s,_homedir_,${HOME}," ~/.config/obmenu-generator/config.pl
 
 xset -dpms; xset s off &
 
@@ -34,6 +14,8 @@ start-pulseaudio-x11 &
 ## Panel
 tint2 &
 #xfce4-panel &
+# Notification
+dunst &
 ## Background
 # (sleep 1s && nitrogen --restore) &
 feh --bg-tile ~/Pictures/dojanp.png

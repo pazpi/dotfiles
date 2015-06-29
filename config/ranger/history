@@ -1,12 +1,3 @@
-rename Dani.Daniels.Girl.Perversions.XXX.DVDRip.x264-UPPERCUT
-tab_move 
-rename Foto papa
-rename Inernal Memory
-open_with gtkwave
-rename octavespice
-mkdir Appendiabiti
-find 
-open_with natron
 mkdir Switching Eletronica
 rename locandina-nadia-finale.png
 mkdir Natron-Video
@@ -40,11 +31,20 @@ rename torrents.torrent
 rename torrents(1).torrent
 touch 
 rename dylandogofili.pdf
-open_with 
 rename 1986.10 [Dylan Dog 001] L'alba dei morti viventi (2r c2c) [Aquila omega].cbr
 rename 1986.10 [Dylan Dog 001] L'alba dei morti viventi (1e redazionali) [ozzyvillage].cbz
 open_with qpdfview
-open_with mcomix
 mkdir 
 mkdir Dati-oscilloscopio
+open_with mcomix
+open_with 
+open_with bash
+mkdir hand-of-fire
+rename Pink Floyd - The Wall (Disc 3 wav)
+rename Pink Floyd - The Wall (Disc 2 wav)
+rename Pink Floyd - The Wall (Disc 1 wav)
+mkdir The Wall
+rename The Wall (Disc 1)
+rename The Wall (Disc 2)
+rename fade-to-black.torrent
 delete

@@ -67,10 +67,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'wincent/command-t'
     Plug 'msanders/snipmate.vim'
     Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
-    "Plug 'LaTeX-Box-Team/LaTeX-Box'
     Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'tomasr/molokai', { 'dir': '~/.vim/colors'}
     "Plug 'LaTeX-Box-Team/LaTeX-Box'
+    Plug 'WolfgangMehner/vim-plugins'
     Plug 'alvan/vim-closetag'
 call plug#end()
 "------------------------------------------------------------

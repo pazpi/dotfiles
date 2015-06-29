@@ -1,7 +1,7 @@
 ##### connection settings #####
 mpd_host = "localhost"
 mpd_port = "6600"
-mpd_music_dir = "/home/pazpi/music/"
+mpd_music_dir = "/home/pazpi/Music/"
 
 ##### timeouts and delays #####
 #mpd_connection_timeout = "5"
