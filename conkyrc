@@ -1,37 +1,40 @@
-update_interval 2
-total_run_times 0
-net_avg_samples 1
-cpu_avg_samples 1
-imlib_cache_size 0
-double_buffer yes
-no_buffers yes
-use_xft yes
-#xftfont Droid Sans:size=9
-xftfont terminus:size=10
-override_utf8_locale yes
-text_buffer_size 2048
-own_window yes
-own_window_type desktop
-own_window_transparent yes
-#own_window_hints undecorated,sticky,skip_taskbar,skip_pager
-alignment top_right
-gap_x 18
-gap_y 40
-minimum_size 260 0
-default_bar_size 30 8
-draw_shades no
-default_color c5c5c5
-default_shade_color 000000
-color0 8DBC68
-color1 c5c5c5
-color2 c5c5c5
-own_window_argb_visual yes
-own_window_colour 000000
-own_window_argb_value 0
-draw_graph_borders no
-if_up_strictness link
+conky.config = {
+	update_interval = 2,
+	total_run_times = 0,
+	net_avg_samples = 1,
+	cpu_avg_samples = 1,
+	imlib_cache_size = 0,
+	double_buffer = true,
+	no_buffers = true,
+	use_xft = true,
+--xftfont Droid Sans:size=9
+	font = 'terminus:size=10',
+	override_utf8_locale = true,
+	text_buffer_size = 2048,
+	own_window = true,
+	own_window_type = 'desktop',
+	own_window_transparent = true,
+--own_window_hints undecorated,sticky,skip_taskbar,skip_pager
+	alignment = 'top_right',
+	gap_x = 18,
+	gap_y = 40,
+	minimum_width = 260, minimum_height = 0,
+	default_bar_width = 30, default_bar_height = 8,
+	draw_shades = false,
+	default_color = '#c5c5c5',
+	default_shade_color = '#000000',
+	color0 = '#8DBC68',
+	color1 = '#c5c5c5',
+	color2 = '#c5c5c5',
+	own_window_argb_visual = true,
+	own_window_colour = '#000000',
+	own_window_argb_value = 0,
+	draw_graph_borders = false,
+	if_up_strictness = 'link',
 
-TEXT
+};
+
+conky.text = [[
 ${color orange}SYSTEM INFORMATION ${hr 2}$color
 
  ${color white}${time %A},${time %e} ${time %B} ${time %G}${alignr}${time %H:%M:%S}
@@ -88,6 +91,7 @@ ${if_up wlp3s0}${color orange}WiFi ${wireless_link_qual_perc wlp3s0}% ${wireless
  ${downspeedgraph wlp3s0 25,150 000000 00ff00} ${alignr}${upspeedgraph wlp3s0 25,150 000000 ff0000}$color
  ${color white}Private IP: ${color}${addr wlp3s0}
  ${color white}Public  IP: ${color}${curl ifconfig.me/ip 60}${endif}
+
 #
 #S H O R T C U T K E Y S
 #
@@ -105,3 +109,4 @@ ${if_up wlp3s0}${color orange}WiFi ${wireless_link_qual_perc wlp3s0}% ${wireless
 #Super+v$alignr Volume Control
 #Super+x$alignr Logout
 #PrtSc$alignr Screenshot
+]];

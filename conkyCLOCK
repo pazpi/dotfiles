@@ -1,32 +1,35 @@
-update_interval 15
-total_run_times 0
-net_avg_samples 1
-cpu_avg_samples 1
-imlib_cache_size 0
-double_buffer yes
-no_buffers yes
-use_xft yes
-xftfont terminus:size=15
-override_utf8_locale yes
-text_buffer_size 2048
-own_window yes
-own_window_type desktop
-own_window_transparent yes
-#own_window_hints undecorated,sticky,skip_taskbar,skip_pager
-alignment bottom_left
-gap_x 18
-gap_y 40
-minimum_size 260 0
-default_bar_size 30 8
-draw_shades no
-default_color orange
-color1 222222
-own_window_argb_visual yes
-own_window_colour 000000
-own_window_argb_value 0
-draw_graph_borders no
+conky.config = {
+	update_interval = 15,
+	total_run_times = 0,
+	net_avg_samples = 1,
+	cpu_avg_samples = 1,
+	imlib_cache_size = 0,
+	double_buffer = true,
+	no_buffers = true,
+	use_xft = true,
+	font = 'terminus:size=15',
+	override_utf8_locale = true,
+	text_buffer_size = 2048,
+	own_window = true,
+	own_window_type = 'desktop',
+	own_window_transparent = true,
+--own_window_hints undecorated,sticky,skip_taskbar,skip_pager
+	alignment = 'bottom_left',
+	gap_x = 18,
+	gap_y = 40,
+	minimum_width = 260, minimum_height = 0,
+	default_bar_width = 30, default_bar_height = 8,
+	draw_shades = false,
+	default_color = 'orange',
+	color1 = '#222222',
+	own_window_argb_visual = true,
+	own_window_colour = '#000000',
+	own_window_argb_value = 0,
+	draw_graph_borders = false,
 
-TEXT
+};
+
+conky.text = [[
 
 ${color}I T ${color1}L ${color}I S ${color1}A S T I M E
 ${if_match ${exec date +"%M"} < 35}${if_match ${exec date +"%M"} >= 15}${if_match ${exec date +"%M"} < 20}${color}${endif}${endif}A ${color1}C ${if_match ${exec date +"%M"} >= 15}${if_match ${exec date +"%M"} < 20}${color}${endif}${endif}Q U A R T E R ${color1}D C
@@ -46,3 +49,4 @@ ${if_match ${exec date +"%I"} == 3}${color}${else}${color1}${endif}F O U R ${if_
 ${if_match ${exec date +"%I"} == 7}${color}${else}${color1}${endif}E I G H T${if_match ${exec date +"%I"} == 10}${color}${else}${color1}${endif} E L E V E N
 ${if_match ${exec date +"%I"} == 6}${color}${else}${color1}${endif}S E V E N${if_match ${exec date +"%I"} == 11}${color}${else}${color1}${endif} T W E L V E
 ${if_match ${exec date +"%I"} == 9}${color}${else}${color1}${endif}T E N ${endif}${color1}S E ${if_match ${exec date +"%M"} < 5}${color}${endif}O C L O C K
+]];
