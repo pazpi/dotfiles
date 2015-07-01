@@ -465,24 +465,24 @@ nnoremap L $
 "let g:solarized_termcolors=256
 "colorscheme solarized
 "call togglebg#map("<F6>")
-if has("mac")
-    "<<<<<<< Updated upstream
-    "let g:solarized_termcolors=256
-    "colorscheme solarized
-    "call togglebg#map("<F6>")
-    "=======
-    set background=dark
-    colorscheme solarized
-    ">>>>>>> Stashed changes
-    let g:rehash256 = 1
-else
+" if has("mac")
+    " "<<<<<<< Updated upstream
+    " "let g:solarized_termcolors=256
+    " "colorscheme solarized
+    " "call togglebg#map("<F6>")
+    " "=======
+    " set background=dark
+    " colorscheme solarized
+    " ">>>>>>> Stashed changes
+    " let g:rehash256 = 1
+" else
     let g:seoul256_background = 233
     colo seoul256
     " set background=dark
     " colorscheme molokai
     " let g:molokai_original = 1
     " let g:rehash256 = 1
-endif
+" endif
 "-----------------------------------------------------------
 "
 "vim airline -----------------------------------------------
