@@ -89,6 +89,7 @@ let mapleader=","
 let maplocalleader="\\"
 
 " Editing behaviour {{{
+" set timeoutlen=50
 set showmode                    " always show what mode we're currently editing in
 set nowrap                      " don't wrap lines
 set tabstop=4                   " a tab is four spaces
@@ -489,7 +490,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '>'
-"let g:Powerline_symbols = "fancy"
+let g:Powerline_symbols = "fancy"
 set laststatus=2
 "-----------------------------------------------------------
 "NERDTree---------------------------------------------------
