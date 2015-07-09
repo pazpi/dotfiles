@@ -14,6 +14,7 @@ fi
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 urxvtd -q -f -o
 
+export "XDG_CONFIG_HOME=$HOME/.config"
 export "MPD_HOST=192.168.1.190"
 export "MPD_PORT=6600"
 
@@ -47,6 +48,8 @@ xscreensaver -no-splash &
 # nitrogen --restore &
 # compton -CGb &
 # Here openbox is kept as default
+
+# exec awesome
 
 session=${1:-openbox}
 
