@@ -13,30 +13,30 @@
 set nocompatible
 " Vundle  {{{
 filetype off                    " force reloading *after* pathogen loaded
-"------------------------------------------------------------
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-if has("mac")
-    Bundle 'Valloric/YouCompleteMe'
-endif
+" "------------------------------------------------------------
+" " set the runtime path to include Vundle and initialize
+" set rtp+=~/.vim/bundle/Vundle.vim
+" call vundle#begin()
+" if has("mac")
+    " Bundle 'Valloric/YouCompleteMe'
+" endif
 
-Plugin 'gmarik/Vundle.vim'
-if has("mac")
-    Plugin 'bling/vim-airline'
-    Plugin 'altercation/vim-colors-solarized'
-endif
+" Plugin 'gmarik/Vundle.vim'
+" if has("mac")
+    " Plugin 'bling/vim-airline'
+    " Plugin 'altercation/vim-colors-solarized'
+" endif
 
-call vundle#end()            " required
-"------------------------------------------------------------
+" call vundle#end()            " required
+" "------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
     if has("mac")
-        Plug 'Valloric/YouCompleteMe'
+        Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
     endif
 
     if has("mac")
-        Plugin 'bling/vim-airline'
-        Plugin 'altercation/vim-colors-solarized'
+        Plug 'bling/vim-airline'
+        Plug 'altercation/vim-colors-solarized'
     endif
     Plug 'suan/vim-instant-markdown'
     Plug 'junegunn/seoul256.vim'
