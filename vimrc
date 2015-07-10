@@ -30,6 +30,14 @@ endif
 call vundle#end()            " required
 "------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
+    if has("mac")
+        Plug 'Valloric/YouCompleteMe'
+    endif
+
+    if has("mac")
+        Plugin 'bling/vim-airline'
+        Plugin 'altercation/vim-colors-solarized'
+    endif
     Plug 'suan/vim-instant-markdown'
     Plug 'junegunn/seoul256.vim'
     Plug 'yegappan/mru'
@@ -65,7 +73,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
     " Plug 'KabbAmine/vCoolor.vim'
     Plug 'wincent/command-t'
-    Plug 'msanders/snipmate.vim'
+    " Plug 'msanders/snipmate.vim'
+    Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
     Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'tomasr/molokai', { 'dir': '~/.vim/colors'}
