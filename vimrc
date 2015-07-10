@@ -63,7 +63,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'kien/ctrlp.vim'
     Plug 'scrooloose/nerdcommenter'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-    Plug 'KabbAmine/vCoolor.vim'
+    " Plug 'KabbAmine/vCoolor.vim'
     Plug 'wincent/command-t'
     Plug 'msanders/snipmate.vim'
     Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
