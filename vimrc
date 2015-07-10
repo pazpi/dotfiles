@@ -542,10 +542,6 @@ let g:closetag_html_style=1
 "let g:closetag_filenames = "*.html, *xhtml, *phtml"
 "-----------------------------------------------------------
 "
-"YouCompleteMe----------------------------------------------
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-"-----------------------------------------------------------
-"
 "TagBar http://mirnazim.org/writings/vim-plugins-i-use/-----
 nnoremap <leader>l :TagbarToggle<CR>
 "-----------------------------------------------------------
@@ -570,6 +566,7 @@ let g:cpp_experimental_template_highlight = 1
 
 "YouCompleteMe----------------------------------------------
 "let g:ycm_global_ycm_extra_conf = "~/.vim/python/ycm/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_register_as_syntastic_checker = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
@@ -601,6 +598,16 @@ let g:syntastic_c_check_header = 1
 let g:syntastic_c_auto_refresh_includes = 1
 "-----------------------------------------------------------
 "
+"Ultisnips--------------------------------------------------
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<s-b>"
+let g:UltiSnipsJumpBackwardTrigger="<s-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+"-----------------------------------------------------------
+
 "Calendar---------------------------------------------------
 let g:calendar_google_calendar = 1
 let g:calendar_google_task     = 1
@@ -613,8 +620,8 @@ nmap <Leader>a <Plug>(EasyAlign)
 "-----------------------------------------------------------
 "
 "Snippets---------------------------------------------------
-let g:snipMate = {}
-let g:snipMate.scope_aliases = {}
+" let g:snipMate = {}
+" let g:snipMate.scope_aliases = {}
 "-----------------------------------------------------------
 "
 "Open Ranger file manager-----------------------------------
