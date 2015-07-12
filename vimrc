@@ -4,6 +4,11 @@
 " To start vim without loading any .vimrc or plugins, use:
 "     vim -u NONE
 "
+" If you are using Arch install this programs that work like plugins
+" -ctags (Extra)
+" -vim-youcompleteme-git (Aur)
+" -vim-airline (Aur)
+"
 " Use vim settings, rather then vi settings (much better!)
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -27,13 +32,11 @@ filetype off                    " force reloading *after* pathogen loaded
 " "------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
     if has("mac")
+        Plug 'bling/vim-airline'
+        Plug 'altercation/vim-colors-solarized'
         Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
     endif
 
-    if has("mac")
-        Plug 'bling/vim-airline'
-        Plug 'altercation/vim-colors-solarized'
-    endif
     Plug 'suan/vim-instant-markdown'
     Plug 'junegunn/seoul256.vim'
     Plug 'yegappan/mru'
@@ -645,7 +648,7 @@ function! Ranger()
     endif
     redraw!
 endfunction
-nmap <leader>r :call Ranger()<cr>
+nmap <leader>R :call Ranger()<cr>
 "-----------------------------------------------------------
 
 " Filetype specific handling {{{
