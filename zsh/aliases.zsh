@@ -22,6 +22,7 @@ alias record="ffmpeg -y -f alsa -ac 2 -i pulse -f x11grab -r 30 -s `xdpyinfo | g
 alias vga="bash /home/pazpi/.screenlayout/VGA1440x900.sh"
 alias lvds="bash /home/pazpi/.screenlayout/LVDS1.sh"
 alias nfspi="sudo mount -t nfs 192.168.1.190:/media/1TORRHDD /mnt/1TORRHDD"
+alias winmount="sudo mount /dev/sda3 /mnt/Windows"
 alias sshpi="ssh pi@pazpi.local"
 alias cal="cal -m"
 alias tv='mpv dvb://"Italia1 HD"'
