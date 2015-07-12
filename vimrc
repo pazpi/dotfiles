@@ -1,13 +1,9 @@
-"
-" Maintained by Vincent Driessen <vincent@datafox.nl>
-
 " To start vim without using this .vimrc file, use:
 "     vim -u NORC
 "
 " To start vim without loading any .vimrc or plugins, use:
 "     vim -u NONE
 "
-
 " Use vim settings, rather then vi settings (much better!)
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -47,13 +43,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'terryma/vim-multiple-cursors'
     Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
     "Plug 'joonty/vim-phpqa'
-    "Plug 'rking/ag.vim'
+    Plug 'rking/ag.vim'
     "Plug 'octol/vim-cpp-enhanced-highlight' 
     "Plug 'shawncplus/phpcomplete.vim'
     Plug 'sudar/vim-arduino-syntax'
     Plug 'MarcWeber/vim-addon-mw-utils'
     Plug 'tomtom/tlib_vim'
-    "Plug 'snipmate-snippets'
     "Plug 'garbas/vim-snipmate'
     "Plug 'honza/vim-snippets'
     "Plug 'sudar/vim-arduino-snippets'
@@ -224,8 +219,13 @@ set noswapfile                  " do not write annoying intermediate swap files,
 set directory=~/.vim/.tmp,~/tmp,/tmp
                                 " store swap files in one of these directories
                                 "    (in case swapfile is ever turned on)
-set viminfo='20,\"80            " read/write a .viminfo file, don't store more
-                                "    than 80 lines of registers
+
+"Jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
 set wildmenu                    " make tab completion for files/buffers act like bash
 set wildmode=list:full          " show a list when pressing tab and complete
                                 "    first full match
@@ -502,6 +502,7 @@ let g:airline#extensions#tabline#left_alt_sep = '>'
 let g:Powerline_symbols = "fancy"
 set laststatus=2
 "-----------------------------------------------------------
+"
 "NERDTree---------------------------------------------------
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
@@ -524,12 +525,15 @@ let NERDTreeMouseMode=2
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
             \ '\.o$', '\.so$', '\.egg$', '^\.git$' ]
 "-----------------------------------------------------------
+"
 "Pep8 (python-mode)-----------------------------------------
 let g:pymode_lint_ignore="E114,E115,E116"
 "-----------------------------------------------------------
+"
 "NerdCommenter----------------------------------------------
 let NERDSpaceDelims=1
 "-----------------------------------------------------------
+"
 "MultiCursor------------------------------------------------
 let g:multi_cursor_use_default_mapping = 0
 let g:multi_cursor_next_key            = '<C-a>'
@@ -537,6 +541,7 @@ let g:multi_cursor_prev_key            = '<C-s>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 "-----------------------------------------------------------
+"
 "Closetag---------------------------------------------------
 let g:closetag_html_style=1
 "let g:closetag_filenames = "*.html, *xhtml, *phtml"
@@ -550,16 +555,16 @@ nnoremap <leader>l :TagbarToggle<CR>
 let g:vimfiler_split_action = 1
 "-----------------------------------------------------------
 "
-" YankRing stuff--------------------------------------------  
+" YankRing stuff--------------------------------------------
 let g:yankring_history_dir = '$HOME/.vim/.tmp'
 nnoremap <leader>r :YRShow<CR>
 "-----------------------------------------------------------
 
-"Auto-Pairs-------------------------------------------------  
+"Auto-Pairs-------------------------------------------------
 let g:AutoPairsFlyMode = 0
 "-----------------------------------------------------------
 
-"Auto-Pairs-------------------------------------------------  
+"Auto-Pairs-------------------------------------------------
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 "-----------------------------------------------------------
@@ -583,7 +588,7 @@ let g:ycm_key_list_previous_completion = ['<Up>']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
+"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -603,17 +608,17 @@ let g:syntastic_c_auto_refresh_includes = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<s-b>"
 let g:UltiSnipsJumpBackwardTrigger="<s-z>"
-
+"
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 "-----------------------------------------------------------
-
+"
 "Calendar---------------------------------------------------
 let g:calendar_google_calendar = 1
 let g:calendar_google_task     = 1
 let g:calendar_first_day       = 'monday'
 "-----------------------------------------------------------
-
+"
 "Easy Align-------------------------------------------------
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
