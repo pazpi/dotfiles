@@ -143,7 +143,7 @@ v () { if [[ `argc "$@"` > 1 ]]; then vim $@;
                 elif [ ! -f $1 ] || [ -w $1 ]; then vim $@;
                 else
                         echo -n "File is Read-only. Edit as root? (Y/n): "
-                        read -n 1 yn; echo;
+                        read yn; echo;
                         if [ "$yn" = 'n' ] || [ "$yn" = 'N' ];
                             then vim $*;
                             else sudo -E vim $*;
