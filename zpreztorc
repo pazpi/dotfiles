@@ -35,6 +35,7 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'syntax-highlighting' \
   'rsync' \
+  'git' \
   'history-substring-search'
 
 #
