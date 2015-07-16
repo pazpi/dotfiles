@@ -25,7 +25,7 @@
     ~/.dotfiles: ''
     # ~/.gitconfig: gitconfig
     # ~/.gitignore_global: gitignore_global
-    ~/.packages-install.txt: packages-install.txt
+    ~/.packages-list.txt: packages-list.txt
     ~/.ncmpcpp/config: ncmpcpp/config
     ~/.rtorrent.rc: rtorrent.rc
     ~/.screenrc: screenrc
