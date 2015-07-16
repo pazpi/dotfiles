@@ -158,6 +158,7 @@ alias masterpdfeditor="pdfeditor"
 alias rock="mpv http://tunein.com/radio/98-ROCK-979-s29726/"
 alias bc="bc -l"
 alias ram="watch -n 1 cat /proc/meminfo"
+alias pack-list="pacman -Qe | awk '{print $1}'"
 # Color man pages
 man() {
 	env \

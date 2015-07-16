@@ -56,7 +56,7 @@ alias ram="watch -n 1 cat /proc/meminfo"
 alias serveThis="php -S localhost:8080"
 alias rtorrent="screen -m -fa -S rtorrent /usr/bin/rtorrent"
 alias matlab="screen -m -fa -S matlab /usr/local/bin/matlab"
-alias sl="sl"
+alias packlist="pacman -Qe | awk '{print $1}'"
 #
 # Use colors in coreutils utilities output
 # alias ls='ls --color=auto'
