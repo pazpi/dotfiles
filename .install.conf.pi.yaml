@@ -1,0 +1,22 @@
+- clean: ['~', '~/.config']
+
+- shell:
+    - mkdir -p ~/.rtorrent/session ~/.rtorrent/watch ~/.rtorrent/downloads ~/Pictures
+    - git submodule update --init --recursive # after linking ~/.gitconfig
+
+- link:
+    ~/.bashrc: bashrc
+    ~/.dotfiles: ''
+    # ~/.gitconfig: gitconfig
+    # ~/.gitignore_global: gitignore_global
+    ~/.packages-install.txt: packages-install.txt
+    ~/.ncmpcpp/config: ncmpcpp/config
+    ~/.rtorrent.rc: rtorrent.rc
+    ~/.screenrc: screenrc
+    # ~/.tmux.conf: tmux.conf
+    # ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zprezto: prezto/
+    ~/.zpreztorc: zpreztorc
+    ~/.zsh: zsh/
+    ~/.zshrc: zshrc
