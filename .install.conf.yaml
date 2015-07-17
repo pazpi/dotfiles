@@ -13,6 +13,9 @@
     ~/.conkyrc: conkyrc
     ~/.conkyMPD: conkyMPD
     ~/.conkyCLOCK: conkyCLOCK
+    ~/.config/dunst:
+        create: true
+        path: config/dunst
     ~/.config/mpv:
         create: true
         path: config/mpv
