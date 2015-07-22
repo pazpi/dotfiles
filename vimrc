@@ -37,6 +37,7 @@ call plug#begin('~/.vim/plugged')
         Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
     endif
 
+    Plug 'scrooloose/syntastic'
     Plug 'suan/vim-instant-markdown'
     Plug 'junegunn/seoul256.vim'
     Plug 'yegappan/mru'
@@ -571,7 +572,18 @@ let g:AutoPairsFlyMode = 0
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 "-----------------------------------------------------------
+"
+"Syntastic--------------------------------------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"-----------------------------------------------------------
+"
 "YouCompleteMe----------------------------------------------
 "let g:ycm_global_ycm_extra_conf = "~/.vim/python/ycm/.ycm_extra_conf.py"
 let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
