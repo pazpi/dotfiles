@@ -441,13 +441,22 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
+    <!-- <keybind key="W-z"> -->
+      <!-- <action name="Execute"> -->
+        <!-- <startupnotify> -->
+          <!-- <enabled>true</enabled> -->
+          <!-- <name>rofi</name> -->
+        <!-- </startupnotify> -->
+        <!-- <command>rofi -show run -font "snap 10" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 85</command> -->
+      <!-- </action> -->
+    <!-- </keybind> -->
     <keybind key="W-z">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
           <name>rofi</name>
         </startupnotify>
-        <command>rofi -show run -font "snap 10" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 85</command>
+        <command>rofi -show run -font "terminus 10" -lines 20 -width 100 -padding 7 -yoffset 180</command>
       </action>
     </keybind>
     <!-- <keybind key="W-z"> -->
@@ -459,13 +468,22 @@
     <!-- <command>dmenu_run -fn -misc-fixed-*-*-*-*-20-200-*-*-*-*-*-*  -i -nf 'gray' -sb 'dark green' -nb 'dim gray'</command> -->
     <!-- </action> -->
     <!-- </keybind> -->
-    <keybind key="W-x">
+    <keybind key="W-S-x">
       <action name="Execute">
         <startupnotify>
           <enabled>true</enabled>
           <name>oblogout</name>
         </startupnotify>
         <command>oblogout</command>
+      </action>
+    </keybind>
+    <keybind key="W-x">
+      <action name="Execute">
+        <startupnotify>
+          <enabled>true</enabled>
+          <name>logout-rofi</name>
+        </startupnotify>
+        <command>logout-menu</command>
       </action>
     </keybind>
     <keybind key="W-i">
@@ -492,7 +510,7 @@
           <enabled>true</enabled>
           <name>Editor</name>
         </startupnotify>
-        <command>urxvtc -e vim</command>
+        <command>eclipse</command>
       </action>
     </keybind>
     <!-- <keybind key="W-m"> -->
