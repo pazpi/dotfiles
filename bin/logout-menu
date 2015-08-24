@@ -1,0 +1,36 @@
+#!/bin/bash
+# a logout menu using rofi
+
+wm=${1:openbox}
+case $wm in
+    i3)
+        logout="i3-msg exit";;
+    bspwm)
+        logout="bspc quit";;
+    sway)
+        logout="sway-msg exit";;
+    openbox)
+        logout="openbox --exit";;
+esac
+
+CMD=`echo -e "Shutdown\nSuspend\nLock\nReboot\nHibernate\nLogout" | rofi -dmenu -p "Logout Menu:" -font "terminus 10" -lines 10 -width 100 -padding 7 -yoffset -262` 
+
+if [ ! $CMD ]; then
+    exit
+fi
+
+case $CMD in
+    Logout)
+        'openbox --exit';;
+        # eval "$logout";;
+    Shutdown)
+        systemctl poweroff -i;;
+    Reboot)
+        systemctl reboot;;
+    Hibernate)
+        systemctl hibernate;;
+    Suspend)
+        systemctl suspend;;
+    Lock)
+        lock;;
+esac
