@@ -49,7 +49,7 @@ xscreensaver -no-splash &
 # compton -CGb &
 # Here openbox is kept as default
 
-# exec awesome
+# exec i3
 
 session=${1:-openbox}
 

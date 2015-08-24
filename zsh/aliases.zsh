@@ -47,6 +47,7 @@ alias ipwifidown='sudo ip link set wlp3s0 down'
 alias ipwifiup='sudo ip link set wlp3s0 up'
 alias youtube-wl="mpv -ytdl https://www.youtube.com/playlist\?list=PLg-qQC6kJtcM6yLCBg1m-mUYoFRGBJ88g"
 alias youtube-max='youtube-dl -f bestvideo+bestaudio '
+alias youtube-dl-wl='cd ~/Videos/WatchLater && youtube-dl https://www.youtube.com/playlist\?list=PLg-qQC6kJtcM6yLCBg1m-mUYoFRGBJ88g'
 alias aurcurl='cd AurPackage && curl -O'
 alias 'nvidia-settings'='optirun -b none nvidia-settings -c :8'
 alias tty-clock='tty-clock -scC 3'
