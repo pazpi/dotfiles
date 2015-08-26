@@ -26,6 +26,10 @@
         create: true
         path: config/ranger
     ~/.dotfiles: ''
+    ~/.i3:
+        create: true
+        path: i3
+    ~/.i3blocks.conf: i3blocks.conf
     # ~/.gitconfig: gitconfig
     # ~/.gitignore_global: gitignore_global
     ~/.packages-list.txt: packages-list.txt
