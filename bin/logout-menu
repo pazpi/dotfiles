@@ -13,7 +13,7 @@ case $wm in
         logout="openbox --exit";;
 esac
 
-CMD=`echo -e "Shutdown\nSuspend\nLock\nReboot\nHibernate\nLogout" | rofi -dmenu -p "Logout Menu:" -font "terminus 10" -lines 10 -width 100 -padding 7 -yoffset -262` 
+CMD=`echo -e "Shutdown\nSuspend\nLock\nReboot\nHibernate\nLogout" | rofi -dmenu -p "Logout Menu:" -font "terminus 10" -lines 10 -width 100 -padding 7 -yoffset -279` 
 
 if [ ! $CMD ]; then
     exit

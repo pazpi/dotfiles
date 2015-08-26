@@ -508,7 +508,7 @@ set laststatus=2
 "-----------------------------------------------------------
 "
 "NERDTree---------------------------------------------------
-nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
 nnoremap <leader>N :NERDTreeClose<CR>
 " Store the bookmarks file

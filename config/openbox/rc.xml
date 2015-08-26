@@ -184,57 +184,57 @@
     <!-- <chainQuitKey>C-g</chainQuitKey> -->
     <!-- Keybindings for desktop switching -->
     <!-- <keybind key="C-A-Left"> -->
-      <!-- <action name="GoToDesktop"> -->
-        <!-- <to>left</to> -->
-        <!-- <wrap>no</wrap> -->
-      <!-- </action> -->
+    <!-- <action name="GoToDesktop"> -->
+    <!-- <to>left</to> -->
+    <!-- <wrap>no</wrap> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <!-- <keybind key="C-A-Right"> -->
-      <!-- <action name="GoToDesktop"> -->
-        <!-- <to>right</to> -->
-        <!-- <wrap>no</wrap> -->
-      <!-- </action> -->
+    <!-- <action name="GoToDesktop"> -->
+    <!-- <to>right</to> -->
+    <!-- <wrap>no</wrap> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <!-- <keybind key="C-A-Up"> -->
-      <!-- <action name="GoToDesktop"> -->
-        <!-- <to>up</to> -->
-        <!-- <wrap>no</wrap> -->
-      <!-- </action> -->
+    <!-- <action name="GoToDesktop"> -->
+    <!-- <to>up</to> -->
+    <!-- <wrap>no</wrap> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <!-- <keybind key="C-A-Down"> -->
-      <!-- <action name="GoToDesktop"> -->
-        <!-- <to>down</to> -->
-        <!-- <wrap>no</wrap> -->
-      <!-- </action> -->
+    <!-- <action name="GoToDesktop"> -->
+    <!-- <to>down</to> -->
+    <!-- <wrap>no</wrap> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <!-- <keybind key="S-A-Left"> -->
-      <!-- <action name="SendToDesktop"> -->
-        <!-- <to>left</to> -->
-        <!-- <wrap>no</wrap> -->
-      <!-- </action> -->
+    <!-- <action name="SendToDesktop"> -->
+    <!-- <to>left</to> -->
+    <!-- <wrap>no</wrap> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <!-- <keybind key="S-A-Right"> -->
-      <!-- <action name="SendToDesktop"> -->
-        <!-- <to>right</to> -->
-        <!-- <wrap>no</wrap> -->
-      <!-- </action> -->
+    <!-- <action name="SendToDesktop"> -->
+    <!-- <to>right</to> -->
+    <!-- <wrap>no</wrap> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <!-- <keybind key="S-A-Up"> -->
-      <!-- <action name="SendToDesktop"> -->
-        <!-- <to>up</to> -->
-        <!-- <wrap>no</wrap> -->
-      <!-- </action> -->
+    <!-- <action name="SendToDesktop"> -->
+    <!-- <to>up</to> -->
+    <!-- <wrap>no</wrap> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <!-- <keybind key="S-A-Down"> -->
-      <!-- <action name="SendToDesktop"> -->
-        <!-- <to>down</to> -->
-        <!-- <wrap>no</wrap> -->
-      <!-- </action> -->
+    <!-- <action name="SendToDesktop"> -->
+    <!-- <to>down</to> -->
+    <!-- <wrap>no</wrap> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <!-- <keybind key="W-F1"> -->
-      <!-- <action name="GoToDesktop"> -->
-        <!-- <to>1</to> -->
-      <!-- </action> -->
+    <!-- <action name="GoToDesktop"> -->
+    <!-- <to>1</to> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <keybind key="W-F2">
       <action name="GoToDesktop">
@@ -269,7 +269,7 @@
       </action>
     </keybind>
     <!-- Keybindings for MPD/MPC -->
-    <keybind key="W-A-z">
+    <keybind key="W-c">
       <action name="Execute">
         <enabled>true</enabled>
         <name>clerk</name>
@@ -370,13 +370,13 @@
     </keybind>
     <!-- Keybindings for running applications -->
     <!-- <keybind key="W-u"> -->
-      <!-- <action name="Execute"> -->
-        <!-- <startupnotify> -->
-          <!-- <enabled>true</enabled> -->
-          <!-- <name>terminator</name> -->
-        <!-- </startupnotify> -->
-        <!-- <command>terminator</command> -->
-      <!-- </action> -->
+    <!-- <action name="Execute"> -->
+    <!-- <startupnotify> -->
+    <!-- <enabled>true</enabled> -->
+    <!-- <name>terminator</name> -->
+    <!-- </startupnotify> -->
+    <!-- <command>terminator</command> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <keybind key="W-w">
       <action name="Execute">
@@ -442,13 +442,13 @@
       </action>
     </keybind>
     <!-- <keybind key="W-z"> -->
-      <!-- <action name="Execute"> -->
-        <!-- <startupnotify> -->
-          <!-- <enabled>true</enabled> -->
-          <!-- <name>rofi</name> -->
-        <!-- </startupnotify> -->
-        <!-- <command>rofi -show run -font "snap 10" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 85</command> -->
-      <!-- </action> -->
+    <!-- <action name="Execute"> -->
+    <!-- <startupnotify> -->
+    <!-- <enabled>true</enabled> -->
+    <!-- <name>rofi</name> -->
+    <!-- </startupnotify> -->
+    <!-- <command>rofi -show run -font "snap 10" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 85</command> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <keybind key="W-z">
       <action name="Execute">
@@ -970,9 +970,9 @@
     <application class="*">
       <decor>no</decor>
     </application>
-    <application class="Firefox">
-      <decor>yes</decor>
-    </application>
+    <!-- <application class="Firefox"> -->
+      <!-- <decor>yes</decor> -->
+    <!-- </application> -->
     <!--    
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
