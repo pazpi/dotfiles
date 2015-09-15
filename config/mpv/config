@@ -1,6 +1,6 @@
 # vim: syntax=config
 use-filedir-conf=yes
-screenshot-template=~/Pictures/mpv/mpv-screenshot%n
+screenshot-template=~/Pictures/mpv/mpv-screenshot_%f_%p
 
 ### VIDEO ###
 # cache=8192
