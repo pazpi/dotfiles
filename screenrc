@@ -1,6 +1,7 @@
 #Screen config file
 #
 term rxvt-unicode-256color
+termcapinfo xterm* ti@:te@
 
 hardstatus off
 hardstatus alwayslastline
