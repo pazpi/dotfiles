@@ -91,15 +91,15 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 # switch to workspace
-bindsym $mod+1 workspace 1:
-bindsym $mod+2 workspace 2:
-bindsym $mod+3 workspace 3:
-bindsym $mod+4 workspace 4:
-bindsym $mod+5 workspace 5:
-bindsym $mod+6 workspace 6:
-bindsym $mod+7 workspace 7:
-bindsym $mod+8 workspace 8:
-bindsym $mod+9 workspace 9:
+bindsym $mod+1 workspace 1: # Terminal
+bindsym $mod+2 workspace 2: # IDE
+bindsym $mod+3 workspace 3: # Broswer
+bindsym $mod+4 workspace 4: # FIle Manager
+bindsym $mod+5 workspace 5: # Pdf-Libreoffice
+bindsym $mod+6 workspace 6: # Telegram
+bindsym $mod+7 workspace 7: # Video Editing
+bindsym $mod+8 workspace 8: # Steam
+bindsym $mod+9 workspace 9: # Virtualbox
 bindsym $mod+0 workspace 10:
 
 # move focused container to workspace
@@ -108,9 +108,9 @@ bindsym $mod+Shift+2 move container to workspace 2:
 bindsym $mod+Shift+3 move container to workspace 3:
 bindsym $mod+Shift+4 move container to workspace 4:
 bindsym $mod+Shift+5 move container to workspace 5:
-bindsym $mod+Shift+6 move container to workspace 6:
+bindsym $mod+Shift+6 move container to workspace 6:
 bindsym $mod+Shift+7 move container to workspace 7:
-bindsym $mod+Shift+8 move container to workspace 8:
+bindsym $mod+Shift+8 move container to workspace 8:
 bindsym $mod+Shift+9 move container to workspace 9:
 bindsym $mod+Shift+0 move container to workspace 10:
 
@@ -120,6 +120,7 @@ bindsym $mod+Shift+0 move container to workspace 10:
 bindsym $mod+Shift+a move container to workspace back_and_forth; workpace back_and_forth
 bindsym $mod+Control+Right move workspace to output right
 bindsym $mod+Control+Left move workspace to output left
+bindsym $mod+Control+q exec logout-menu
 
 # MPD controll
 # bindsym $mod+semicolon+space exec mpc toggle
@@ -178,14 +179,14 @@ client.unfocused        #656565 #656565 #ffffff #656565
 client.urgent           #de7470 #de7470 #ffffff #de7470
 client.placeholder      #de7470 #de7470 #ffffff #de7470
 
-assign [class="^urxvt$"] 1
+assign [class="^urxvt$"] 1:
 assign [class="^Atom$"] 2:
 assign [class="^Eclipse$"] 2:
 assign [class="^Firefox$"] 3:
 assign [class="^pcmanfm$"] 4:
 assign [class="^qpdfviewer$"] 5:
-assign [class='^Telegram$'] 6
-assign [class='^steam$'] 7
+assign [class='^Telegram$'] 6:
+assign [class='^Steam$'] 8:
 # Spawn new windows in workspace
 for_window [class="^urxvt$"] focus        
 for_window [class="^Atom$"] focus    
@@ -194,7 +195,7 @@ for_window [class="^Firefox$"] focus
 for_window [class="^pcmanfm$"] focus
 for_window [class="^qpdfviewer$"] focus 
 for_window [class='^Telegram$'] focus
-for_window [class='^steam$'] focus floating enable
+for_window [class='^Steam$'] focus floating enable
 
 mouse_warping none
 focus_follows_mouse no
@@ -215,6 +216,8 @@ bar {
         strip_workspace_numbers no
 }
 
+# exec conky
+
 # Execute on start
 # Ssh Agent
 exec eval "$(ssh-agent -s)"
@@ -224,6 +227,5 @@ exec xrandr-autodetect
 exec compton -CGb
 exec duns
 exec --no-startup-id nitrogen --restore
-# exec conky
 # exec conky -c .conkyCLOCK
 # exec conky -c .conkyMPD
