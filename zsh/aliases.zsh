@@ -81,6 +81,12 @@ function dfu() {
     )
 }
 
+# Get total duration of video in a directory (recursive)
+function getDuration() {
+    echo "Only mp4 file"
+    find . -iname '*.mp4' -exec ffprobe -v quiet -of csv=p=0 -show_entries format=duration {} \; | paste -sd+ -| bc
+}
+
 # Use pip without requiring virtualenv
 function syspip() {
     PIP_REQUIRE_VIRTUALENV="" pip "$@"
