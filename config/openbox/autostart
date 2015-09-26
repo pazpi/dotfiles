@@ -18,7 +18,8 @@ tint2 &
 dunst &
 ## Background
 # (sleep 1s && nitrogen --restore) &
-feh --bg-tile ~/Pictures/dojanp.png
+# feh --bg-tile ~/Pictures/dojanp.png
+feh --bg-scale /usr/share/backgrounds/gnome/adwaita-night.jpg --bg-scale /usr/share/backgrounds/gnome/adwaita-morning.jpg
 ## Battery Icon
 (sleep 1s && cbatticon -u 20 -i notification -c "systemctl hybrid-sleep" -l 15 -r 3) &
 (sleep 1s && volumeicon) &
