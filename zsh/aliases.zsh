@@ -47,7 +47,7 @@ alias ipwifidown='sudo ip link set wlp3s0 down'
 alias ipwifiup='sudo ip link set wlp3s0 up'
 alias youtube-wl="mpv -ytdl https://www.youtube.com/playlist\?list=PLg-qQC6kJtcM6yLCBg1m-mUYoFRGBJ88g"
 alias youtube-max='youtube-dl -f bestvideo+bestaudio '
-alias youtube-dl-wl='cd ~/Videos/WatchLater && youtube-dl https://www.youtube.com/playlist\?list=PLg-qQC6kJtcM6yLCBg1m-mUYoFRGBJ88g'
+alias youtube-dl-wl='cd ~/Videos/WatchLater && youtube-dl https://www.youtube.com/playlist\?list=PLg-qQC6kJtcM6yLCBg1m-mUYoFRGBJ88g -o "%(upload_date)s-%(title)s.%(ext)s"'
 alias aurcurl='cd AurPackage && curl -O'
 alias 'nvidia-settings'='optirun -b none nvidia-settings -c :8'
 alias tty-clock='tty-clock -scC 3'
@@ -60,6 +60,8 @@ alias rtorrent="screen -m -fa -S rtorrent /usr/bin/rtorrent"
 alias matlab="screen -m -fa -S matlab /usr/local/bin/matlab"
 alias packlist="pacman -Qe | awk '{print $1}'"
 alias ranger='TERM=xterm-256color ranger'
+alias bot='cd ~/Projects/Eclipse-workspace/ruTorrent-bot && source env/bin/activate'
+alias battery='upower -i `upower -e | grep 'BAT'`'
 #
 # Use colors in coreutils utilities output
 # alias ls='ls --color=auto'

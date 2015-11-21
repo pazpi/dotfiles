@@ -19,7 +19,7 @@ dunst &
 ## Background
 # (sleep 1s && nitrogen --restore) &
 # feh --bg-tile ~/Pictures/dojanp.png
-feh --bg-scale /usr/share/backgrounds/gnome/adwaita-night.jpg --bg-scale /usr/share/backgrounds/gnome/adwaita-morning.jpg
+feh --bg-fill /usr/share/backgrounds/gnome/adwaita-night.jpg
 ## Battery Icon
 (sleep 1s && cbatticon -u 20 -i notification -c "systemctl hybrid-sleep" -l 15 -r 3) &
 (sleep 1s && volumeicon) &
@@ -36,13 +36,13 @@ feh --bg-scale /usr/share/backgrounds/gnome/adwaita-night.jpg --bg-scale /usr/sh
 # (sleep 1s && pcmanfm -d) &
 (sleep 1s && conky) &
 (sleep 1s && conky -c .conkyCLOCK) &
-(sleep 2s && conky -c .conkyMPD) &
+(sleep 1s && conky -c .conkyMPD) &
 ## Optionally enable screensaver
 #(sleep 1s && xautolock -time 15 -locker 'xlock -mode blank') &
 # xscreensaver -no-splash &
 #(xrdb /home/pazpi/.Xresources) &
 # Disable screensaver when play video in VLC, mPlayer, Flash, ecc (see script for detail)
 (sleep 2s && lightsOn) &
-(sleep 2s && xrandr-autodetect) &
+# (sleep 5s && xrandr-autodetect) &
 ## Optionally disable touchpad
 #/usr/bin/synclient TouchpadOff=1 &
