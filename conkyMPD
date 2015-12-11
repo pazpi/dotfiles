@@ -15,8 +15,8 @@ conky.config = {
 	own_window_transparent = true,
 --own_window_hints undecorated,sticky,skip_taskbar,skip_pager
 	alignment = 'top_left',
-	gap_x = 18,
-	gap_y = 40,
+	gap_x = 120,
+	gap_y = 30,
 --minimum_size 100 1000
 --maximum_width 1200
 	default_bar_width = 30, default_bar_height = 8,
@@ -27,6 +27,7 @@ conky.config = {
 	color0 = '#8DBC68',
 	color1 = '#c5c5c5',
 	color2 = '#c5c5c5',
+	color3 = '#1893d2',
 	own_window_argb_visual = true,
 	own_window_colour = '#000000',
 	own_window_argb_value = 0,
@@ -37,7 +38,7 @@ conky.config = {
 
 conky.text = [[
 ${if_mpd_playing}
-${color orange}MPD-Pi ${mpd_status} ${hr 2}$color
+${color3 }MPD-Pi ${mpd_status} ${hr 2}$color
 ${color white}Title:${alignr}${color} ${mpd_title}
 ${color white}Artist:${alignr}${color} ${mpd_artist}
 ${color white}Album:${alignr}${color} ${mpd_album}
