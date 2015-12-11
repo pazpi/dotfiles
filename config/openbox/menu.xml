@@ -24,7 +24,7 @@
 		</item>
 		<item label="Web Browser">
 			<action name="Execute">
-				<execute>firefox-aurora</execute>
+				<execute>firefox</execute>
 			</action>
 		</item>
 		<item label="File Manager">
@@ -123,6 +123,11 @@
 		<menu execute="/usr/bin/obdevicemenu" id="devices" label="Devices"/>
 		<menu execute="/usr/bin/obfilebrowser" id="file" label="File"/>
 		<menu id="network" label="Network">
+			<item label="Firefox">
+				<action name="Execute">
+					<execute>firefox</execute>
+				</action>
+			</item>
 			<item label="Firefox">
 				<action name="Execute">
 					<execute>firefox-aurora</execute>
