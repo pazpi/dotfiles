@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-config/ranger/colorscheme/__pycache__
-=======
-
+config/ranger/colorschemes/__pycache__
+ncmpcpp/error.log
 *.pyo
->>>>>>> 2a29ed85ef94e07d1d261c49c55c7bfed3bbff43
