@@ -18,10 +18,7 @@ export "XDG_CONFIG_HOME=$HOME/.config"
 export "MPD_HOST=192.168.1.190"
 export "MPD_PORT=6600"
 
-#
 # setup ssh-agent
-#
-
 # set environment variables if user's agent already exists
 SSH_AUTH_SOCK=$(ls -l /tmp/ssh-*/agent.* 2> /dev/null | grep $(whoami) | awk '{print $9}')
 SSH_AGENT_PID=$(echo $SSH_AUTH_SOCK | cut -d. -f2)
@@ -47,13 +44,11 @@ fi
 # xscreensaver -no-splash &
 # nitrogen --restore &
 # compton -CGb &
-# Here openbox is kept as default
 
 # exec i3
 exec openbox-session
 
 # session=${1:-openbox}
-
 # case $session in
     # awesome           ) exec awesome;;
     # bspwm             ) sxhkd & exec bspwm;;
