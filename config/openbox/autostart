@@ -10,6 +10,7 @@ eval "$(ssh-agent -s)" &
 ssh-add "/home/pazpi/.ssh/id_rsa_pi" &
 ## Basic compositing effects
 compton -CGb &
+xrandr-autodetect &
 start-pulseaudio-x11 &
 ## Panel
 tint2 &
@@ -44,6 +45,5 @@ feh --bg-fill ~/.background/arch-blue-thx-martino.png --bg-fill ~/.background/1\
 #(xrdb /home/pazpi/.Xresources) &
 # Disable screensaver when play video in VLC, mPlayer, Flash, ecc (see script for detail)
 (sleep 2s && lightsOn) &
-# (sleep 5s && xrandr-autodetect) &
 ## Optionally disable touchpad
-#/usr/bin/synclient TouchpadOff=1 &
+usr/bin/synclient TouchpadOff=1 &
