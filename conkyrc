@@ -15,8 +15,8 @@ conky.config = {
 	own_window_type = 'desktop',
 	own_window_transparent = true,
 --own_window_hints undecorated,sticky,skip_taskbar,skip_pager
-	alignment = 'top_right',
-	gap_x = 18,
+	alignment = 'top_left',
+	gap_x = 1000,
 	gap_y = 40,
 	minimum_width = 260, minimum_height = 0,
 	default_bar_width = 30, default_bar_height = 8,
