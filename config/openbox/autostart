@@ -20,7 +20,7 @@ dunst &
 ## Background
 # (sleep 1s && nitrogen --restore) &
 # feh --bg-tile ~/Pictures/dojanp.png
-feh --bg-fill ~/.background/arch-blue-thx-martino.png --bg-fill ~/.background/1\ -\ 7Gw3fnk.jpg
+feh --bg-fill ~/.background/arch-blue-thx-martino.png --bg-fill ~/.background/2.png
 # feh --bg-fill /usr/share/backgrounds/gnome/adwaita-night.jpg
 ## Battery Icon
 (sleep 1s && cbatticon -u 20 -i notification -c "systemctl hybrid-sleep" -l 15 -r 3) &
