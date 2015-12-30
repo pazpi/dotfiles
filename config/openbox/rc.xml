@@ -510,7 +510,7 @@
           <enabled>true</enabled>
           <name>Editor</name>
         </startupnotify>
-        <command>eclipse</command>
+        <command>pycharm</command>
       </action>
     </keybind>
     <!-- <keybind key="W-m"> -->
