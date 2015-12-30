@@ -51,7 +51,6 @@ alias youtube-dl-wl='cd ~/Videos/WatchLater && youtube-dl https://www.youtube.co
 alias aurcurl='cd AurPackage && curl -O'
 alias 'nvidia-settings'='optirun -b none nvidia-settings -c :8'
 alias tty-clock='tty-clock -scC 3'
-alias masterpdfeditor="pdfeditor"
 alias rock="mpv http://tunein.com/radio/98-ROCK-979-s29726/"
 alias bc="bc -l"
 alias ram="watch -n 1 cat /proc/meminfo"
@@ -62,6 +61,7 @@ alias packlist="pacman -Qe | awk '{print $1}'"
 alias ranger='TERM=xterm-256color ranger'
 alias bot='cd ~/Projects/Eclipse-workspace/ruTorrent-bot && source env/bin/activate'
 alias battery='upower -i `upower -e | grep 'BAT'`'
+alias 1080p='sh ~/.screenlayout/HDMI1920x1080.sh'
 #
 # Use colors in coreutils utilities output
 # alias ls='ls --color=auto'
