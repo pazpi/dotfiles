@@ -7,6 +7,7 @@ mpd_music_dir = "/home/pazpi/Music/"
 #mpd_connection_timeout = "5"
 # mpd_crossfade_time = "2"
 playlist_disable_highlight_delay = "3"
+playlist_show_remaining_time = "yes"
 message_delay_time = "2"
 
 ##### visualizer settins #####
@@ -142,9 +143,9 @@ statusbar_visibility = "yes"
 titles_visibility = "no"
 #header_text_scrolling = "yes"
 # fancy_scrolling = "yes"
-cyclic_scrolling = "yes"
+cyclic_scrolling = "no"
 #lines_scrolled = "2"
-#follow_now_playing_lyrics = "no"
+follow_now_playing_lyrics = "yes"
 #store_lyrics_in_song_dir = "no"
 
 #ncmpc_like_songs_adding = "no" (enabled - add/remove, disabled - always add)
@@ -155,10 +156,10 @@ cyclic_scrolling = "yes"
 jump_to_now_playing_song_at_start = "yes"
 
 #ask_before_clearing_main_playlist = "no"
-#clock_display_seconds = "no"
+clock_display_seconds = "yes"
 #display_volume_level = "yes"
 display_bitrate = "yes"
-#display_remaining_time = "no"
+display_remaining_time = "no"
 #regular_expressions = "basic" (basic/extended)
 ignore_leading_the = "yes"
 #block_search_constraints_change_if_items_found = "yes"
