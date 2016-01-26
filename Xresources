@@ -47,7 +47,7 @@ URxvt.iconFile: /home/pazpi/Pictures/Terminal-icon.png
 !! Perl Script
 URxvt.perl-ext-common: default,matcher,clipboard,fullscreen,tabbedex
 
-URxvt.url-launcher: /usr/bin/firefox-aurora
+URxvt.url-launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
 URxvt.keysym.C-Delete: perl:matcher:last
 URxvt.keysym.M-Delete: perl:matcher:list
