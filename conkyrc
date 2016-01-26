@@ -38,11 +38,11 @@ conky.config = {
 conky.text = [[
 ${color3 }SYSTEM INFORMATION ${hr 2}$color
 
- ${color white}${time %A},${time %e} ${time %B} ${time %G}${alignr}${time %H:%M:%S}
+ ${color white}${time %A},${time %e} ${time %B} ${time %Y}${alignr}${time %H:%M:%S}
  ${color white}Machine$color $nodename ${alignr}${color white}Uptime$color $uptime
  ${color white}Kernel$color $kernel ${alignr}${color white}Arch$color $machine
 
-${color3}CPU ${execi 20 cat /sys/class/thermal/thermal_zone0/temp | gawk '{print $1/1000}'}°C ${hr 2}$color
+${color3}CPU ${execi 20 cat /sys/class/thermal/thermal_zone0/temp | gawk '{print $1/1000}'}°C - ${loadavg} ${hr 2}$color
 
  #${execi 20 sensors | grep 'Core 2' | cut -c18-90 ;}
 cpu1 ${cpu cpu1}%    cpu2 ${cpu cpu2}%    cpu3 ${cpu cpu3}%   cpu4 ${cpu cpu4}%
