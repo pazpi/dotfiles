@@ -121,14 +121,14 @@
 			<!--</item>-->
 		</menu>
 		<menu execute="/usr/bin/obdevicemenu" id="devices" label="Devices"/>
-		<menu execute="/usr/bin/obfilebrowser" id="file" label="File"/>
+		<!-- <menu execute="/usr/bin/obfilebrowser" id="file" label="File"/> -->
 		<menu id="network" label="Network">
 			<item label="Firefox">
 				<action name="Execute">
 					<execute>firefox</execute>
 				</action>
 			</item>
-			<item label="Firefox">
+			<item label="Firefox Aurora">
 				<action name="Execute">
 					<execute>firefox-aurora</execute>
 				</action>
@@ -312,7 +312,7 @@
 			</item>
 			<item label="Master PDF">
 				<action name="Execute">
-					<execute>/opt/masterpdfeditor/master-pdf-editor</execute>
+					<execute>pdfeditor</execute>
 				</action>
 			</item>
 			<item label="Krop">
