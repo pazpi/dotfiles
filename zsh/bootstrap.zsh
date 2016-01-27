@@ -1,1 +1,1 @@
-export PATH=~/.dotfiles/bin:${PATH}
+export PATH=~/.bin:${PATH}
