@@ -13,6 +13,9 @@
     ~/.bashrc: bashrc
     ~/.bashMacrc: bashMacrc
     # ~/.axelrc: axelrc
+    ~/.bin:
+        create: true
+        path: bin
     ~/.conkyrc: conkyrc
     ~/.conkyMPD: conkyMPD
     ~/.conkyCLOCK: conkyCLOCK
