@@ -44,7 +44,7 @@
 				<item label="Window">
 					<action name="Execute">
 						<execute>
-                            scrot -u -q 100 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
+                            scrot -d 1 -u -q 100 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
                         </execute>
 					</action>
 				</item>
