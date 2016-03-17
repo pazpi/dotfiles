@@ -272,8 +272,8 @@
     <keybind key="W-c">
       <action name="Execute">
         <enabled>true</enabled>
-        <name>clerk</name>
-        <execute>clerk</execute>
+        <name>speedcrunch</name>
+        <execute>speedcrunch</execute>
       </action>
     </keybind>
     <keybind key="W-A-Right">
