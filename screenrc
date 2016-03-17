@@ -5,7 +5,7 @@ termcapinfo xterm* ti@:te@
 
 hardstatus off
 hardstatus alwayslastline
-hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d-%m-%y %{W} %c %{g}]'
+hardstatus string '%{= kG}[ %{G}%H:%S %l %{g} ][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d-%m-%y %{W} %c %{g}]'
 
 bind c screen 1
 bind ^c screen 1
