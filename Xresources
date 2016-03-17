@@ -6,10 +6,7 @@ Xft.autohint: false
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
-! *foreground: rgb:b2/b2/b2
-! *background: rgb:08/08/08
 !! Urxvt config !!
-!!Technical stuff
  
 URxvt.scrollBar: false
 URxvt.cursorUnderline: false
@@ -17,8 +14,6 @@ URxvt.colorUL: #9695b5
 URxvt.internalBorder:0
 URxvt.saveLines: 16384
 
-! URxvt*font:  -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:pixelsize:12
-! URxvt*boldFont:  -xos4-terminus-bold-*-*-*-14-*-*-*-*-*-iso8859-15,xft:terminus:bold:pixelsize:12
 ! URxvt*italicFont:  xft:Bitstream Vera Sans Mono:italic:autohint=true:pixelsize=12
 ! URxvt*boldItalicFont:  xft:Bitstream Vera Sans Mono:bold:italic:autohint=true:pixelsize=12
 URxvt.font: xft:Terminus:pixelsize=15,xft:Inconsolata\ for\ Powerline:pixelsize=15:antialias=true:hinting=true
@@ -34,12 +29,10 @@ URxvt.geometry: 105x33
 URxvt.borderless: true 
 
 URxvt.depth: 32
-! URxvt.background: [85]#000000
 
 ! URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
 Urxvt.perl-ext-common: default,clipboard
-!! Color !!
 ! Font color
 !URxvt.foreground: white
 URxvt.iconFile: /home/pazpi/Pictures/Terminal-icon.png 
@@ -93,6 +86,27 @@ URxvt.color15: #e4e4e4
 URxvt.cursorColor: #d0d0d0
 URxvt.cursorColor2: #3a3a3a
 URxvt.colorBD: #e4e4e4
+
+!TomorrowNight
+! *foreground:   #c5c8c6
+! *background:   #1d1f21
+! *cursorColor:  #aeafad
+! *color0:       #000000
+! *color1:       #912226
+! *color2:       #778900
+! *color3:       #ae7b00
+! *color4:       #1d2594
+! *color5:       #682a9b
+! *color6:       #2b6651
+! *color7:       #929593
+! *color8:       #666666
+! *color9:       #cc6666
+! *color10:      #b5bd68
+! *color11:      #f0c674
+! *color12:      #81a2be
+! *color13:      #b294bb
+! *color14:      #8abeb7
+! *color15:      #ecebec
 
 ! Hybrid Terminal Colours. Uses the palette from Tomorrow-Night:
 ! https://github.com/chriskempson/tomorrow-theme/blob/master/vim/colors/Tomorrow-Night.vim
@@ -181,9 +195,6 @@ URxvt.colorBD: #e4e4e4
 ! Fade to this colour, when fading is used (see fading:). The default colour is black; option
 ! URxvt*fadeColor: colour
 
-! Set the application icon pixmap; option -icon.
-! URxvt*iconFile: file
-
 ! Use the specified colour for the scrollbar [default #B2B2B2].
 ! URxvt*scrollColor: colour
 
@@ -192,17 +203,6 @@ URxvt.colorBD: #e4e4e4
 
 ! The colour of the border around the text area and between the scrollbar and the text.
 ! URxvt*borderColor: colour
-
-! Select the fonts to be used. This is a comma separated list of font names that are checked in
-!URxvt*font: xft:terminus:size=10
-
-!URxvt*boldFont: xft:terminus:size=10
-
-! 
-! URxvt*italicFont: fontlist
-
-! The font list to use for displaying bold, italic or bold italic characters, respectively.
-! URxvt*boldItalicFont: fontlist
 
 ! When font styles are not enabled, or this option is enabled (True, option -is, the default),
 URxvt*intensityStyles: false
@@ -238,7 +238,7 @@ URxvt*scrollstyle: plain
 ! URxvt*thickness: number
 
 ! True: enable the scrollbar [default]; option -sb. False: disable the scrollbar; option +sb.
-! URxvt*scrollBar: boolean
+URxvt*scrollBar: false
 
 ! True: place the scrollbar on the right of the window; option -sr.  False: place the scrollbar on
 ! URxvt*scrollBar_right: boolean
