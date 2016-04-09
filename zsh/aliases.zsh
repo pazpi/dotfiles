@@ -63,6 +63,7 @@ alias bot='cd ~/Projects/Eclipse-workspace/ruTorrent-bot && source env/bin/activ
 alias battery='upower -i `upower -e | grep 'BAT'`'
 alias 1080p='sh ~/.screenlayout/HDMI1920x1080.sh'
 alias ssh-tunnel='ssh -D 5000 -N at-nas-pi'
+alias xclip='xclip -selection c'
 #
 # Use colors in coreutils utilities output
 # alias ls='ls --color=auto'
