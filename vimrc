@@ -1,10 +1,8 @@
 " To start vim without using this .vimrc file, use:
 "     vim -u NORC
-"
 " To start vim without loading any .vimrc or plugins, use:
 "     vim -u NONE
-"
-" If you are using Arch install this programs that work like plugins
+" If you are using Arch install with pacman:
 " -ctags (Extra)
 " -vim-youcompleteme-git (Aur)
 " -vim-airline (Aur)
@@ -12,24 +10,7 @@
 " Use vim settings, rather then vi settings (much better!)
 " This must be first, because it changes other options as a side effect.
 set nocompatible
-" Vundle  {{{
-filetype off                    " force reloading *after* pathogen loaded
-" "------------------------------------------------------------
-" " set the runtime path to include Vundle and initialize
-" set rtp+=~/.vim/bundle/Vundle.vim
-" call vundle#begin()
-" if has("mac")
-    " Bundle 'Valloric/YouCompleteMe'
-" endif
-
-" Plugin 'gmarik/Vundle.vim'
-" if has("mac")
-    " Plugin 'bling/vim-airline'
-    " Plugin 'altercation/vim-colors-solarized'
-" endif
-
-" call vundle#end()            " required
-" "------------------------------------------------------------
+"Plug ------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
     if has("mac")
         Plug 'bling/vim-airline'
@@ -42,48 +23,46 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/seoul256.vim'
     Plug 'yegappan/mru'
     Plug 'klen/python-mode'
-    Plug 'rstacruz/sparkup'
     Plug 'majutsushi/tagbar'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-    "Plug 'joonty/vim-phpqa'
-    Plug 'rking/ag.vim'
-    "Plug 'octol/vim-cpp-enhanced-highlight' 
-    "Plug 'shawncplus/phpcomplete.vim'
-    Plug 'sudar/vim-arduino-syntax'
-    Plug 'MarcWeber/vim-addon-mw-utils'
-    Plug 'tomtom/tlib_vim'
-    "Plug 'garbas/vim-snipmate'
-    "Plug 'honza/vim-snippets'
-    "Plug 'sudar/vim-arduino-snippets'
-    Plug 'jplaut/vim-arduino-ino'
-    Plug 'gaving/vimmpc'
-    Plug 'jiangmiao/auto-pairs'
-    "Plug 'lervag/vim-latex'
-    Plug 'tpope/vim-fugitive'
-    " Plug 'nvie/vim-flake8'
-    Plug 'gmarik/Vundle.vim'
-    Plug 'itchyny/calendar.vim'
-    "Plugin ' aperezdc/vim-template/'
-    Plug 'vim-scripts/YankRing.vim'
-    Plug 'sjl/gundo.vim'
     Plug 'kien/ctrlp.vim'
     Plug 'scrooloose/nerdcommenter'
     Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
-    " Plug 'KabbAmine/vCoolor.vim'
-    " Plug 'wincent/command-t'
-    " Plug 'msanders/snipmate.vim'
-    Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
     Plug 'junegunn/vim-easy-align', { 'on': ['<Plug>(EasyAlign)', 'EasyAlign'] }
     Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'tomasr/molokai', { 'dir': '~/.vim/colors'}
-    "Plug 'LaTeX-Box-Team/LaTeX-Box'
-    Plug 'WolfgangMehner/vim-plugins'
     Plug 'alvan/vim-closetag'
+    Plug 'szw/vim-tags'
+    Plug 'jiangmiao/auto-pairs'
+    Plug 'tpope/vim-fugitive'
+    Plug 'itchyny/calendar.vim'
+    Plug 'vim-scripts/YankRing.vim'
+    " Plug 'joonty/vim-phpqa'
+    " Plug 'rking/ag.vim'
+    " Plug 'octol/vim-cpp-enhanced-highlight' 
+    " Plug 'shawncplus/phpcomplete.vim'
+    " Plug 'sudar/vim-arduino-syntax'
+    " Plug 'MarcWeber/vim-addon-mw-utils'
+    " Plug 'tomtom/tlib_vim'
+    " Plug 'garbas/vim-snipmate'
+    " Plug 'honza/vim-snippets'
+    " Plug 'sudar/vim-arduino-snippets'
+    " Plug 'jplaut/vim-arduino-ino'
+    " Plug 'lervag/vim-latex'
+    " Plug 'nvie/vim-flake8'
+    " Plug 'gmarik/Vundle.vim'
+    " Plug 'aperezdc/vim-template/'
+    " Plug 'sjl/gundo.vim'
+    " Plug 'KabbAmine/vCoolor.vim'
+    " Plug 'wincent/command-t'
+    " Plug 'msanders/snipmate.vim'
+    " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+    " Plug 'LaTeX-Box-Team/LaTeX-Box'
+    " Plug 'WolfgangMehner/vim-plugins'
 call plug#end()
 "------------------------------------------------------------
 "let items = fzf#run({ 'sink': 'tabe', 'options': '-m +c', 'dir': '~', 'source': 'ls'  })
-
 
 filetype plugin indent on       " enable detection, plugins and indenting in one step
 syntax enable
@@ -109,7 +88,7 @@ set backspace=indent,eol,start  " allow backspacing over everything in insert mo
 set autoindent                  " always set autoindenting on
 set copyindent                  " copy the previous indentation on autoindenting
 set number                      " always show line numbers
-"set ruler
+"set ruler                      " show the differnce from actual line and other line numbers
 highlight LineNr ctermfg=white  " white line number
 set showmatch                   " set show matching parenthesis
 set ignorecase                  " ignore case when searching
@@ -121,7 +100,6 @@ set hlsearch                    " highlight search terms
 set incsearch                   " show search matches as you type
 set gdefault                    " search/replace "globally" (on a line) by default
 set listchars=tab:▸\ ,trail:·,extends:#,nbsp:·
-
 set nolist                      " don't show invisible characters by default, but it is enabled for some file types (see later)
 set pastetoggle=<F2>            " when in insert mode, press <F2> to go to paste mode, where you can paste mass data that won't be autoindented
 set mouse=a                     " enable using the mouse if terminal emulator supports it (xterm does)
@@ -133,6 +111,221 @@ set cul                         " highlight current line
 hi CursolLine term=none cterm=none ctermbg=3    " adjust color
 "set shortmess+=I                " hide the launch screen
 set clipboard=unnamed           " normal OS clipboard interaction
+" }}}
+"
+" Editor layout {{{
+set termencoding=utf-8
+set encoding=utf-8
+set lazyredraw                  " don't update the display while executing macros
+set laststatus=2                " tell VIM to always put a status line in, even if there is only one window
+set cmdheight=2                 " use a status bar that is 2 rows high
+" }}}
+"
+" Vim behaviour {{{
+set hidden                      " hide buffers instead of closing them this  means that the current buffer can be put
+                                " to background without being written; and that marks and undo history are preserved
+set switchbuf=useopen           " reveal already opened files from the quickfix window instead of opening new buffers
+set history=1000                " remember more commands and search history
+set undolevels=1000             " use many muchos levels of undo
+if v:version >= 730
+    set undofile                " keep a persistent backup file
+    set undodir=~/.vim/.undo,~/tmp,/tmp
+endif
+set nobackup                    " do not keep backup files, it's 70's style cluttering
+set noswapfile                  " do not write annoying intermediate swap files, who did ever restore from swap files anyway?
+set directory=~/.vim/.tmp,~/tmp,/tmp
+                                " store swap files in one of these directories (in case swapfile is ever turned on)
+
+"Jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+set wildmenu                    " make tab completion for files/buffers act like bash
+set wildmode=list:full          " show a list when pressing tab and complete first full match
+set wildignore=*.swp,*.bak,*.pyc,*.class
+" set title                       " change the terminal's title
+let &titleold=getcwd()
+set visualbell                  " don't beep
+set noerrorbells                " don't beep
+set showcmd                     " show (partial) command in the last line of the screen this also shows visual selection info
+set nomodeline                  " disable mode lines (security measure)
+set ttyfast                     " always use a fast terminal
+set cursorline                  " underline the current line, for quick orientation
+" }}}
+"
+" Extra vi-compatibility {{{
+" set extra vi-compatible options
+set cpoptions+=$     " when changing a line, don't redisplay, but put a '$' at
+                     " the end during the change
+set formatoptions-=o " don't start new lines w/ comment leader on pressing 'o'
+au filetype vim set formatoptions-=o
+                     " somehow, during vim filetype detection, this gets set
+                     " for vim files, so explicitly unset it again
+" }}}
+"
+"Seoul256 --------------------------------------------------
+let g:seoul256_background = 233
+colo seoul256
+"-----------------------------------------------------------
+"
+"MRU -------------------------------------------------------
+nnoremap <leader>h :MRU<cr>
+"-----------------------------------------------------------
+"
+"vim airline -----------------------------------------------
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '>'
+let g:Powerline_symbols = "fancy"
+set laststatus=2
+"-----------------------------------------------------------
+"
+"CtrlP -----------------------------------------------------
+" Invoke CtrlP, but CommandT style
+nnoremap <leader>t :CtrlP<cr>
+nnoremap <leader>. :CtrlPTag<cr>
+nnoremap <leader>b :CtrlPBuffer<cr>
+"-----------------------------------------------------------
+"
+"NERDTree---------------------------------------------------
+nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
+nnoremap <leader>N :NERDTreeClose<CR>
+" Store the bookmarks file
+let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
+" Show the bookmarks table on startup
+let NERDTreeShowBookmarks=1
+" Show hidden files, too
+let NERDTreeShowFiles=1
+let NERDTreeShowHidden=1
+" Quit on opening files from the tree
+let NERDTreeQuitOnOpen=1
+" Highlight the selected entry in the tree
+let NERDTreeHighlightCursorline=1
+" Use a single click to fold/unfold directories and a double click to open
+" files
+let NERDTreeMouseMode=2
+" Don't display these kinds of files
+let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
+            \ '\.o$', '\.so$', '\.egg$', '^\.git$' ]
+"-----------------------------------------------------------
+"
+"Pep8 (python-mode)-----------------------------------------
+let g:pymode_lint_ignore="E114,E115,E116"
+"-----------------------------------------------------------
+"
+"NerdCommenter----------------------------------------------
+let NERDSpaceDelims=1
+"-----------------------------------------------------------
+"
+"MultiCursor------------------------------------------------
+let g:multi_cursor_use_default_mapping = 0
+let g:multi_cursor_next_key            = '<C-a>'
+let g:multi_cursor_prev_key            = '<C-s>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+"-----------------------------------------------------------
+"
+"Closetag---------------------------------------------------
+let g:closetag_html_style=1
+"let g:closetag_filenames = "*.html, *xhtml, *phtml"
+"-----------------------------------------------------------
+"
+"TagBar http://mirnazim.org/writings/vim-plugins-i-use/-----
+nnoremap <leader>l :TagbarToggle<CR>
+"-----------------------------------------------------------
+"
+"VimFilter--------------------------------------------------
+let g:vimfiler_split_action = 1
+"-----------------------------------------------------------
+"
+" YankRing stuff--------------------------------------------
+let g:yankring_history_dir = '$HOME/.vim/.tmp'
+nnoremap <leader>y :YRShow<CR>
+"-----------------------------------------------------------
+"
+"Auto-Pairs-------------------------------------------------
+let g:AutoPairsFlyMode = 0
+"-----------------------------------------------------------
+"
+"Auto-Pairs-------------------------------------------------
+let g:cpp_class_scope_highlight = 1
+let g:cpp_experimental_template_highlight = 1
+"-----------------------------------------------------------
+"
+"YouCompleteMe----------------------------------------------
+"let g:ycm_global_ycm_extra_conf = "~/.vim/python/ycm/.ycm_extra_conf.py"
+" let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+" let g:ycm_register_as_syntastic_checker = 1
+" let g:ycm_complete_in_comments = 1
+" let g:ycm_complete_in_strings = 1
+" let g:ycm_collect_identifiers_from_tags_files = 1
+" let g:ycm_seed_identifiers_with_syntax = 1
+" let g:ycm_cache_omnifunc = 0
+" let g:ycm_filetype_whitelist = {'c':0, 'cpp':0, 'python':0, 'objc':0, 'objcpp':0}
+" let g:ycm_add_preview_to_completeopt = 1
+" let g:ycm_autoclose_preview_window_after_completion = 1
+" let g:ycm_autoclose_preview_window_after_insertion = 1
+" let g:ycm_key_list_select_completion = ['<Down>']
+" let g:ycm_key_list_previous_completion = ['<Up>']
+"-----------------------------------------------------------
+"
+" Global Syntastic options ---------------------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+"
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_enable_signs = 1
+let g:syntastic_always_populate_loc_list = 1
+" Syntastic C checker
+let g:syntastic_c_compiler_options = ""
+let g:syntastic_c_check_header = 1
+let g:syntastic_c_auto_refresh_includes = 1
+"-----------------------------------------------------------
+"
+"Ultisnips--------------------------------------------------
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<s-b>"
+let g:UltiSnipsJumpBackwardTrigger="<s-z>"
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+"-----------------------------------------------------------
+"
+"Calendar---------------------------------------------------
+let g:calendar_google_calendar = 1
+let g:calendar_google_task     = 1
+let g:calendar_first_day       = 'monday'
+"-----------------------------------------------------------
+"
+"Easy Align-------------------------------------------------
+vmap <Enter> <Plug>(EasyAlign)
+nmap <Leader>a <Plug>(EasyAlign)
+"-----------------------------------------------------------
+"
+"Snippets---------------------------------------------------
+" let g:snipMate = {}
+" let g:snipMate.scope_aliases = {}
+"-----------------------------------------------------------
+"
+"Vim-tags---------------------------------------------------
+ let g:vim_tags_auto_generate = 1
+"-----------------------------------------------------------
+"
+"Vim-cpp-enhanced-highlight --------------------------------
+let g:cpp_class_scope_highlight = 1
+"-----------------------------------------------------------
+"
+"
 " Toggle show/hide invisible chars
 nnoremap <leader>i :set list!<cr>
 
@@ -191,59 +384,10 @@ nnoremap z3 :set foldlevel=3<cr>
 nnoremap z4 :set foldlevel=4<cr>
 nnoremap z5 :set foldlevel=5<cr>
 nnoremap <Space> za
-vnoremap <Space> za  
+vnoremap <Space> za
 "}}}
 
-" Editor layout {{{
-set termencoding=utf-8
-set encoding=utf-8
-set lazyredraw                  " don't update the display while executing macros
-set laststatus=2                " tell VIM to always put a status line in, even
-                                "    if there is only one window
-set cmdheight=2                 " use a status bar that is 2 rows high
-" }}}
 
-" Vim behaviour {{{
-set hidden                      " hide buffers instead of closing them this
-                                "    means that the current buffer can be put
-                                "    to background without being written; and
-                                "    that marks and undo history are preserved
-set switchbuf=useopen           " reveal already opened files from the
-                                " quickfix window instead of opening new
-                                " buffers
-set history=1000                " remember more commands and search history
-set undolevels=1000             " use many muchos levels of undo
-if v:version >= 730
-    set undofile                " keep a persistent backup file
-    set undodir=~/.vim/.undo,~/tmp,/tmp
-endif
-set nobackup                    " do not keep backup files, it's 70's style cluttering
-set noswapfile                  " do not write annoying intermediate swap files,
-                                "    who did ever restore from swap files anyway?
-set directory=~/.vim/.tmp,~/tmp,/tmp
-                                " store swap files in one of these directories
-                                "    (in case swapfile is ever turned on)
-
-"Jump to the last position when
-" reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
-
-set wildmenu                    " make tab completion for files/buffers act like bash
-set wildmode=list:full          " show a list when pressing tab and complete
-                                "    first full match
-set wildignore=*.swp,*.bak,*.pyc,*.class
-" set title                       " change the terminal's title
-let &titleold=getcwd()
-set visualbell                  " don't beep
-set noerrorbells                " don't beep
-set showcmd                     " show (partial) command in the last line of the screen this also shows visual selection info
-set nomodeline                  " disable mode lines (security measure)
-set ttyfast                     " always use a fast terminal
-set cursorline                  " underline the current line, for quick orientation
-" }}}
-                                     
 " Toggle the quickfix window {{{
 " From Steve Losh, http://learnvimscriptthehardway.stevelosh.com/chapters/38.html
 nnoremap <C-q> :call <SID>QuickfixToggle()<cr>
@@ -311,7 +455,11 @@ noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
-nnoremap <leader>w <C-w>v<C-w>l
+" Split previously opened file ('#') in a split window
+nnoremap <leader>w :execute "leftabove vsplit" bufname('#')<cr>
+" nnoremap <leader>W :execute "rightbelow vsplit" bufname('#')<cr>
+" nnoremap <leader>w <C-w>v<C-w>l
+ nnoremap <leader>W <C-w>S<C-w>l
 " Complete whole filenames/lines with a quicker shortcut key in insert mode
 inoremap <C-f> <C-z><C-f>
 inoremap <C-l> <C-z><C-l>
@@ -328,49 +476,15 @@ nnoremap <silent> <leader>\ :nohlsearch<CR>
 " replace)
 nnoremap <leader>z :%s#\<<C-r>=expand("<cword>")<CR>\>#
 
-" Keep search matches in the middle of the window and pulse the line when moving
-" to them.
-"nnoremap n n:call PulseCursorLine()<cr>
-"nnoremap N N:call PulseCursorLine()<cr>
-
-" Quickly get out of insert mode without your fingers having to leave the
-" home row (either use 'jj' or 'jk')
-inoremap jj <Esc>
-
-" Quick alignment of text
-nnoremap <leader>al :left<CR>
-nnoremap <leader>ar :right<CR>
-nnoremap <leader>ac :center<CR>
-
-" Ctrl+W to redraw
-"nnoremap <C-w> :redraw!<cr>
-
-" Strip all trailing whitespace from a file, using ,W
-"nnoremap <leader>W :%s/\s\+$//<CR>:let @/=''<CR>
-
-" grep/Ack/Ag for the word under cursor
-vnoremap <leader>a y:grep! "\b<c-r>"\b"<cr>:cw<cr>
-nnoremap <leader>a :grep! "\b<c-r><c-w>\b"
-nnoremap K *N:grep! "\b<c-r><c-w>\b"<cr>:cw<cr>
+" Keep search matches in the middle of the window and pulse the line when moving to them.
+" nnoremap n n:call PulseCursorLine()<cr>
+" nnoremap N N:call PulseCursorLine()<cr>
 
 " Allow quick additions to the spelling dict
 "nnoremap <leader>g :spellgood <c-r><c-w>
 
-" bind \ (backward slash) to grep shortcut
-nnoremap \ :FZF -e<SPACE>
-
-" Creating folds for tags in HTML
-"nnoremap <leader>ft Vatzf
-
 " Reselect text that was just pasted with ,v
 nnoremap <leader>v V`]
-
-" Gundo.vim
-nnoremap <leader>u :GundoToggle<CR>
-" }}}
-
-
-
 
 " Restore cursor position upon reopening files {{{
 autocmd BufReadPost *
@@ -378,68 +492,52 @@ autocmd BufReadPost *
     \   exe "normal! g`\"" |
     \ endif
 " }}}
-" Extra vi-compatibility {{{
-" set extra vi-compatible options
-set cpoptions+=$     " when changing a line, don't redisplay, but put a '$' at
-                     " the end during the change
-set formatoptions-=o " don't start new lines w/ comment leader on pressing 'o'
-au filetype vim set formatoptions-=o
-                     " somehow, during vim filetype detection, this gets set
-                     " for vim files, so explicitly unset it again
-" }}}
 
-" Pulse ------------------------------------------------------------------- {{{
+" Pulse -------------------------------------------------------------------
+" function! PulseCursorLine()
+    " let current_window = winnr()
 
-function! PulseCursorLine()
-    let current_window = winnr()
+    " windo set nocursorline
+    " execute current_window . 'wincmd w'
 
-    windo set nocursorline
-    execute current_window . 'wincmd w'
+    " setlocal cursorline
 
-    setlocal cursorline
+    " redir => old_hi
+        " silent execute 'hi CursorLine'
+    " redir END
+    " let old_hi = split(old_hi, '\n')[0]
+    " let old_hi = substitute(old_hi, 'xxx', '', '')
 
-    redir => old_hi
-        silent execute 'hi CursorLine'
-    redir END
-    let old_hi = split(old_hi, '\n')[0]
-    let old_hi = substitute(old_hi, 'xxx', '', '')
+    " hi CursorLine guibg=#3a3a3a
+    " redraw
+    " sleep 20m
 
-    hi CursorLine guibg=#3a3a3a
-    redraw
-    sleep 20m
+    " hi CursorLine guibg=#4a4a4a
+    " redraw
+    " sleep 30m
 
-    hi CursorLine guibg=#4a4a4a
-    redraw
-    sleep 30m
+    " hi CursorLine guibg=#3a3a3a
+    " redraw
+    " sleep 30m
 
-    hi CursorLine guibg=#3a3a3a
-    redraw
-    sleep 30m
+    " hi CursorLine guibg=#2a2a2a
+    " redraw
+    " sleep 20m
 
-    hi CursorLine guibg=#2a2a2a
-    redraw
-    sleep 20m
+    " execute 'hi ' . old_hi
 
-    execute 'hi ' . old_hi
-
-    windo set cursorline
-    execute current_window . 'wincmd w'
-endfunction
-
-" }}}
-
-" Invoke CtrlP, but CommandT style
-nnoremap <leader>t :CtrlP<cr>
-nnoremap <leader>. :CtrlPTag<cr>
-nnoremap <leader>b :CtrlPBuffer<cr>
-
+    " windo set cursorline
+    " execute current_window . 'wincmd w'
+" endfunction
+"-------------------------------------------------------------------------
+"
 " Learn Vim Script the Hard Way Exercises
 "noremap - ddp
 "noremap _ ddkP
 
 " C-U in insert/normal mode, to uppercase the word under cursor
-"inoremap <c-u> <esc>viwUea
-"nnoremap <c-u> viwUe
+inoremap <c-u> <esc>viwUea
+nnoremap <c-u> viwUe
 
 " Use shift-H and shift-L for move to beginning/end
 nnoremap H 0
@@ -460,207 +558,23 @@ nnoremap L $
 "onoremap ia :<c-u>execute "normal! ?[,(]\rwv/[),]\rh"<cr>
 "vnoremap ia :<c-u>execute "normal! ?[,(]\rwv/[),]\rh"<cr>
 
-" Split previously opened file ('#') in a split window
-"nnoremap <leader>sh :execute "leftabove vsplit" bufname('#')<cr>
-"nnoremap <leader>sl :execute "rightbelow vsplit" bufname('#')<cr>
-
-" Grep searches
-"nnoremap <leader>g :silent execute "grep! -R " . shellescape('<cword>') . " ."<cr>:copen 12<cr>
-"nnoremap <leader>G :silent execute "grep! -R " . shellescape('<cWORD>') . " ."<cr>:copen 12<cr>
-
-" Rope config
-"nnoremap <leader>A :RopeAutoImport<cr>
-
-" Switch from block-cursor to vertical-line-cursor when going into/out of
-" insert mode
-"let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-"let g:solarized_termcolors=256
-"colorscheme solarized
-"call togglebg#map("<F6>")
-" if has("mac")
-    " "<<<<<<< Updated upstream
-    " "let g:solarized_termcolors=256
-    " "colorscheme solarized
-    " "call togglebg#map("<F6>")
-    " "=======
-    " set background=dark
-    " colorscheme solarized
-    " ">>>>>>> Stashed changes
-    " let g:rehash256 = 1
-" else
-    let g:seoul256_background = 233
-    colo seoul256
-    " set background=dark
-    " colorscheme molokai
-    " let g:molokai_original = 1
-    " let g:rehash256 = 1
-" endif
-"-----------------------------------------------------------
-"
-"vim airline -----------------------------------------------
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '>'
-let g:Powerline_symbols = "fancy"
-set laststatus=2
-"-----------------------------------------------------------
-"
-"NERDTree---------------------------------------------------
-nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>m :NERDTreeClose<CR>:NERDTreeFind<CR>
-nnoremap <leader>N :NERDTreeClose<CR>
-" Store the bookmarks file
-let NERDTreeBookmarksFile=expand("$HOME/.vim/NERDTreeBookmarks")
-" Show the bookmarks table on startup
-let NERDTreeShowBookmarks=1
-" Show hidden files, too
-let NERDTreeShowFiles=1
-let NERDTreeShowHidden=1
-" Quit on opening files from the tree
-let NERDTreeQuitOnOpen=1
-" Highlight the selected entry in the tree
-let NERDTreeHighlightCursorline=1
-" Use a single click to fold/unfold directories and a double click to open
-" files
-let NERDTreeMouseMode=2
-" Don't display these kinds of files
-let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
-            \ '\.o$', '\.so$', '\.egg$', '^\.git$' ]
-"-----------------------------------------------------------
-"
-"Pep8 (python-mode)-----------------------------------------
-let g:pymode_lint_ignore="E114,E115,E116"
-"-----------------------------------------------------------
-"
-"NerdCommenter----------------------------------------------
-let NERDSpaceDelims=1
-"-----------------------------------------------------------
-"
-"MultiCursor------------------------------------------------
-let g:multi_cursor_use_default_mapping = 0
-let g:multi_cursor_next_key            = '<C-a>'
-let g:multi_cursor_prev_key            = '<C-s>'
-let g:multi_cursor_skip_key            = '<C-x>'
-let g:multi_cursor_quit_key            = '<Esc>'
-"-----------------------------------------------------------
-"
-"Closetag---------------------------------------------------
-let g:closetag_html_style=1
-"let g:closetag_filenames = "*.html, *xhtml, *phtml"
-"-----------------------------------------------------------
-"
-"TagBar http://mirnazim.org/writings/vim-plugins-i-use/-----
-nnoremap <leader>l :TagbarToggle<CR>
-"-----------------------------------------------------------
-"
-"VimFilter--------------------------------------------------
-let g:vimfiler_split_action = 1
-"-----------------------------------------------------------
-"
-" YankRing stuff--------------------------------------------
-let g:yankring_history_dir = '$HOME/.vim/.tmp'
-nnoremap <leader>r :YRShow<CR>
-"-----------------------------------------------------------
-
-"Auto-Pairs-------------------------------------------------
-let g:AutoPairsFlyMode = 0
-"-----------------------------------------------------------
-
-"Auto-Pairs-------------------------------------------------
-let g:cpp_class_scope_highlight = 1
-let g:cpp_experimental_template_highlight = 1
-"-----------------------------------------------------------
-"
-"Syntastic--------------------------------------------------
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-"-----------------------------------------------------------
-"
-"YouCompleteMe----------------------------------------------
-"let g:ycm_global_ycm_extra_conf = "~/.vim/python/ycm/.ycm_extra_conf.py"
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-let g:ycm_register_as_syntastic_checker = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_cache_omnifunc = 0
-let g:ycm_filetype_whitelist = {'c':0, 'cpp':0, 'python':0, 'objc':0, 'objcpp':0}
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_key_list_select_completion = ['<Down>']
-let g:ycm_key_list_previous_completion = ['<Up>']
-" Global Syntastic options.
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-"
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_enable_signs = 1
-let g:syntastic_always_populate_loc_list = 1
-" Syntastic C checker
-let g:syntastic_c_compiler_options = ""
-let g:syntastic_c_check_header = 1
-let g:syntastic_c_auto_refresh_includes = 1
-"-----------------------------------------------------------
-"
-"Ultisnips--------------------------------------------------
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<s-b>"
-let g:UltiSnipsJumpBackwardTrigger="<s-z>"
-"
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
-"-----------------------------------------------------------
-"
-"Calendar---------------------------------------------------
-let g:calendar_google_calendar = 1
-let g:calendar_google_task     = 1
-let g:calendar_first_day       = 'monday'
-"-----------------------------------------------------------
-"
-"Easy Align-------------------------------------------------
-vmap <Enter> <Plug>(EasyAlign)
-nmap <Leader>a <Plug>(EasyAlign)
-"-----------------------------------------------------------
-"
-"Snippets---------------------------------------------------
-" let g:snipMate = {}
-" let g:snipMate.scope_aliases = {}
-"-----------------------------------------------------------
-"
 "Open Ranger file manager-----------------------------------
 " Use ranger as vim file manager
-function! Ranger()
-    " Get a temp file name without creating it
-    let tmpfile = substitute(system('mktemp -u'), '\n', '', '')
-    " Launch ranger, passing it the temp file name
-    silent exec '!RANGER_RETURN_FILE='.tmpfile.' ranger'
-    " If the temp file has been written by ranger
-    if filereadable(tmpfile)
-        " Get the selected file name from the temp file
-        let filetoedit = system('cat '.tmpfile)
-        exec 'edit '.filetoedit
-        call delete(tmpfile)
-    endif
-    redraw!
-endfunction
-nmap <leader>R :call Ranger()<cr>
+" function! Ranger()
+    " " Get a temp file name without creating it
+    " let tmpfile = substitute(system('mktemp -u'), '\n', '', '')
+    " " Launch ranger, passing it the temp file name
+    " silent exec '!RANGER_RETURN_FILE='.tmpfile.' ranger'
+    " " If the temp file has been written by ranger
+    " if filereadable(tmpfile)
+        " " Get the selected file name from the temp file
+        " let filetoedit = system('cat '.tmpfile)
+        " exec 'edit '.filetoedit
+        " call delete(tmpfile)
+    " endif
+    " redraw!
+" endfunction
+" nmap <leader>R :call Ranger()<cr>
 "-----------------------------------------------------------
 
 " Filetype specific handling {{{
@@ -823,25 +737,4 @@ if has("autocmd")
         autocmd filetype textile highlight link frontmatter Comment
     augroup end "}}}
 endif
-" }}}
-
- "Skeleton processing {{{
-
-"if has("autocmd")
-
-    ""if !exists('*LoadTemplate')
-    ""function LoadTemplate(file)
-        """ Add skeleton fillings for Python (normal and unittest) files
-        ""if a:file =~ 'test_.*\.py$'
-            ""execute "0r ~/.vim/skeleton/test_template.py"
-        ""elseif a:file =~ '.*\.py$'
-            ""execute "0r ~/.vim/skeleton/template.py"
-        ""endif
-    ""endfunction
-    ""endif
-
-    ""autocmd BufNewFile * call LoadTemplate(@%)
-
-"endif " has("autocmd")
-
 " }}}
