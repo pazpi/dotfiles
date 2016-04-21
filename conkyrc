@@ -77,7 +77,7 @@ ${color3}DISK ${hr 2}$color
  ${color white}Read:$color ${diskio_read /dev/sda4}${alignr}${color white}Write:$color ${diskio_write /dev/sda4}
  #${fs_bar 3, 320 /home/pazpi}$color
  ${diskiograph_read /dev/sda4 15,150 000000 00ff00}${alignr}${diskiograph_write /dev/sda4 15,150 000000 ffff00}
-${color3}Battery is ${battery BAT1} ${battery_time BAT1} ${hr 2}$color
+${color3}Battery is ${battery BAT1} ${battery_time BAT1} ${battery | grep "energy-rate" | awk '{print $2}' 10} ${hr 2}$color
 
 ${if_up wlp3s0}${color3}WiFi wlp3s0 ${wireless_link_qual_perc wlp3s0}% ${wireless_bitrate wlp3s0} ${hr 2}$color
 # ${color white}Private IP: ${color}${addr wlp3s0}

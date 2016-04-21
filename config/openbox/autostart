@@ -23,7 +23,7 @@ dunst &
 feh --bg-fill ~/.background/arch-blue-thx-martino.png --bg-fill ~/.background/2.png
 # feh --bg-fill /usr/share/backgrounds/gnome/adwaita-night.jpg
 ## Battery Icon
-(sleep 1s && cbatticon -u 20 -i notification -c "systemctl hybrid-sleep" -l 15 -r 3) &
+(sleep 1s && cbatticon -u 20 -i notification -c "systemctl poweroff" -l 15 -r 2) &
 (sleep 1s && volumeicon) &
 #(sleep 1s && pcmanfm -d) &
 #(sleep 5s && octopi-notifier) &
