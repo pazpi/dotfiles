@@ -11,8 +11,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
-urxvtd -q -f -o
+# [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+# urxvtd -q -f -o
 
 export "XDG_CONFIG_HOME=$HOME/.config"
 export "MPD_HOST=192.168.1.190"

@@ -46,4 +46,4 @@ feh --bg-fill ~/.background/arch-blue-thx-martino.png --bg-fill ~/.background/2.
 # Disable screensaver when play video in VLC, mPlayer, Flash, ecc (see script for detail)
 (sleep 2s && lightsOn) &
 ## Optionally disable touchpad
-usr/bin/synclient TouchpadOff=1 &
+# usr/bin/synclient TouchpadOff=1 &
