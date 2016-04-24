@@ -31,6 +31,9 @@
     ~/.config/ranger:
         create: true
         path: config/ranger
+    ~/.config/tint2:
+        create: true
+        path: config/tint2
     ~/.dotfiles: ''
     ~/.i3:
         create: true
