@@ -9,7 +9,7 @@ esac
 # Add vim as default editor
 export EDITOR=vim
 export TERMINAL=urxvtc
-export BROWSER=firefox-aurora
+export BROWSER=firefox
 export PROMPT_COMMAND='echo -ne "\033]0;$PWD\007"'
 export TERM=xterm
 export LC_ALL=en_US.UTF-8
