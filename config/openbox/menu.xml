@@ -34,59 +34,59 @@
                 </execute>
 			</action>
 		</item>
-		<item label="Text Editor">
+		<item label="pyCharm">
 			<action name="Execute">
-				<execute>urxvtc -e vim</execute>
+				<execute>pycharm</execute>
 			</action>
 		</item>
-			<menu id="graphicsScreenshots" label="Screenshot">
-				<separator label="scrot"/>
-				<item label="Window">
-					<action name="Execute">
-						<execute>
+		<menu id="graphicsScreenshots" label="Screenshot">
+			<separator label="scrot"/>
+			<item label="Window">
+				<action name="Execute">
+					<execute>
                             scrot -d 1 -u -q 100 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
                         </execute>
-					</action>
-				</item>
-				<item label="Now">
-					<action name="Execute">
-						<execute>
+				</action>
+			</item>
+			<item label="Now">
+				<action name="Execute">
+					<execute>
                             scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
                         </execute>
-					</action>
-				</item>
-				<item label="In 5 Seconds...">
-					<action name="Execute">
-						<execute>
+				</action>
+			</item>
+			<item label="In 5 Seconds...">
+				<action name="Execute">
+					<execute>
                             scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
                         </execute>
-					</action>
-				</item>
-				<item label="In 10 Seconds...">
-					<action name="Execute">
-						<execute>
+				</action>
+			</item>
+			<item label="In 10 Seconds...">
+				<action name="Execute">
+					<execute>
                             scrot -d 10 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
                         </execute>
-					</action>
-				</item>
-				<item label="Selected Area... (click &amp; drag mouse)">
-					<action name="Execute">
-						<execute>
+				</action>
+			</item>
+			<item label="Selected Area... (click &amp; drag mouse)">
+				<action name="Execute">
+					<execute>
                             scrot -s '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
                         </execute>
-					</action>
-				</item>
-			</menu>
+				</action>
+			</item>
+		</menu>
 		<!-- <item label="Media Player"> -->
-			<!-- <action name="Execute"> -->
-				<!-- <execute> -->
-                    <!-- vlc -->
-                <!-- </execute> -->
-			<!-- </action> -->
+		<!-- <action name="Execute"> -->
+		<!-- <execute> -->
+		<!-- vlc -->
+		<!-- </execute> -->
+		<!-- </action> -->
 		<!-- </item> -->
 		<separator/>
 		<menu id="accessories" label="Accessories">
-            <!--
+			<!--
 			   -<item label="Catfish File Search">
 			   -    <action name="Execute">
 			   -        <execute>
@@ -96,16 +96,16 @@
 			   -</item>
                -->
 			<!-- <item label="Archive Manager"> -->
-				<!-- <action name="Execute"> -->
-					<!-- <execute> -->
-                        <!-- file-roller -->
-                    <!-- </execute> -->
-				<!-- </action> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute> -->
+			<!-- file-roller -->
+			<!-- </execute> -->
+			<!-- </action> -->
 			<!-- </item> -->
 			<!--<item label="Aptana Studio 3">-->
-				<!--<action name="Execute">-->
-					<!--<execute>aptanastudio3</execute>-->
-				<!--</action>-->
+			<!--<action name="Execute">-->
+			<!--<execute>aptanastudio3</execute>-->
+			<!--</action>-->
 			<!--</item>-->
 			<item label="File Manager">
 				<action name="Execute">
@@ -122,9 +122,9 @@
 			<!--</action>-->
 			<!--</item>-->
 			<!--<item label="System Profiler and Benchmark">-->
-				<!--<action name="Execute">-->
-					<!--<execute>hardinfo</execute>-->
-				<!--</action>-->
+			<!--<action name="Execute">-->
+			<!--<execute>hardinfo</execute>-->
+			<!--</action>-->
 			<!--</item>-->
 		</menu>
 		<menu execute="/usr/bin/obdevicemenu" id="devices" label="Devices"/>
@@ -146,16 +146,16 @@
 				</action>
 			</item>
 			<!--<item label="Filezilla">-->
-				<!--<action name="Execute">-->
-					<!--<execute>filezilla</execute>-->
-				<!--</action>-->
+			<!--<action name="Execute">-->
+			<!--<execute>filezilla</execute>-->
+			<!--</action>-->
 			<!--</item>-->
 			<!--<item label="Remote Filesystems">-->
-				<!--<action name="Execute">-->
-					<!--<execute>-->
-                        <!--gigolo-->
-                    <!--</execute>-->
-				<!--</action>-->
+			<!--<action name="Execute">-->
+			<!--<execute>-->
+			<!--gigolo-->
+			<!--</execute>-->
+			<!--</action>-->
 			<!--</item>-->
 			<separator label="Services"/>
 			<menu id="network-832814" label="Mega">
@@ -212,9 +212,9 @@
 				</action>
 			</item>
 			<!--<item label="Play on Linux">-->
-				<!--<action name="Execute">-->
-					<!--<execute>primusrun playonlinux</execute>-->
-				<!--</action>-->
+			<!--<action name="Execute">-->
+			<!--<execute>primusrun playonlinux</execute>-->
+			<!--</action>-->
 			<!--</item>-->
 		</menu>
 		<menu id="graphics" label="Graphics">
@@ -231,13 +231,13 @@
 				</action>
 			</item>
 			<!-- <item label="Gimp"> -->
-				<!-- <action name="Execute"> -->
-					<!-- <execute>gimp</execute> -->
-				<!-- </action> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute>gimp</execute> -->
+			<!-- </action> -->
 			<!-- </item> -->
 			<item label="Natron">
 				<action name="Execute">
-                    <execute>natron</execute>
+					<execute>natron</execute>
 				</action>
 			</item>
 			<item label="Viewnior Image Viewer">
@@ -250,25 +250,25 @@
 		</menu>
 		<menu id="multimedia" label="Multimedia">
 			<!-- <item label="XBMC"> -->
-				<!-- <action name="Execute"> -->
-					<!-- <execute>xbmc</execute> -->
-				<!-- </action> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute>xbmc</execute> -->
+			<!-- </action> -->
 			<!-- </item> -->
 			<!-- <item label="Popcorn Time"> -->
-				<!-- <action name="Execute"> -->
-					<!-- <execute>/home/pazpi/Popcorn-Time-0.3.5.3-Linux64/Popcorn-Time</execute> -->
-				<!-- </action> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute>/home/pazpi/Popcorn-Time-0.3.5.3-Linux64/Popcorn-Time</execute> -->
+			<!-- </action> -->
 			<!-- </item> -->
 			<!-- <item label="VLC Media Player"> -->
-				<!-- <action name="Execute"> -->
-					<!-- <execute> -->
-                        <!-- vlc -->
-                    <!-- </execute> -->
-				<!-- </action> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute> -->
+			<!-- vlc -->
+			<!-- </execute> -->
+			<!-- </action> -->
 			<!-- </item> -->
 			<item label="TV mpv">
 				<action name="Execute">
-                    <execute>mpv dvb://Italia1 HD</execute>
+					<execute>mpv dvb://Italia1 HD</execute>
 				</action>
 			</item>
 			<item label="PulseAudio VC">
@@ -277,31 +277,31 @@
 				</action>
 			</item>
 			<!--<item label="Screen Record">-->
-				<!--<action name="Execute">-->
-					<!--<execute>simplescreenrecorder</execute>-->
-				<!--</action>-->
+			<!--<action name="Execute">-->
+			<!--<execute>simplescreenrecorder</execute>-->
+			<!--</action>-->
 			<!--</item>-->
 			<!--<item label="Music AutoTag">-->
-				<!--<action name="Execute">-->
-					<!--<execute>picard</execute>-->
-				<!--</action>-->
+			<!--<action name="Execute">-->
+			<!--<execute>picard</execute>-->
+			<!--</action>-->
 			<!--</item>-->
 		</menu>
 		<menu id="office" label="Office">
 			<!-- <item label="AbiWord"> -->
-				<!-- <action name="Execute"> -->
-					<!-- <execute>abiword</execute> -->
-				<!-- </action> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute>abiword</execute> -->
+			<!-- </action> -->
 			<!-- </item> -->
 			<item label="LibreOffice">
 				<action name="Execute">
 					<execute>libreoffice</execute>
-                </action>
-            </item>
+				</action>
+			</item>
 			<!-- <item label="Gnumeric"> -->
-				<!-- <action name="Execute"> -->
-					<!-- <execute>gnumeric</execute> -->
-				<!-- </action> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute>gnumeric</execute> -->
+			<!-- </action> -->
 			<!-- </item> -->
 			<item label="Calculator">
 				<action name="Execute">
@@ -404,11 +404,11 @@
 					</action>
 				</item>
 				<!-- <item label="Restart tint2"> -->
-					<!-- <action name="Execute"> -->
-						<!-- <execute> -->
-                            <!-- tint2restart -->
-                        <!-- </execute> -->
-					<!-- </action> -->
+				<!-- <action name="Execute"> -->
+				<!-- <execute> -->
+				<!-- tint2restart -->
+				<!-- </execute> -->
+				<!-- </action> -->
 				<!-- </item> -->
 				<item label="TintWizard">
 					<action name="Execute">
@@ -440,23 +440,23 @@
 				</action>
 			</item>
 			<!-- <item label="Choose Wallpaper"> -->
-				<!-- <action name="Execute"> -->
-					<!-- <execute>nitrogen</execute> -->
-				<!-- </action> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute>nitrogen</execute> -->
+			<!-- </action> -->
 			<!-- </item> -->
 		</menu>
 		<menu id="38" label="Utilities">
 			<!-- <menu id="software manger" label="Software Manager"> -->
-				<!-- <item label="Pamac Updater"> -->
-					<!-- <action name="Execute"> -->
-						<!-- <execute>pamac-updater</execute> -->
-					<!-- </action> -->
-				<!-- </item> -->
-				<!-- <item label="Pacman Manager"> -->
-					<!-- <action name="Execute"> -->
-						<!-- <execute>pamac-manager</execute> -->
-					<!-- </action> -->
-				<!-- </item> -->
+			<!-- <item label="Pamac Updater"> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute>pamac-updater</execute> -->
+			<!-- </action> -->
+			<!-- </item> -->
+			<!-- <item label="Pacman Manager"> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute>pamac-manager</execute> -->
+			<!-- </action> -->
+			<!-- </item> -->
 			<!-- </menu> -->
 			<!--
 			   -<item label="7-Zip FM">
@@ -466,19 +466,19 @@
 			   -</item>
                -->
 			<!-- <item label="Archive Manager"> -->
-				<!-- <action name="Execute"> -->
-					<!-- <execute>file-roller</execute> -->
-				<!-- </action> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute>file-roller</execute> -->
+			<!-- </action> -->
 			<!-- </item> -->
 			<!-- <item label="Bulk Rename"> -->
-				<!-- <action name="Execute"> -->
-					<!-- <execute>/usr/lib/Thunar/ThunarBulkRename</execute> -->
-				<!-- </action> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute>/usr/lib/Thunar/ThunarBulkRename</execute> -->
+			<!-- </action> -->
 			<!-- </item> -->
 			<!-- <item label="Catfish File Search"> -->
-				<!-- <action name="Execute"> -->
-					<!-- <execute>catfish</execute> -->
-				<!-- </action> -->
+			<!-- <action name="Execute"> -->
+			<!-- <execute>catfish</execute> -->
+			<!-- </action> -->
 			<!-- </item> -->
 			<item label="Gparted">
 				<action name="Execute">
