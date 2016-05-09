@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -A links=( 
+declare -A links=(
     # File
     [bashrc]=~/.bashrc
     [conkyrc]=~/.conkyrc
@@ -18,7 +18,8 @@ declare -A links=(
     [dunst]=~/.config/dunst
     [bin]=~/.bin
     [i3]=~/.config/i3
-    [mpv]=~/.config/mpv  
+    [mpd]=~/.config/mpd
+    [mpv]=~/.config/mpv
     [ncmpcpp]=~/.ncmpcpp
     [openbox]=~/.config/openbox
     [ranger]=~/.config/ranger
