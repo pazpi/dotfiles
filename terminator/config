@@ -1,0 +1,89 @@
+[global_config]
+  borderless = True
+  enabled_plugins = InactivityWatch, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
+  focus = system
+  title_transmit_bg_color = "#d30102"
+[keybindings]
+  copy = <Alt>c
+  cycle_next = <Primary>Page_Up
+  cycle_prev = <Primary>Page_Down
+  go_down = <Shift>Down
+  go_left = <Shift>Left
+  go_right = <Shift>Right
+  go_up = <Shift>Up
+  group_tab = <Primary><Alt>t
+  insert_number = <Primary><Alt>1
+  insert_padded = <Primary><Alt>0
+  new_tab = <Primary><Shift>a
+  new_terminator = <Primary><Shift>n
+  new_window = <Primary>n
+  next_tab = <Primary>Tab
+  paste = <Alt>v
+  prev_tab = <Primary><Shift>Tab
+  rotate_cw = <Primary><Shift>r
+  split_horiz = <Primary>minus
+  split_vert = <Primary>backslash
+  zoom_out = <Primary><Shift>underscore
+[layouts]
+  [[default]]
+    [[[child1]]]
+      command = ""
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      size = 900, 500
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.76
+    background_image = None
+    background_type = transparent
+    font = Terminus 10
+    foreground_color = "#d0d0d0"
+    palette = "#000000:#cc1e1e:#55ae00:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#e12626:#8ae234:#fce94f:#729fcf:#ad7fa8:#34c2e2:#eeeeec"
+    scroll_on_output = False
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[ranger]]
+    background_color = "#002b36"
+    background_darkness = 0.94
+    background_image = None
+    foreground_color = "#839496"
+    palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
+    scroll_on_output = False
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[solarized-dark]]
+    background_color = "#121212"
+    background_darkness = 0.79
+    background_image = None
+    cursor_color = "#eee8d5"
+    font = Terminus 10
+    foreground_color = "#d0d0d0"
+    palette = "#073642:#d30102:#859900:#b58900:#6c71c4:#d33682:#2aa198:#839496:#586e75:#cb4b16:#859900:#b58900:#268bd2:#dc322f:#2aa198:#93a1a1"
+    scroll_on_output = False
+    scrollback_infinite = True
+    scrollback_lines = 5000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[solarized-light]]
+    background_color = "#eee8d5"
+    background_darkness = 0.769574944072
+    background_image = None
+    cursor_color = "#002b36"
+    font = Terminus 10
+    foreground_color = "#002b36"
+    palette = "#073642:#d30102:#859900:#b58900:#6c71c4:#d33682:#2aa198:#839496:#586e75:#cb4b16:#859900:#b58900:#268bd2:#dc322f:#2aa198:#93a1a1"
+    scroll_on_output = False
+    scrollback_infinite = True
+    scrollback_lines = 5000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
