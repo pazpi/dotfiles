@@ -1,6 +1,18 @@
 # dotfiles
 my personal dotfiles
 
+## Install dotfile
+
+```
+./setup.sh
+```
+
+## Clean dotfile
+
+```
+./setup.sh clean
+```
+
 To generate package list you need to run
 
 ```
