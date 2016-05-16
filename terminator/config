@@ -1,8 +1,10 @@
 [global_config]
   borderless = True
+  custom_url_handler = firefox
   enabled_plugins = InactivityWatch, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
   focus = system
   title_transmit_bg_color = "#d30102"
+  use_custom_url_handler = True
 [keybindings]
   copy = <Alt>c
   cycle_next = <Primary>Page_Up
