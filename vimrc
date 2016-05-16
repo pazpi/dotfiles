@@ -215,6 +215,7 @@ let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.py\$class$', '\.obj$',
 "
 "Pep8 (python-mode)-----------------------------------------
 let g:pymode_lint_ignore="E114,E115,E116"
+let g:pymode_lint = 0
 "-----------------------------------------------------------
 "
 "NerdCommenter----------------------------------------------
