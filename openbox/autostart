@@ -44,6 +44,6 @@ feh --bg-fill ~/.background/arch-blue-thx-martino.png --bg-fill ~/.background/2.
 # xscreensaver -no-splash &
 #(xrdb /home/pazpi/.Xresources) &
 # Disable screensaver when play video in VLC, mPlayer, Flash, ecc (see script for detail)
-(sleep 2s && lightsOn) &
+# (sleep 2s && lightsOn) &
 ## Optionally disable touchpad
 # usr/bin/synclient TouchpadOff=1 &
