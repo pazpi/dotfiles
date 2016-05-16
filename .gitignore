@@ -1,3 +1,8 @@
 ranger/colorschemes/__pycache__
 ncmpcpp/error.log
 *.pyo
+mpd/database
+mpd/log
+mpd/mpd.conf
+mpd/state
+mpd/sticker.sql
