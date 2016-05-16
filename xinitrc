@@ -47,6 +47,7 @@ fi
 
 # exec i3
 exec openbox-session
+# exec /home/pazpi/sway-start.sh
 
 # session=${1:-openbox}
 # case $session in
