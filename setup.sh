@@ -11,7 +11,7 @@ declare -A links=(
     [screenrc]=~/.screenrc
     [vimrc]=~/.vimrc
     [xinitrc]=~/.xinitrc
-    [Xresource]=~/.Xresource
+    [Xresources]=~/.Xresources
     [zpreztorc]=~/.zpreztorc
     [zshrc]=~/.zshrc
     # Directory
