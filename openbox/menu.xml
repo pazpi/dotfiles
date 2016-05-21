@@ -182,6 +182,18 @@
 					</action>
 				</item>
 			</menu>
+			<menu id="network-522227" label="Insync">
+				<item label="start">
+					<action name="Execute">
+						<execute>insync start</execute>
+					</action>
+				</item>
+				<item label="stop">
+					<action name="Execute">
+						<execute>killall insync</execute>
+					</action>
+				</item>
+			</menu>
 		</menu>
 		<menu id="games" label="Games">
 			<menu id="games-465427" label="Dwarf Fortress">
