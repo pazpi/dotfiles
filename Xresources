@@ -438,13 +438,12 @@ xterm*foreground: #d0d0d0
 ! xterm*cursorColor2: #3a3a3a
 ! xterm*colorBD: #e4e4e4
 
-rofi.modi:                           window,run,ssh,clerk
+rofi.modi:                           window,run,ssh
 rofi.opacity:                        100
 rofi.width:                          50
 rofi.lines:                          15
 rofi.columns:                        1
-rofi.font:                           Montserrat 12
-!rofi.font:                           mono 12
+rofi.font:                           Overpass 10
 rofi.fg:                             #002B36
 rofi.bg:                             #FDF6E3
 rofi.color-enabled: true
