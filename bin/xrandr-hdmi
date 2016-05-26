@@ -7,4 +7,6 @@ if (xrandr | grep "$EXT disconnected"); then
     xrandr --output $IN --auto --output $EXT --off 
 else
     xrandr --output $IN --auto --primary --output $EXT --auto --right-of $IN
+    #Set correct background
+    feh --bg-fill ~/.background/arch-blue-thx-martino.png --bg-fill ~/.background/2.png
 fi
