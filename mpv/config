@@ -3,7 +3,7 @@ use-filedir-conf=yes
 screenshot-template=~/Pictures/mpv/mpv-screenshot_%f_%p
 
 ### VIDEO ###
-cache=16384
+# cache=16384
 # cache-default=8192
 # cache-initial=0
 display-fps=60
@@ -11,7 +11,7 @@ framedrop=vo
 hwdec=vaapi
 vo=opengl
 # vf=eq
-ytdl-format=298+bestaudio/137+bestaudio/22/135+bestaudio/18/best
+ytdl-format=299+bestaudio/298+bestaudio/137+bestaudio/22/135+bestaudio/18/best
 # ytdl-format=bestvideo+bestaudio/best
 
 ### AUDIO ###
