@@ -11,8 +11,7 @@ framedrop=vo
 hwdec=vaapi
 vo=opengl
 # vf=eq
-ytdl-format=299+bestaudio/298+bestaudio/137+bestaudio/22/135+bestaudio/18/best
-# ytdl-format=bestvideo+bestaudio/best
+ytdl-format="bestvideo[height<=1080][fps>=30]+bestaudio/best"
 
 ### AUDIO ###
 alang=en,eng,English,it,ita
