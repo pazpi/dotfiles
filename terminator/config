@@ -14,11 +14,12 @@
   go_right = <Shift>Right
   go_up = <Shift>Up
   group_tab = <Primary><Alt>t
+  help = <Primary>F1
   insert_number = <Primary><Alt>1
   insert_padded = <Primary><Alt>0
   new_tab = <Primary><Shift>a
   new_terminator = <Primary><Shift>n
-  new_window = <Primary>n
+  new_window = <Primary><Alt>n
   next_tab = <Primary>Tab
   paste = <Alt>v
   prev_tab = <Primary><Shift>Tab
