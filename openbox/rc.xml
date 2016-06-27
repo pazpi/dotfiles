@@ -40,7 +40,7 @@
                   'Active' - where the active window is -->
   </placement>
   <theme>
-    <name>Numix-ArchBlue</name>
+    <name>Clearlooks</name>
     <titleLayout>NDSLIMC</titleLayout>
     <!--
       available characters are NDSLIMC, each can occur at most once.
@@ -280,35 +280,35 @@
       <action name="Execute">
         <enabled>true</enabled>
         <name>mpc_next</name>
-        <execute>mpc next</execute>
+        <execute>mpc -h 192.168.1.69 next</execute>
       </action>
     </keybind>
     <keybind key="W-A-Left">
       <action name="Execute">
         <enabled>true</enabled>
         <name>mpc prev</name>
-        <execute>mpc prev</execute>
+        <execute>mpc -h 192.168.1.69 prev</execute>
       </action>
     </keybind>
     <keybind key="W-A-space">
       <action name="Execute">
         <enabled>true</enabled>
         <name>mpc pause</name>
-        <command>mpc toggle</command>
+        <command>mpc -h 192.168.1.69 toggle</command>
       </action>
     </keybind>
     <keybind key="W-A-Up">
       <action name="Execute">
         <enabled>true</enabled>
         <name>mpc prev</name>
-        <execute>mpc volume +5</execute>
+        <execute>mpc -h 192.168.1.69 volume +5</execute>
       </action>
     </keybind>
     <keybind key="W-A-Down">
       <action name="Execute">
         <enabled>true</enabled>
         <name>mpc prev</name>
-        <execute>mpc volume -5</execute>
+        <execute>mpc -h 192.168.1.69 volume -5</execute>
       </action>
     </keybind>
     <!-- Keybindings for window switching -->

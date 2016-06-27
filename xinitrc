@@ -15,7 +15,7 @@ fi
 # urxvtd -q -f -o
 
 export "XDG_CONFIG_HOME=$HOME/.config"
-export "MPD_HOST=192.168.1.190"
+export "MPDHOST=192.168.1.69"
 export "MPD_PORT=6600"
 
 # setup ssh-agent

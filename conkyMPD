@@ -1,5 +1,5 @@
 conky.config = {
-	update_interval = 2,
+	update_interval = 1,
 	total_run_times = 0,
 	net_avg_samples = 1,
 	cpu_avg_samples = 1,
@@ -31,7 +31,7 @@ conky.config = {
 	own_window_argb_visual = true,
 	own_window_colour = '#000000',
 	own_window_argb_value = 0,
-	mpd_host = '192.168.1.190',
+	mpd_host = '192.168.1.69',
 	mpd_port = 6600,
 
 };
@@ -39,9 +39,10 @@ conky.config = {
 conky.text = [[
 ${if_mpd_playing}
 ${color3 }MPD-Pi ${mpd_status} ${hr 2}$color
-${offset 20}${color white}Title:${alignr}${color} ${mpd_title}
-${offset 35}${color white}Artist:${alignr}${color} ${mpd_artist}
-${offset 50}${color white}Album:${alignr}${color} ${mpd_album}
+# ${offset 20}${color white}Title:${alignr}${color} ${mpd_title}
+${offset 20}${color white}Title:${alignr}${color} ${scroll 100 ${mpd_title}}
+${offset 35}${color white}Artist:${alignr}${color} ${scroll 100 ${mpd_artist}}
+${offset 50}${color white}Album:${alignr}${color} ${scroll 100 ${mpd_album}}
 ${offset 65}${color white}Volume:${alignr}${color} ${mpd_vol}
 ${offset 80}${color white}Progress:${alignr}${mpd_elapsed}/${mpd_length}  ${mpd_bar 6, 200}
 ${endif}
