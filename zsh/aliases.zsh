@@ -45,7 +45,7 @@ alias shutdown='sudo shutdown -h now'
 alias wifi='sudo wifi-menu wlp3s0'
 alias ipwifidown='sudo ip link set wlp3s0 down'
 alias ipwifiup='sudo ip link set wlp3s0 up'
-alias youtube-wl="mpv -ytdl https://www.youtube.com/playlist\?list=PLg-qQC6kJtcM6yLCBg1m-mUYoFRGBJ88g"
+alias youtube-wl="mpv 'https://www.youtube.com/playlist?list=WL' --ytdl-raw-options=playlist-reverse="
 alias youtube-max='youtube-dl -f bestvideo+bestaudio '
 alias youtube-dl-wl='cd ~/Videos/WatchLater && youtube-dl https://www.youtube.com/playlist\?list=PLg-qQC6kJtcM6yLCBg1m-mUYoFRGBJ88g -o "%(upload_date)s-%(title)s.%(ext)s"'
 alias aurcurl='cd AurPackage && curl -O'
