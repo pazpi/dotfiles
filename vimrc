@@ -38,6 +38,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'itchyny/calendar.vim'
     Plug 'vim-scripts/YankRing.vim'
+    Plug 'vim-scripts/a.vim'
     " Plug 'joonty/vim-phpqa'
     " Plug 'rking/ag.vim'
     " Plug 'octol/vim-cpp-enhanced-highlight' 
@@ -248,11 +249,12 @@ let g:yankring_history_dir = '$HOME/.vim/.tmp'
 nnoremap <leader>y :YRShow<CR>
 "-----------------------------------------------------------
 "
-"Auto-Pairs-------------------------------------------------
-let g:AutoPairsFlyMode = 0
+"a.vim------------------------------------------------------
+nnoremap <leader>A :AV<cr>
 "-----------------------------------------------------------
 "
 "Auto-Pairs-------------------------------------------------
+let g:AutoPairsFlyMode = 0
 let g:cpp_class_scope_highlight = 1
 let g:cpp_experimental_template_highlight = 1
 "-----------------------------------------------------------
