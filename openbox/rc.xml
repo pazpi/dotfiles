@@ -181,61 +181,6 @@
     <!-- 'Left', 'Middle', 'Right' -->
   </dock>
   <keyboard>
-    <!-- <chainQuitKey>C-g</chainQuitKey> -->
-    <!-- Keybindings for desktop switching -->
-    <!-- <keybind key="C-A-Left"> -->
-    <!-- <action name="GoToDesktop"> -->
-    <!-- <to>left</to> -->
-    <!-- <wrap>no</wrap> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
-    <!-- <keybind key="C-A-Right"> -->
-    <!-- <action name="GoToDesktop"> -->
-    <!-- <to>right</to> -->
-    <!-- <wrap>no</wrap> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
-    <!-- <keybind key="C-A-Up"> -->
-    <!-- <action name="GoToDesktop"> -->
-    <!-- <to>up</to> -->
-    <!-- <wrap>no</wrap> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
-    <!-- <keybind key="C-A-Down"> -->
-    <!-- <action name="GoToDesktop"> -->
-    <!-- <to>down</to> -->
-    <!-- <wrap>no</wrap> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
-    <!-- <keybind key="S-A-Left"> -->
-    <!-- <action name="SendToDesktop"> -->
-    <!-- <to>left</to> -->
-    <!-- <wrap>no</wrap> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
-    <!-- <keybind key="S-A-Right"> -->
-    <!-- <action name="SendToDesktop"> -->
-    <!-- <to>right</to> -->
-    <!-- <wrap>no</wrap> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
-    <!-- <keybind key="S-A-Up"> -->
-    <!-- <action name="SendToDesktop"> -->
-    <!-- <to>up</to> -->
-    <!-- <wrap>no</wrap> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
-    <!-- <keybind key="S-A-Down"> -->
-    <!-- <action name="SendToDesktop"> -->
-    <!-- <to>down</to> -->
-    <!-- <wrap>no</wrap> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
-    <!-- <keybind key="W-F1"> -->
-    <!-- <action name="GoToDesktop"> -->
-    <!-- <to>1</to> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
     <keybind key="W-F2">
       <action name="GoToDesktop">
         <to>2</to>
@@ -368,16 +313,6 @@
         <direction>down</direction>
       </action>
     </keybind>
-    <!-- Keybindings for running applications -->
-    <!-- <keybind key="W-u"> -->
-    <!-- <action name="Execute"> -->
-    <!-- <startupnotify> -->
-    <!-- <enabled>true</enabled> -->
-    <!-- <name>terminator</name> -->
-    <!-- </startupnotify> -->
-    <!-- <command>terminator</command> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
     <keybind key="W-w">
       <action name="Execute">
         <startupnotify>
@@ -441,15 +376,6 @@
         <command>pcmanfm</command>
       </action>
     </keybind>
-    <!-- <keybind key="W-z"> -->
-    <!-- <action name="Execute"> -->
-    <!-- <startupnotify> -->
-    <!-- <enabled>true</enabled> -->
-    <!-- <name>rofi</name> -->
-    <!-- </startupnotify> -->
-    <!-- <command>rofi -show run -font "snap 10" -fg "#505050" -bg "#000000" -hlfg "#ffb964" -hlbg "#000000" -o 85</command> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
     <keybind key="W-z">
       <action name="Execute">
         <startupnotify>
@@ -459,15 +385,6 @@
         <command>rofi -show run -lines 20 -width 100 -padding 7 -yoffset 180</command>
       </action>
     </keybind>
-    <!-- <keybind key="W-z"> -->
-    <!-- <action name="Execute"> -->
-    <!-- <startupnotify> -->
-    <!-- <enabled>true</enabled> -->
-    <!-- <name>dmenu</name> -->
-    <!-- </startupnotify> -->
-    <!-- <command>dmenu_run -fn -misc-fixed-*-*-*-*-20-200-*-*-*-*-*-*  -i -nf 'gray' -sb 'dark green' -nb 'dim gray'</command> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
     <keybind key="W-S-x">
       <action name="Execute">
         <startupnotify>
@@ -513,15 +430,15 @@
         <command>pycharm</command>
       </action>
     </keybind>
-    <!-- <keybind key="W-m"> -->
-    <!-- <action name="Execute"> -->
-    <!-- <startupnotify> -->
-    <!-- <enabled>true</enabled> -->
-    <!-- <name>Mediaplayer</name> -->
-    <!-- </startupnotify> -->
-    <!-- <command>vlc</command> -->
-    <!-- </action> -->
-    <!-- </keybind> -->
+    <keybind key="W-A-v">
+        <action name="Execute">
+            <startupnotify>
+                <enabled>true</enabled>
+                <name>Middle mouse button paste</name>
+            </startupnotify>
+            <command>xdotool click 2</command>
+        </action>
+    </keybind>
     <keybind key="Print">
       <action name="Execute">
         <startupnotify>
@@ -588,16 +505,6 @@
         <command>xbacklight -dec 5</command>
       </action>
     </keybind>
-    <!--<keybind key="XF86MonBrightnessUp">-->
-    <!--<action name="Execute">-->
-    <!--<command>xbacklight +10</command>-->
-    <!--</action>-->
-    <!--</keybind>-->
-    <!--<keybind key="XF86MonBrightnessDown">-->
-    <!--<action name="Execute">-->
-    <!--<command>xbacklight -10</command>-->
-    <!--</action>-->
-    <!--</keybind>-->
     <!-- Where installing pulse-audio instead, change 'amixer set' to 'amixer -D pulse set' -->
     <keybind key="XF86AudioRaiseVolume">
       <action name="Execute">
