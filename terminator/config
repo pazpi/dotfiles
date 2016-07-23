@@ -39,6 +39,16 @@
       parent = ""
       size = 900, 500
       type = Window
+  [[ranger]]
+    [[[child1]]]
+      command = ""
+      parent = window0
+      profile = ranger
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      size = 1000, 700
+      type = Window
 [plugins]
 [profiles]
   [[default]]
@@ -54,14 +64,16 @@
     show_titlebar = False
   [[ranger]]
     background_color = "#002b36"
-    background_darkness = 0.94
+    background_darkness = 0.77
     background_image = None
+    custom_command = TERM=xterm-256color /usr/bin/ranger
     foreground_color = "#839496"
     palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
     scroll_on_output = False
     scrollback_infinite = True
     scrollbar_position = hidden
     show_titlebar = False
+    use_custom_command = True
   [[solarized-dark]]
     background_color = "#121212"
     background_darkness = 0.79
