@@ -8,6 +8,7 @@
 
 # To set your keyboard layout, you need to modify your X config:
 # http://www.google.com/search?q=how+to+set+keyboard+layout+xorg
+PATH=~/.bin:$PATH
 MPDHOST=192.168.1.69
 MPD_PORT=6600
 MOZ_USE_OMTC=1
