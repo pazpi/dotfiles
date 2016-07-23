@@ -13,15 +13,14 @@ set nocompatible
 "Plug ------------------------------------------------------------
 call plug#begin('~/.vim/plugged')
     if has("mac")
-        Plug 'bling/vim-airline'
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
         Plug 'altercation/vim-colors-solarized'
-        Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
     endif
 
+    Plug 'bling/vim-airline'
     Plug 'scrooloose/syntastic'
     Plug 'suan/vim-instant-markdown'
     Plug 'junegunn/seoul256.vim'
-    Plug 'yegappan/mru'
     Plug 'klen/python-mode'
     Plug 'majutsushi/tagbar'
     Plug 'terryma/vim-multiple-cursors'
@@ -39,6 +38,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'itchyny/calendar.vim'
     Plug 'vim-scripts/YankRing.vim'
     Plug 'vim-scripts/a.vim'
+    " Plug 'yegappan/mru'
     " Plug 'joonty/vim-phpqa'
     " Plug 'rking/ag.vim'
     " Plug 'octol/vim-cpp-enhanced-highlight' 
