@@ -13,7 +13,6 @@ fi
 
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 # urxvtd -q -f -o
-
 export "XDG_CONFIG_HOME=$HOME/.config"
 export "MPDHOST=192.168.1.69"
 export "MPD_PORT=6600"
@@ -44,7 +43,7 @@ fi
 # xscreensaver -no-splash &
 # nitrogen --restore &
 # compton -CGb &
-
+setxkbmap it
 # exec i3
 exec openbox-session
 # exec /home/pazpi/sway-start.sh

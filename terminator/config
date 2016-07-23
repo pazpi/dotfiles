@@ -3,6 +3,7 @@
   custom_url_handler = firefox
   enabled_plugins = InactivityWatch, ActivityWatch, TerminalShot, LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler, LaunchpadBugURLHandler
   focus = system
+  title_font = Overpass Light 11
   title_transmit_bg_color = "#d30102"
   use_custom_url_handler = True
 [keybindings]
@@ -44,14 +45,13 @@
     background_darkness = 0.76
     background_image = None
     background_type = transparent
-    font = Terminus 10
+    font = Sans 10
     foreground_color = "#d0d0d0"
     palette = "#000000:#cc1e1e:#55ae00:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#e12626:#8ae234:#fce94f:#729fcf:#ad7fa8:#34c2e2:#eeeeec"
     scroll_on_output = False
     scrollback_infinite = True
     scrollbar_position = hidden
     show_titlebar = False
-    use_system_font = False
   [[ranger]]
     background_color = "#002b36"
     background_darkness = 0.94
