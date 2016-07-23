@@ -1,0 +1,24 @@
+#!/bin/bash
+# File used to automount nfs disk on local network
+# put this line on root's crontab
+# */5 * * * * 	/home/pazpi/.bin/auto_share
+SERVER_EXPORT='192.168.1.69:/srv/nfs4/data'
+MOUNT_TARGET='/mnt/atnas'
+
+# Nothing to do if user does not have requisite binaries.
+[[ -z $(which ping) ]] && echo 'Install iputils or whatever package provides ping' && exit 0
+[[ -z $(which mountpoint) ]] && echo 'Install util-linux or whatever package provides mountpoint' && exit 0
+
+ping -c 1 192.168.1.69 &>/dev/null
+if [ $? -ne 0 ]; then
+	# server is down so unmount
+	#
+	# if we query the mount point and it was previously mounted, the script freezes
+	# so just unmount forcing while lazy
+	umount -l -f $MOUNT_TARGET &>/dev/null
+else
+	# server is up
+	#
+	# check if mount point is live and try to mount if not
+	mountpoint -q $MOUNT_TARGET || mount -t nfs4 $SERVER_EXPORT $MOUNT_TARGET
+fi
