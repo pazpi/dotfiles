@@ -7,7 +7,6 @@ conky.config = {
 	double_buffer = true,
 	no_buffers = true,
 	use_xft = true,
---xftfont Droid Sans:size=9
 	font = 'terminus:size=10',
 	override_utf8_locale = true,
 	text_buffer_size = 2048,
@@ -74,9 +73,9 @@ ${color3}DISK ${hr 2}$color
 
  ${color white}ROOT$color ${fs_free_perc /}%$alignr${fs_free /}/ ${fs_size /}
  # ${color white}HOME$color ${fs_free_perc /home/pazpi}%$alignr${fs_free /home/pazpi}/ ${fs_size /home/pazpi}
- ${color white}Read:$color ${diskio_read /dev/sda4}${alignr}${color white}Write:$color ${diskio_write /dev/sda4}
+ ${color white}Read:$color ${diskio_read /dev/sda3}${alignr}${color white}Write:$color ${diskio_write /dev/sda3}
  #${fs_bar 3, 320 /home/pazpi}$color
- ${diskiograph_read /dev/sda4 15,150 000000 00ff00}${alignr}${diskiograph_write /dev/sda4 15,150 000000 ffff00}
+ ${diskiograph_read /dev/sda3 15,150 000000 00ff00}${alignr}${diskiograph_write /dev/sda3 15,150 000000 ffff00}
 ${color3}Battery is ${battery BAT1} ${battery_time BAT1} ${battery | grep "energy-rate" | awk '{print $2}' 10} ${hr 2}$color
 
 ${if_up wlp3s0}${color3}WiFi wlp3s0 ${wireless_link_qual_perc wlp3s0}% ${wireless_bitrate wlp3s0} ${hr 2}$color
