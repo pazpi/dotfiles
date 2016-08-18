@@ -6,3 +6,9 @@ mpd/log
 mpd/mpd.conf
 mpd/state
 mpd/sticker.sql
+mpv/watch_later
+bin/deploytool
+bin/matlab
+bin/mbuild
+bin/mcc
+bin/mex
