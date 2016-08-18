@@ -33,7 +33,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'tomasr/molokai', { 'dir': '~/.vim/colors'}
     Plug 'alvan/vim-closetag'
     Plug 'szw/vim-tags'
-    Plug 'jiangmiao/auto-pairs'
+    " Plug 'jiangmiao/auto-pairs'
     Plug 'tpope/vim-fugitive'
     Plug 'itchyny/calendar.vim'
     Plug 'vim-scripts/YankRing.vim'
