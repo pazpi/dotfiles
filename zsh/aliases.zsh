@@ -1,5 +1,3 @@
-# alias git-pull="git pull origin master"
-# alias git-push="git push origin master"
 alias x="exit"
 alias q="exit"
 alias ls='ls --group-directories-first --time-style=+"%d.%m.%Y %H:%M" --color=auto -F'
@@ -9,28 +7,15 @@ alias grep='grep --color=tty -d skip'
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias vp='vim PKGBUILD'
-alias update='sudo pacman -Syu'
-alias install='sudo pacman -S'
-alias uninstall='sudo pacman -Rs'
-alias search='pacman -Ss'
-alias show='pacman -Si'
-alias need='pacman -Qi'
-alias missing='pacman -Qk'
-alias trash='pacman -Qdt'
 alias orphan='pacman -Rns $(pacman -Qtdq)'
 alias record="ffmpeg -y -f alsa -ac 2 -i pulse -f x11grab -r 30 -s `xdpyinfo | grep 'dimensions:'|awk '{print $2}'` -i :0.0 -acodec pcm_s16le output.wav -an -vcodec libx264 -threads 0 output.mp4"
-alias vga="bash /home/pazpi/.screenlayout/VGA1440x900.sh"
-alias lvds="bash /home/pazpi/.screenlayout/LVDS1.sh"
-#alias nfspi="sudo mount -t nfs 192.168.1.190:/media/1TORRHDD /mnt/1TORRHDD"
 alias nfspi="sudo mount -t nfs archpi.local:/srv/nfs4/1TORRHDD /mnt/1TORRHDD"
 alias winmount="sudo mount /dev/sda3 /mnt/Windows"
-alias sshpi="ssh pi@pazpi.local"
 alias cal="cal -m"
 alias tv='mpv dvb://"Italia1 HD"'
 alias yotobi="livestreamer twitch.tv/yotobi"
 alias :q='exit'
 alias :Q='exit'
-#alias v='vim'
 alias pacman='sudo pacman'
 alias HIST='echo > ~/.zsh/.zsh-history'
 alias TMP='sudo /bin/rm -rf /tmp/* /tmp/.* &>/dev/null'
@@ -48,45 +33,22 @@ alias ipwifiup='sudo ip link set wlp3s0 up'
 alias youtube-wl="mpv 'https://www.youtube.com/playlist?list=WL' --ytdl-raw-options=playlist-reverse="
 alias youtube-max='youtube-dl -f bestvideo+bestaudio '
 alias youtube-dl-wl='cd ~/Videos/WatchLater && youtube-dl https://www.youtube.com/playlist\?list=PLg-qQC6kJtcM6yLCBg1m-mUYoFRGBJ88g -o "%(upload_date)s-%(title)s.%(ext)s"'
-alias aurcurl='cd AurPackage && curl -O'
-alias 'nvidia-settings'='optirun -b none nvidia-settings -c :8'
-alias tty-clock='tty-clock -scC 3'
-alias rock="mpv http://tunein.com/radio/98-ROCK-979-s29726/"
+alias nvidia-settings='optirun -b none nvidia-settings -c :8'
 alias bc="bc -l"
 alias ram="watch -n 1 cat /proc/meminfo"
 alias serveThis="php -S localhost:8080"
 alias rtorrent="screen -m -fa -S rtorrent /usr/bin/rtorrent"
-alias matlab="screen -m -fa -S matlab /usr/local/bin/matlab"
+alias rtorrent="screen -m -fa -S matlab /home/pazpi/.bin/matalb"
 alias packlist="pacman -Qe | awk '{print $1}'"
 alias ranger='TERM=xterm-256color ranger'
-alias bot='cd ~/Projects/Eclipse-workspace/ruTorrent-bot && source env/bin/activate'
 alias battery='upower -i `upower -e | grep 'BAT'`'
-alias 1080p='sh ~/.screenlayout/HDMI1920x1080.sh'
 alias ssh-tunnel='ssh -D 5000 -N at-nas-pi'
 alias xclip='xclip -selection c'
+# Mirror a website
+alias mirrorsite='wget -m -k -K -E -e robots=off'
 #
-# Use colors in coreutils utilities output
-# alias ls='ls --color=auto'
-alias grep='grep --color'
-
-# ls aliases
-alias ll='ls -la'
-alias la='ls -A'
-alias l='ls'
-
-# Aliases to protect against overwriting
-# alias cp='cp -i'
-# alias mv='mv -i'
-
-# Update dotfiles
-function dfu() {
-    (
-        cd ~/Projects/dotfiles && git pullff && ./install -q
-    )
-}
-
 # Get total duration of video in a directory (recursive)
-function getDuration() {
+function getDurationSec() {
     echo "Only mp4 file"
     find . -iname '*.mp4' -exec ffprobe -v quiet -of csv=p=0 -show_entries format=duration {} \; | paste -sd+ -| bc
 }
@@ -209,9 +171,6 @@ cl() {
         echo "bash: cl: '$dir': Directory not found"
     fi
 }
-
-# Mirror a website
-alias mirrorsite='wget -m -k -K -E -e robots=off'
 
 # fh - repeat history
 fh() {
