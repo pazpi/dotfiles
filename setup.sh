@@ -19,6 +19,7 @@ declare -A links=(
     [dunst]=~/.config/dunst
     [bin]=~/.bin
     [i3]=~/.config/i3
+    [img]=~/.background
     [mpd]=~/.config/mpd
     [mpv]=~/.config/mpv
     [ncmpcpp]=~/.ncmpcpp
