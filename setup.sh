@@ -4,6 +4,7 @@ declare -A links=(
     # File
     [bashrc]=~/.bashrc
     [conkyrc]=~/.conkyrc
+    [conkyrcOLD]=~/.conkyrcOLD
     [conkyCLOCK]=~/.conkyCLOCK
     [conkyMPD]=~/.conkyMPD
     [i3blocks.conf]=~/.i3blocks.conf
@@ -36,6 +37,20 @@ if [ "$mode" = "clean" ]; then
         echo "rm ${!links[$i]}"
         rm ${links[$i]}
     done
+elif [ "$mode" = "new" ]; then
+    echo "New installation:"
+    for i in "${!links[@]}"
+    do
+        if [ ! -h  "${links[$i]}" ]
+        then
+            echo "$PWD/$i -> ${links[$i]}"
+            ln -s $PWD/$i ${links[$i]}
+        fi
+    done
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    echo "Install minimun package:"
+    echo "Please run as root:"
+    echo "pacman -S `cat package-list.txt`"
 else
     echo "creating new links:"
     for i in "${!links[@]}"
