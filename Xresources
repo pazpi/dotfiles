@@ -439,7 +439,7 @@ xterm*foreground: #d0d0d0
 ! xterm*colorBD: #e4e4e4
 
 rofi.modi:                           window,run,ssh
-rofi.opacity:                        100
+rofi.opacity:                        85
 rofi.width:                          50
 rofi.lines:                          15
 rofi.columns:                        1
@@ -451,11 +451,6 @@ rofi.color-window: #393939, #393939, #268bd2
 rofi.color-normal: #393939, #ffffff, #393939, #268bd2, #ffffff
 rofi.color-active: #393939, #268bd2, #393939, #268bd2, #205171
 rofi.color-urgent: #393939, #f3843d, #393939, #268bd2, #ffc39c
-! rofi.color-enabled:                  false
-! rofi.color-normal:                   #fdf6e3,#002b36,#eee8d5,#586e75,#eee8d5
-! rofi.color-urgent:                   #fdf6e3,#dc322f,#eee8d5,#dc322f,#fdf6e3
-! rofi.color-active:                   #fdf6e3,#268bd2,#eee8d5,#268bd2,#fdf6e3
-! rofi.color-window:                   #fdf6e3,#002b36
 rofi.fg-active:                      #268BD2
 rofi.fg-urgent:                      #DC322F
 rofi.bg-active:                      #FDF6E3
@@ -467,7 +462,7 @@ rofi.padding:                        100
 rofi.yoffset:                        0
 rofi.xoffset:                        0
 rofi.fixed-num-lines:                false
-rofi.terminal:                       urxvt
+rofi.terminal:                       terminator
 rofi.ssh-client:                     ssh
 rofi.ssh-command:                    {terminal} -e {ssh-client} {host}
 rofi.run-command:                    {cmd}
