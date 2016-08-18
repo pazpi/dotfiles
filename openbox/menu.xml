@@ -11,8 +11,8 @@
 		<item label="Run Program">
 			<action name="Execute">
 				<execute>
-                    dmenu_run -fn -misc-fixed-*-*-*-*-20-200-*-*-*-*-*-*  -i -nf 'gray' -sb 'dark green' -nb 'dim gray'
-                </execute>
+                                    rofi -show run -lines 20 -width 100 -padding 70 -yoffset 0
+                                </execute>
 			</action>
 		</item>
 		--&gt;
@@ -44,21 +44,21 @@
 			<item label="Window">
 				<action name="Execute">
 					<execute>
-                            scrot -d 1 -u -q 100 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
+                            scrot -d 1 -u -q 100 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; nomacs ~/Pictures/Screenshots/$f'
                         </execute>
 				</action>
 			</item>
 			<item label="Now">
 				<action name="Execute">
 					<execute>
-                            scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
+                            scrot '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; nomacs ~/Pictures/Screenshots/$f'
                         </execute>
 				</action>
 			</item>
 			<item label="In 5 Seconds...">
 				<action name="Execute">
 					<execute>
-                            scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; viewnior ~/Pictures/Screenshots/$f'
+                            scrot -d 5 '%Y-%m-%d--%s_$wx$h_scrot.png' -e 'mv $f ~/Pictures/Screenshots/ &amp; nomacs ~/Pictures/Screenshots/$f'
                         </execute>
 				</action>
 			</item>

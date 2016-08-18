@@ -1,4 +1,5 @@
-<?xml version="1.0" ?><openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0"?>
+<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
   <resistance>
     <strength>10</strength>
     <screen_edge_strength>20</screen_edge_strength>
@@ -345,7 +346,7 @@
           <enabled>true</enabled>
           <name>ncmpcpp-localhost</name>
         </startupnotify>
-        <command>terminator -e &quot;ncmpcpp -h localhost&quot;</command>
+        <command>terminator -e "ncmpcpp -h localhost"</command>
       </action>
     </keybind>
     <keybind key="W-n">
@@ -354,7 +355,7 @@
           <enabled>true</enabled>
           <name>ncmpcpp</name>
         </startupnotify>
-        <command>terminator -e &quot;ncmpcpp -h 192.168.1.69&quot;</command>
+        <command>terminator -e "ncmpcpp -h 192.168.1.69"</command>
       </action>
     </keybind>
     <keybind key="W-r">
@@ -381,7 +382,7 @@
           <enabled>true</enabled>
           <name>rofi</name>
         </startupnotify>
-        <command>rofi -show run -lines 20 -width 100 -padding 7 -yoffset 180</command>
+        <command>rofi -show run -lines 20 -width 100 -padding 70</command>
       </action>
     </keybind>
     <keybind key="W-x">
@@ -394,13 +395,13 @@
       </action>
     </keybind>
     <!-- <keybind key="W-x"> -->
-      <!-- <action name="Execute"> -->
-        <!-- <startupnotify> -->
-          <!-- <enabled>true</enabled> -->
-          <!-- <name>logout-rofi</name> -->
-        <!-- </startupnotify> -->
-        <!-- <command>logout-menu</command> -->
-      <!-- </action> -->
+    <!-- <action name="Execute"> -->
+    <!-- <startupnotify> -->
+    <!-- <enabled>true</enabled> -->
+    <!-- <name>logout-rofi</name> -->
+    <!-- </startupnotify> -->
+    <!-- <command>logout-menu</command> -->
+    <!-- </action> -->
     <!-- </keybind> -->
     <keybind key="W-i">
       <action name="Execute">
@@ -604,7 +605,7 @@
         <action name="Move"/>
       </mousebind>
       <mousebind action="DoubleClick" button="Left">
-        <action name="ToggleMaximize" xmlns="http://openbox.org/3.4/rc"/>
+        <action xmlns="http://openbox.org/3.4/rc" name="ToggleMaximize"/>
       </mousebind>
       <mousebind action="Click" button="Up">
         <action name="if">
@@ -883,17 +884,19 @@
   <applications>
     <!-- match all windows, and remove their decorations -->
     <application name="oblogout">
-    <position force="yes">
-      <monitor>1</monitor>
-    <x>default</x><y>default</y></position>
-    <fullscreen>yes</fullscreen>
-  <decor>yes</decor></application><application class="*">
+      <position force="yes">
+        <monitor>primary</monitor>
+        <x>default</x>
+        <y>default</y>
+      </position>
+      <fullscreen>yes</fullscreen>
+    </application>
+    <application class="*">
       <decor>no</decor>
     </application>
-  <!-- <applications> -->
-  
+    <!-- <applications> -->
     <!-- <application class="Firefox"> -->
-    <!-- <decor>yes</decor> -->
+    <!-- <monitor>2</monitor> -->
     <!-- </application> -->
     <!--    
   # this is an example with comments through out. use these to make your

@@ -10,7 +10,8 @@ eval "$(ssh-agent -s)" &
 ssh-add "/home/pazpi/.ssh/id_rsa_nop" &
 ## Basic compositing effects
 compton -CGb &
-xrandr-autodetect &
+# xrandr-autodetect &
+xrand-hdmi &
 start-pulseaudio-x11 &
 ## Panel
 tint2 &
@@ -38,8 +39,8 @@ feh --bg-fill ~/.background/arch-blue-thx-martino.png --bg-fill ~/.background/2.
 #(sleep 1s && thunar --daemon) &
 # (sleep 1s && pcmanfm -d) &
 (sleep 1s && conky) &
-(sleep 1s && conky -c .conkyCLOCK) &
-(sleep 1s && conky -c .conkyMPD) &
+# (sleep 1s && conky -c .conkyCLOCK) &
+# (sleep 1s && conky -c .conkyMPD) &
 ## Optionally enable screensaver
 #(sleep 1s && xautolock -time 15 -locker 'xlock -mode blank') &
 # xscreensaver -no-splash &
