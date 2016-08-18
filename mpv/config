@@ -6,7 +6,7 @@ screenshot-template=~/Pictures/mpv/mpv-screenshot_%f_%p
 # cache=16384
 # cache-default=8192
 # cache-initial=0
-display-fps=60
+# display-fps=60
 framedrop=vo
 hwdec=vaapi
 vo=opengl
@@ -15,10 +15,10 @@ ytdl-format="bestvideo[height<=1080][fps>=30]+bestaudio/best"
 # ytdl-raw-options="playlist-reverse"
 
 ### AUDIO ###
+volume=70
 alang=en,eng,English,it,ita
 ao=:alsa:resample=no
 audio-channels=2
-# softvol=no
 
 ### SUBTITLES ###
 ass-force-style=Kerning=yes
