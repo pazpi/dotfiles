@@ -102,7 +102,7 @@ ${font Zurich LtCn BT:size=10}${voffset -675}${offset 32}$sysname $kernel ${offs
 ${if_mpd_playing}
 ${voffset 655}${offset 33}${font Zurich XCn BT:size=18}Artist: ${font Zurich LtCn BT:size=18}${voffset -1}${scroll 20 ${mpd_artist}}
 ${voffset -32}${offset 335}${font Zurich XCn BT:size=18}Album: ${font Zurich LtCn BT:size=18}${voffset -1}${scroll 20 ${mpd_album}}
-${voffset -30}${offset 773}${font Zurich XCn BT:size=18}Title: ${font Zurich LtCn BT:size=18}${voffset -1}${scroll 20 ${mpd_title}}
-${voffset -32}${offset 1060}${font Zurich LtCn BT:size=18}${alignr}${mpd_vol} - ${mpd_status} - ${mpd_elapsed}/${mpd_length}
+${voffset -30}${offset 625}${font Zurich XCn BT:size=18}Title: ${font Zurich LtCn BT:size=18}${voffset -1}${scroll 40 ${mpd_title}}
+${voffset -30}${offset 1060}${font Zurich LtCn BT:size=18}${alignr}${mpd_vol} - ${mpd_status} - ${mpd_elapsed}/${mpd_length}
 ${endif}
 
