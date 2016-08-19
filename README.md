@@ -18,3 +18,6 @@ To generate package list you need to run
 ```
 pacman -Qe | awk '{print $1}' > package_list.txt
 ```
+
+## Ugly theme for qt application
+run `qtconfig-q4` and set the theme to GTK+
