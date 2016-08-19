@@ -4,9 +4,6 @@ declare -A links=(
     # File
     [bashrc]=~/.bashrc
     [conkyrc]=~/.conkyrc
-    [conkyrcOLD]=~/.conkyrcOLD
-    [conkyCLOCK]=~/.conkyCLOCK
-    [conkyMPD]=~/.conkyMPD
     [i3blocks.conf]=~/.i3blocks.conf
     [rtorrent.rc]=~/.rtorrent.rc
     [screenrc]=~/.screenrc
