@@ -100,8 +100,8 @@ ${offset 1075}${top_mem name 5}$alignr${top_mem cpu 5}   ${top_mem mem 5}${font}
 ${font Zurich LtCn BT:size=10}${voffset -675}${offset 32}$sysname $kernel ${offset 32}$nodename ${offset 36}$uptime${font}
 # MPD
 ${if_mpd_playing}
-${voffset 655}${offset 33}${font Zurich XCn BT:size=18}Artist: ${font Zurich LtCn BT:size=18}${voffset -1}${scroll 20 ${mpd_artist}}
-${voffset -32}${offset 335}${font Zurich XCn BT:size=18}Album: ${font Zurich LtCn BT:size=18}${voffset -1}${scroll 20 ${mpd_album}}
+${voffset 655}${offset 33}${font Zurich XCn BT:size=18}Artist: ${font Zurich LtCn BT:size=18}${voffset -1}${scroll 22 ${mpd_artist}}
+${voffset -30}${offset 335}${font Zurich XCn BT:size=18}Album: ${font Zurich LtCn BT:size=18}${voffset -1}${scroll 20 ${mpd_album}}
 ${voffset -30}${offset 625}${font Zurich XCn BT:size=18}Title: ${font Zurich LtCn BT:size=18}${voffset -1}${scroll 40 ${mpd_title}}
 ${voffset -30}${offset 1060}${font Zurich LtCn BT:size=18}${alignr}${mpd_vol} - ${mpd_status} - ${mpd_elapsed}/${mpd_length}
 ${endif}
