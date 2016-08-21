@@ -12,3 +12,4 @@ bin/matlab
 bin/mbuild
 bin/mcc
 bin/mex
+bin/lockOLD
