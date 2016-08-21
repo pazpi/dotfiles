@@ -38,5 +38,5 @@ ${CMD}
 set +x
 
 #Set correct background
-feh --bg-fill ~/.background/arch-blue-thx-martino.png --bg-fill ~/.background/2.png
+feh --bg-fill ~/.background/Portal.png --bg-fill ~/.background/gnulinux.png
 
