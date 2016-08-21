@@ -1,4 +1,8 @@
 # dotfiles
+
+# This projecs has moved to GitLab
+[dotfile](https://gitlab.com/pazpi/dotfiles)
+
 my personal dotfiles
 
 ## Install dotfile
