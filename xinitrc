@@ -43,8 +43,8 @@ fi
 # xscreensaver -no-splash &
 # nitrogen --restore &
 # compton -CGb &
-# exec i3
-exec openbox-session
+exec i3
+# exec openbox-session
 # exec /home/pazpi/sway-start.sh
 
 # session=${1:-openbox}

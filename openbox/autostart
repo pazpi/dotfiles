@@ -20,10 +20,9 @@ tint2 &
 dunst &
 ## Background
 # (sleep 1s && nitrogen --restore) &
-# feh --bg-tile ~/Pictures/dojanp.png
 # feh --bg-fill ~/.background/arch-blue-thx-martino.png --bg-fill ~/.background/2.png
-feh --bg-fill ~/.background/Portal.png --bg-fill ~/.background/gnulinux.png
-# feh --bg-fill /usr/share/backgrounds/gnome/adwaita-night.jpg
+# feh --bg-fill ~/.background/Portal.png --bg-fill ~/.background/gnulinux.png
+feh-bg.sh
 ## Battery Icon
 (sleep 1s && cbatticon -u 20 -i notification -c "systemctl poweroff" -l 15 -r 2) &
 (sleep 1s && volumeicon) &
